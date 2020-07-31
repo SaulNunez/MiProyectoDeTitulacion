@@ -1,16 +1,64 @@
 \chapter{Desarrollo del Proyecto}
-[Este capítulo se considera el más importante al elaborar el proyecto de titulación. Se describe el procedimiento seguido para lograr el objetivo planteado. Se explica qué y cómo se hizo, además se debe de convencer de que los métodos o procedimientos usados fueron los más adecuados.
-
-Deben detallarse los procedimientos, técnicas, métodos, metodologías y demás estrategias metodológicas requeridas para el proyecto. 
-]
+En este capítulo se discute sobre el trabajo a realizado para la completitud del proyecto, así como la descripción y el post-mortem de las diferentes actividades hechas durante su realización.
 
 \section{Producto propuesto}
+El producto desarrollado es un videojuego colaborativo donde las mecánicas estén afines a que los alumnos conozcan diferentes conceptos básicos de los lenguajes de programación y que tengan que hacer y modificar pequeños programas para resolverlas.  
+Este videojuego se enfoca en la enseñanza de las características más elementales de la programación estructural como: variables, condicionales, ciclos y funciones. Los puzzles para la enseñanza de estos conceptos sean pequeños problemas en el mundo de juego donde tendrán que modificar código existente para cambiar su comportamiento o crear todo un programa pequeño que tenga el comportamiento deseado, usando las técnicas que han descubierto, algunos de estos puzzles contienen elementos que obliguen a varios jugadores a colaborar para resolverlos. Estos puzzles tratarán temas de programación estructurada, estás seguirán el material del curso de Fundamentos de la Programación y Programación I, así como los libros Fundamentos de programación: Algoritmos, estructura de datos y objetos de Luis Joyanes Aguilar y Prelude to Programming: Concepts and design de Steward Venit y Elizabeth Drake. 
+El videojuego solo tendrá un nivel con una duración aproximada de una hora a hora y media.
+
+\section{Forma de validación}
+Para la evaluación de la eficacia de este videojuego en la enseñanza de programación se realizarán dos clases con alumnos del campus de Ciudad Universitaria de la UACJ que no hayan visto programación o estén cursando clases como Fundamentos de Programación o Programación I.
+Estas dos clases tendrán alumnos totalmente distintos. Estas se realizarán de la siguiente manera:
+\begin{itemize}
+    \item En la primera clase se colocaron a todos los alumnos en un lobby del videojuego creado y tendrán que completar todo el primer nivel del videojuego con todos los puzzles, el profesor (uno de los integrantes del equipo) resolverá dudas.
+    \item La segunda y similar en tamaño, fue una clase de dos horas aproximadamente donde se enseñarán conceptos de programación estructurada con Scratch, un lenguaje de programación por bloques muy similar a Blocky de Google, se separará en secciones donde cada una alberga un concepto nuevo y una pequeña actividad de 5 a 10 minutos, se tendrá el mismo temario que en el videojuego.
+\end{itemize}
+
+Al terminar se les hizo un pequeño examen donde se verá el conocimiento sobre diferentes cosas que acaban de ver en la última hora y se comparará su rendimiento, estos dos grupos son muestras distintas de una población de todos aquellos universitarios que no saben programar y estas dos clases pueden tener un numero distinto de participantes, además de que se desconoce la forma en la que estarán distribuidos sus resultados, por lo que se usara la prueba de la U de Mann-Whitney, una prueba no paramétrica que permitirá hacer una afirmación sobre una hipótesis nula, en este caso si se ha encontrado mejora en el rendimiento (denotado por su resultado en el quiz) entre los dos grupos.
+Adicionalmente, el examen contará con preguntas adicionales sobre la opinión de los estudiantes sobre el método de enseñanza, tales como: si les entretuvo, si se les hizo interesante, cuanto se les hizo que aprendieron en una escala del 1 al 10, y si les intereso la programación y se realizará un análisis comparativo. 
 
 \section{Fases (Metodología)}
+El desarrollo de este proyecto incluye varias actividades. Incluye planificación del proyecto con la creación de un documento de diseño, creación de \textit{assets}, así como el desarrollo del juego integrando lo creado en los dos puntos mencionados anteriormente.
+En Kanban estas actividades estarán en tarjetas que serán apiladas según su dependencia causal. 
 
+Integralmente, estas se verán de la misma forma que en la Ilustración 9, primero será necesario definir en el documento de diseño que comprende cada puzle, el entorno del juego y lo que se espera que sean los controles del juego; finalmente se podrán crear los distintos puzzles según las características del engine, como sprites, así como la forma de interconectar el código creado para el juego al engine.
 
-
-...
 \section{Avances}
+\subsection{Documento de diseño del juego}
+Se trabajó en un documento que detalle los diferentes sistemas del videojuego, así como los diferentes puzzles, el arte del juego, etc. Un documento de diseño incluye información detallada que ayude a definir las labores a realizar durante el desarrollo y dar una explicación inequívoca de la entrega. 
+El diseño del juego se planeó un videojuego estilo juego de mesa, donde los movimientos por el tablero ocurren por el lanzamiento de dados, al aterrizar en un cuarto la primera vez en el juego hay cuartos dónde como jugador se puede obtener tanto un ítem que ofrece ventajas en el juego o un puzzle que ofrece al jugador una recompensa. 
+Los puzzles son pequeños programas que el jugador tiene que hacer o editar. Estos incluyen temáticas como variables, condicionales, ciclos y funciones. En la x podemos ver la organización de los puzzles, además de la división por temáticas, va escalonada la dificultad, esta dificultad puede ser mayor entre pisos de la mansión del juego o si el jugador ha resuelto un puzle de ese tipo antes en el juego.
+Los ítems del juego pueden dar al jugador alguno de las siguientes ventajas:
+\begin{itemize}
+    \item Cambiar stats propios o de enemigos
+    \item Hacer algo que el jugador normalmente no podría hacer, como moverse entre pisos o entrar a lugares o abrir tesoros
+    \item Cambiar tiros del dado
+\end{itemize}
 
+En algunos cuartos del juego se diseñó para que, como jugador se puede entrar en mini peleas donde hay enemigos que enfrentas con código o preguntas teóricas y al robarle los suficientes puntos al enemigo ganas obteniendo recompensas para usarlas en el juego. 
+En el juego a lo largo de los turnos, hay probabilidad de entrar en el modo de enfrentamiento del final del juego, en este se enfrenta el jugador más fuerte va los demás.
 
+\subsection{Servidor}
+Se creo un servidor con\textit{ASP.NET Core} para encargarse de la API \textit{SignalR} que tendra acceso los clientes del juego y las páginas del profesor. 
+Vimos factibilidad para usar \textit{Node} para ejecutar los programas que hagan los jugadores en el servidor, donde aseguraremos que cumplan el puzzle, se encontro una librería para obtener un entorno protegido para correr código de los jugadores, en ejecución se manda al microservicio el código y detalles sobre lo que se verificara mediante una \textit{API REST}. Además, tendrá un sistema de lobbies.
+Para desarrollar este sistema se usará la librería Socket.io en el servidor y en el navegador, donde se conecta y se pasaran mensajes a Unity que correrá el juego en el cliente esperará la respuesta de cualquier acción desde el servidor.
+
+El servidor será autoritativo. Mucho del juego será computado en el servidor, donde el cliente solo estará como un cliente ligero de cierta forma. 
+El cliente se conectará mediante \textit{SignalR}.
+El diagrama de secuencia UML del servidor interactuando con el cliente se puede ver en 
+
+\subsection{Creación del cliente de juego}
+Según detalles del documento de diseño, se crearon diversos sprites para elementos del mapa, personajes, animaciones e interfaces gráficas. Esta etapa será encargada de la programación de diversos sistemas y comportamientos de distintos elementos del juego que el usuario podrá interactuar directamente y que correrán en el navegador. Incluye la interconexión con Javascript en el navegador con Unity para el sistema de programación a bloques usando Blocky, este será tratado como una ventana arriba de todo el contenido que puede ser mostrada u ocultada según el estado del juego. Uno de los requisitos es poder pasar archivos XML para definir el entorno del editor de bloques al jugador.
+El juego estará embebido en una página web con un área central donde vivirá el juego, del cual Unity pide que se le pase un elemento div. 
+Esta API se conectará por medio de un sistema de interoperabilidad del motor Unity que permitirá usarlo en C#.
+
+El juego, entre resolver la información de los cambios de otros clientes y alternar a las entradas del jugador cuando es turno de este, el comportamiento del cliente ante diversos estados se puede ver como una máquina de estados como en la Ilustración 10. Inicia la conexión con el servidor, cuando el jugador introduce un código de lobby existente en la lista de sesiones en el servidor inicia el juego y el resto de los estados se alternan según lo mencionado anteriormente.
+
+\subsection{Codificación de \textit{puzzles}}
+El trabajo de esta sección puede ser divido en dos secciones:
+\begin{itemize}
+    \item Microservice para evaluar puzzles
+    \item Tooling para configurar los puzzles
+\end{itemize}
+
+En primera instancia cada puzzle se manda al servidor para ver si fueron respondidos de manera correcta. En este se configurará si hay declaraciones de variables que debe tener el código, así como si la salida del programa y lo que se revisara en el parsing para ver que sigan la estructura correcta. Sin embargo, en el backend del servidor está diseñado en C# para compartir código entre el cliente y el servidor. A base de una búsqueda de librerías previamente encontramos tres librerías para JavaScript (Acorn, Acorn-parser y js-interpreter) y dado que pueden ser separado el sistema, se decidió hacerlo un microservice a lo que se mandarán peticiones una API REST. Adicionalmente, es necesario para algunos puzzles tener un estado del editor del código, se creó una pequeña herramienta donde podemos tener un editor de código Blocky y simplemente obtenemos el código XML del programa del editor para ese tipo de puzzles.
