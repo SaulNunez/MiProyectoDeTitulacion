@@ -5,7 +5,7 @@ trabajos anteriores sobre software enfocados en la enseñanza de programación d
 
 \section{Antecedentes}
 
-Videojuegos como método de enseñanza
+\subsubsection{Videojuegos como método de enseñanza}
 El área de serious games puede pensarse como dos grandes áreas: entre ellas existe el edutainment, 
 aplicaciones informáticas con animaciones, elementos multimedia que muestran la información de una manera divertida; 
 y los videojuegos, creados con la pretensión explicita de enseñar, incluyen el entrenamiento a base de simuladores, 
@@ -30,7 +30,14 @@ Sin embargo, podemos destacar la existencia de algunas nuevas herramientas:
 \subsubsection{LOGO}
 Logo es un lenguaje de programación diseñado como una herramienta para aprender programación. 
 Permite mover una tortuga (originalmente una creatura robótica) a cualquier dirección 
-mediante introducir comandos a la computadora [3] cómo se nota en la Ilustración 1.
+mediante introducir comandos a la computadora [3] cómo se nota en la \ref{fig:logo_scrn}.
+
+\begin{figure}[h]
+    \caption{LOGO}
+    \centering
+    \includegraphics[width=0.5\textwidth]{logo}
+    \label{fig:logo_scrn}
+\end{figure}
 
 \subsubsection{Pascal}
 Lenguaje creado en 1970 por Niklaus Wirth para enseñar programación estructurada, 
@@ -60,10 +67,33 @@ drag-and-drop para realizar la tarea de programación,
 a esta se le conoce como block-based programming [6]. 
 Ejemplos de herramientas de esta categoría incluyen el entorno Scratch, 
 que permite crear pequeños juegos o animaciones con sus herramientas, 
-como se nota en la Ilustración 2 y Code.org, donde hay diversas actividades 
-para aprender a programar. 
-Similar, aunque a diferencia de este proyecto, Lego WeDo va orientado a la robótica. Según la clase, eligen de una de las diferentes opciones disponibles para construir y los alumnos siguen unas instrucciones similares a otros kits de LEGO, y puede ser programado en Scratch o en un software propio de LEGO [7]. Incluye un hub con conectividad bluetooth, donde se pueden conectar sensores y motores [8], como se puede ver en la Ilustración 3. El software de LEGO es igual, block-based programming e incluye sesiones donde los estudiantes aprenden de diversos temas y realizan actividades de programación relacionadas a estos. A diferencia de estos dos, en lugar de ser el profesor la principal fuerza para poner nuevos retos y enseñar nuevos conceptos, acudiremos a mecánicas vistas en videojuegos.
-Por otro lado esta “Kahoot”!, que es una plataforma de game-based learning [9], esta permite a profesores poner quizzes, de los cuales los estudiantes eligen la respuesta en sus teléfonos y en una pantalla más grande a la que tiene acceso el profesor se muestra la pregunta actual con sus posibles respuestas, así como la posición en la que están los alumnos entre cada pregunta, como se nota en la Ilustración 4. Este proyecto es útil para las evaluaciones, sin embargo, de manera similar a este el profesor tiene el control del tema a trabajar y lo controla desde un lobby. 
+como se nota en la \ref{fig:scratch_scrn} y Code.org, donde hay diversas actividades 
+para aprender a programar.
+
+\begin{figure}
+    \caption{El entorno de programación Scratch}
+    \centering
+    \includegraphics[width=0.5\textwidth]{scratch}
+    \label{fig:scratch_scrn}
+\end{figure}
+
+Similar, aunque a diferencia de este proyecto, Lego WeDo va orientado a la robótica. Según la clase, eligen de una de las diferentes opciones disponibles para construir y los alumnos siguen unas instrucciones similares a otros kits de LEGO, y puede ser programado en Scratch o en un software propio de LEGO [7]. Incluye un hub con conectividad bluetooth, donde se pueden conectar sensores y motores [8], como se puede ver en la \ref{fig:wedo}. El software de LEGO es igual, block-based programming e incluye sesiones donde los estudiantes aprenden de diversos temas y realizan actividades de programación relacionadas a estos. A diferencia de estos dos, en lugar de ser el profesor la principal fuerza para poner nuevos retos y enseñar nuevos conceptos, acudiremos a mecánicas vistas en videojuegos.
+
+\begin{figure}
+    \caption{El entorno de programación Scratch}
+    \centering
+    \includegraphics[width=0.5\textwidth]{wedo}
+    \label{fig:wedo}
+\end{figure}
+
+Por otro lado esta “Kahoot”!, que es una plataforma de game-based learning [9], esta permite a profesores poner quizzes, de los cuales los estudiantes eligen la respuesta en sus teléfonos y en una pantalla más grande a la que tiene acceso el profesor se muestra la pregunta actual con sus posibles respuestas, así como la posición en la que están los alumnos entre cada pregunta, como se nota en la \ref{fig:kahoot}. Este proyecto es útil para las evaluaciones, sin embargo, de manera similar a este el profesor tiene el control del tema a trabajar y lo controla desde un lobby. 
+
+\begin{figure}
+    \caption{Kahoot!}
+    \centering
+    \label{fig:kahoot}
+\end{figure}
+
 Hay una variedad de juegos de programación, como CodingGame, que es un sitio de minijuegos donde se ofrecen instrucciones sobre el punto del juego y cuenta con un IDE para programar una solución para pasarlo. Asimismo, CodeCombat, un juego de dungeon crawling donde se debe programar para avanzar en el juego [10], hay aspecto multijugador y al igual a “Kahoot!” uno puede ser parte de un lobby de una clase y el profesor puede ver el avance de sus alumnos, pero cada jugador avanza a su ritmo. Similarmente, en Screeps un MMO de estrategia para programadores de Javascript y CheckIO, se deben resolver problemas en Python [11]. Sin embargo, todos están enfocados además en la enseñanza de un lenguaje de programación (Python o Javascript son opciones comunes), por lo que para un principiante puede ser un punto de contención adicional el aprender la sintaxis durante la práctica. Similarmente, en el área de edutainment existen juegos como Human Resource Machine, Hack ‘n’ Slash, TIS-100, donde a excepción del ultimo están enfocados a desarrollar una lógica para programar, TIS-100 agrega un lenguaje ensamblador con programación a base de “nodos”, cada nodo solo acepta programas pequeños, se comunican varios nodos para crear programas más complejos, TIS-100 es más apto para enseñar sistemas distribuidos en lugar de programación básica.
 
 \section{Definición del problema}
