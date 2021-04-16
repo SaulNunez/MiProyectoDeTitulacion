@@ -339,17 +339,17 @@
     \ifdoctor
     \textsc{Tesis de Doctorado/a en Ciencias de la Ingenier{\'{i}}a}\par
     \else
-    \vspace{3\@line}{Reporte Técnico de Investigación presentado por:}\par
+    \vspace{1\@line}{Reporte Técnico de Investigación presentado por:}\par
     \fi
         \vspace{1\@line}{\@author\  \@authorid\\\@authorb\ \@authorbid}\par
-    \vspace{2\@line}{Requisito  para la obtención del título de:}\par
+    \vspace{1\@line}{Requisito  para la obtención del título de:}\par
         \ifdoctor
         \textbf{Doctor/a en Ciencias de la Ingeniería}\par
         \else
-        \vspace{1\@line}{INGENIERO EN SISTEMAS COMPUTACIONALES/SOFTWARE}\par
+        \vspace{1\@line}{INGENIERO DE SOFTWARE}\par
         \fi
     \vfill\textsc{Asesor:}\par
-        \vspace{3\@line}{\@directortitle\ \@director}\\
+        \vspace{1\@line}{\@directortitle\ \@director}\\
         {\@directorbtitle\ \@directorb}\par
   \end{center}
     \vspace{1\@line}\textrm{\@address}%\par
@@ -435,7 +435,7 @@ C. \@authorb\\
 Presente.-}\par
 \vspace{2\@line}
 
-En virtud de que cumple satisfactoriamente los requisitos solicitados, informo a usted que se autoriza la impresión del proyecto de \@title, para presentar los resultados del proyecto de titulación con el propósito de obtener el título de Licenciado en Ingeniería en Sistemas Computacionales.
+En virtud de que cumple satisfactoriamente los requisitos solicitados, informo a usted que se autoriza la impresión del proyecto de \@title, para presentar los resultados del proyecto de titulación con el propósito de obtener el título de Licenciado en Ingeniería de Software.
 
 Sin otro particular, reciba un cordial saludo.\par
 \begin{center}
@@ -469,7 +469,7 @@ El\'ectrica y Computación\\
 Presente.-}\par
 \vspace{2\@line}
 
-Por medio de la presente me permito comunicarle que, después de haber realizado las asesorías correspondientes al reporte técnico \@title, del alumno \@author de la Licenciatura en Ingeniería en Sistemas Computacionales, considero que lo ha concluido satisfactoriamente, por lo que puede continuar con los trámites de titulación intracurricular.
+Por medio de la presente me permito comunicarle que, después de haber realizado las asesorías correspondientes al reporte técnico \@title, del alumno \@author de la Licenciatura en Ingeniería de Software, considero que lo ha concluido satisfactoriamente, por lo que puede continuar con los trámites de titulación intracurricular.
 
 Sin más por el momento, reciba un cordial saludo.
 \par

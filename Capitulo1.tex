@@ -1,26 +1,21 @@
 \chapter{Planteamiento del Problema}
-En este capítulo se entrara en detalle sobre los términos relacionados al proyecto y analizamos 
+En este capítulo se entrara en detalle sobre los términos relacionados al proyecto y se analizan 
 trabajos anteriores sobre software enfocados en la enseñanza de programación de computadoras desde los 
-60s hasta la actualidad. De igual manera, se define que atacaremos con este proyecto, una problemática y que objetivos tiene el proyecto.
+60s hasta la actualidad. De igual manera, se define que atacaremos con este proyecto, una problemática y qué objetivos tiene el proyecto.
 
 \section{Antecedentes}
 
 \subsubsection{Videojuegos como método de enseñanza}
-El área de serious games puede pensarse como dos grandes áreas: entre ellas existe el edutainment, 
-aplicaciones informáticas con animaciones, elementos multimedia que muestran la información de una manera divertida; 
-y los videojuegos, creados con la pretensión explicita de enseñar, incluyen el entrenamiento a base de simuladores, 
+El área de serious games puede pensarse como dos grandes áreas: entre ellas existe el edutainment, aplicaciones informáticas con animaciones, elementos multimedia que muestran la información de una manera divertida; y los videojuegos, creados con la pretensión explícita de enseñar, incluyen el entrenamiento a base de simuladores, 
 la transmisión de la información o incluso, la promoción de alguna idea o marca \cite{unknown2017a}. 
-La principal diferencia para es la difusión del contenido, el edutainment prioriza 
-la difusión del contenido de manera lúdica, mientras que los videojuegos para enseñar deciden 
+La principal diferencia para este es la difusión del contenido, el \textit{edutainment} prioriza 
+la difusión de manera lúdica, mientras que los videojuegos serios deciden 
 sacrificar la parte lúdica para explorar de mejor manera los conocimientos y lo hace de maneras más complejas \cite{unknown2017a}.
-Mucho desarrollo en el área y uno de los primeros en adoptar los serious games fue la milicia, 
-se usan para el adiestramiento militar, sin contar con el número de simulaciones de distintos vehículos militares \cite{unknown2017a}. 
-Asimismo, han existido serious games de política, con diferentes propósitos, como la comunicación de ideas, 
-criticar a oponentes o reproducir sus discursos, 
-algunos ejemplos son los news games que mezclan lo periodístico con la denuncia política y exponen una problemática de un determinado lugar y tiempo. 
+Mucho del desarrollo en el área de los \textit{serious games} fue en la milicia, aparte de ser de los primeros en adoptarlos. Estos se usan para el adiestramiento militar, sin contar con el número de simulaciones de distintos vehículos militares \cite{unknown2017a}. 
+Asimismo, han existido serious games de política, con diferentes propósitos, como la comunicación de ideas, criticar a oponentes o reproducir sus discursos. 
+Otros ejemplos son los news games que mezclan lo periodístico con la denuncia política y exponen una problemática de un determinado lugar y tiempo. 
 Adicionalmente existen géneros como los advergames, usados para publicidad, 
-los de salud que permiten a los estudiantes aprender sin temor a equivocarse con un ser humano, 
-los videojuegos artísticos y los videojuegos religiosos \cite{unknown2017a}.
+los de salud que permiten a los estudiantes aprender sin temor a equivocarse con un ser humano, los videojuegos artísticos y los videojuegos religiosos \cite{unknown2017a}.
 
 \subsubsection{Evolución de la enseñanza de la programación}
 Podemos notar como punto importante la creación de Pascal a finales de los 60s y principios de los 70s por parte de Niklaus Wirth, un lenguaje enfocado en la enseñanza de técnicas de programación, con una nueva metodología de programación denominada programación estructurada [2]. Sin embargo, no todo es tan claro, no ha existido un consenso de los métodos a utilizar y no ha existido alguno que se haya impuesto. 
@@ -28,23 +23,24 @@ Existen métodos para la enseñanza de otros paradigmas de programación como el
 Sin embargo, podemos destacar la existencia de algunas nuevas herramientas:
 
 \begin{figure}[h]
-    \caption{LOGO}
+  
     \centering
     \includegraphics[width=0.5\textwidth]{logo}
+     \caption{LOGO}
     \label{fig:logo_scrn}
 \end{figure}
 
 \subsubsection{LOGO}
 Logo es un lenguaje de programación diseñado como una herramienta para aprender programación. 
 Permite mover una tortuga (originalmente una creatura robótica) a cualquier dirección 
-mediante introducir comandos a la computadora \cite{logo_history} cómo se nota en la \ref{fig:logo_scrn}.
+mediante introducir comandos a la computadora \cite{logo_history} cómo se nota en la Figura~\ref{fig:logo_scrn}.
 
 \subsubsection{Pascal}
 Lenguaje creado en 1970 por Niklaus Wirth para enseñar programación estructurada, 
 paradigma de programación donde se pone énfasis en las 
 estructuras condicionales y cíclicas, sin GOTO \cite{pascal_history}. 
-Fue comúnmente usado durante después de la primera mitad de los 70s y los 80s 
-debido a que estaba disponible en un gran número de computadoras, 
+Fue comúnmente usado durante la segunda mitad de los 70 y los 80 
+debido a su disponibilidad en un gran número de computadoras, 
 así como por su claridad y seguridad, no era raro que fuera usado para la 
 producción de software.
 
@@ -62,9 +58,9 @@ formas pueden programarlos para que se muevan.
 Normalmente hacen uso de programación por bloques.
 
 \begin{figure}
-    \caption{El entorno de programación Scratch}
     \centering
     \includegraphics[width=0.5\textwidth]{scratch}
+    \caption{El entorno de programación Scratch}
     \label{fig:scratch_scrn}
 \end{figure}
 
@@ -74,27 +70,31 @@ drag-and-drop para realizar la tarea de programación,
 a esta se le conoce como block-based programming \cite{block_based_programming}. 
 Ejemplos de herramientas de esta categoría incluyen el entorno Scratch, 
 que permite crear pequeños juegos o animaciones con sus herramientas, 
-como se nota en la \ref{fig:scratch_scrn} y Code.org, donde hay diversas actividades 
+como se nota en la figura~\ref{fig:scratch_scrn} y Code.org, donde hay diversas actividades 
 para aprender a programar.
 
-Similar, aunque a diferencia de este proyecto, Lego WeDo va orientado a la robótica. Según la clase, eligen de una de las diferentes opciones disponibles para construir y los alumnos siguen unas instrucciones similares a otros kits de LEGO, y puede ser programado en Scratch o en un software propio de LEGO \cite{lego_wedo_explanation}. Incluye un hub con conectividad bluetooth, donde se pueden conectar sensores y motores \cite{lego_wedo_site}, como se puede ver en la \ref{fig:wedo}. El software de LEGO es igual, block-based programming e incluye sesiones donde los estudiantes aprenden de diversos temas y realizan actividades de programación relacionadas a estos. A diferencia de estos dos, en lugar de ser el profesor la principal fuerza para poner nuevos retos y enseñar nuevos conceptos, acudiremos a mecánicas vistas en videojuegos.
-
 \begin{figure}
-    \caption{El entorno de programación Scratch}
     \centering
     \includegraphics[width=0.5\textwidth]{wedo}
-    \label{fig:wedo}
+    \label{fig:wedo_kit}
+    \caption{El entorno de programación Scratch}
 \end{figure}
 
-Por otro lado esta “Kahoot”!, que es una plataforma de game-based learning \cite{wang2015a}, esta permite a profesores poner quizzes, de los cuales los estudiantes eligen la respuesta en sus teléfonos y en una pantalla más grande a la que tiene acceso el profesor se muestra la pregunta actual con sus posibles respuestas, así como la posición en la que están los alumnos entre cada pregunta, como se nota en la \ref{fig:kahoot}. Este proyecto es útil para las evaluaciones, sin embargo, de manera similar a este el profesor tiene el control del tema a trabajar y lo controla desde un lobby. 
+Similar, aunque a diferencia de este proyecto, Lego WeDo va orientado a la robótica. Según la clase, eligen de una de las diferentes opciones disponibles para construir y los alumnos siguen unas instrucciones similares a otros kits de LEGO, y puede ser programado en Scratch o en un software propio de LEGO \cite{lego_wedo_explanation}. Incluye un hub con conectividad bluetooth, donde se pueden conectar sensores y motores \cite{lego_wedo_site}, como se puede ver en la figura~\ref{fig:wedo_kit}. El software de LEGO es igual, block-based programming e incluye sesiones donde los estudiantes aprenden de diversos temas y realizan actividades de programación relacionadas a estos. A diferencia de estos dos, en lugar de ser el profesor la principal fuerza para poner nuevos retos y enseñar nuevos conceptos, acudiremos a mecánicas vistas en videojuegos.
 
 \begin{figure}
-    \caption{Kahoot!}
     \centering
+    \includegraphics[width=0.5\textwidth]{images/kahoot.png}
     \label{fig:kahoot}
+    \caption{Kahoot!}
 \end{figure}
 
+Por otro lado esta “Kahoot”!, que es una plataforma de game-based learning \cite{wang2015a}, esta permite a profesores poner quizzes, de los cuales los estudiantes eligen la respuesta en sus teléfonos y en una pantalla más grande a la que tiene acceso el profesor se muestra la pregunta actual con sus posibles respuestas, así como la posición en la que están los alumnos entre cada pregunta, como se nota en la figura~\ref{fig:kahoot}. Este proyecto es útil para las evaluaciones, sin embargo, de manera similar a este el profesor tiene el control del tema a trabajar y lo controla desde un lobby. 
+
 Hay una variedad de juegos de programación, como CodingGames, que es un sitio de minijuegos donde se ofrecen instrucciones sobre el punto del juego y cuenta con un IDE para programar una solución para pasarlo. Asimismo, CodeCombat, un juego de dungeon crawling donde se debe programar para avanzar en el juego [10], hay aspecto multijugador y al igual a “Kahoot!” uno puede ser parte de un lobby de una clase y el profesor puede ver el avance de sus alumnos, pero cada jugador avanza a su ritmo. Similarmente, en Screeps un MMO de estrategia para programadores de Javascript y CheckIO, se deben resolver problemas en Python \cite{programming_games}. Sin embargo, todos están enfocados además en la enseñanza de un lenguaje de programación (Python o Javascript son opciones comunes), por lo que para un principiante puede ser un punto de contención adicional el aprender la sintaxis durante la práctica. Similarmente, en el área de edutainment existen juegos como Human Resource Machine, Hack ‘n’ Slash, TIS-100, donde a excepción del ultimo están enfocados a desarrollar una lógica para programar, TIS-100 agrega un lenguaje ensamblador con programación a base de “nodos”, cada nodo solo acepta programas pequeños, se comunican varios nodos para crear programas más complejos, TIS-100 es más apto para enseñar sistemas distribuidos en lugar de programación básica.
+
+\subsection{Lógica de programación}
+La lógica de programación se refiere al desarrollo de secuencias a fin que al ejecutarse linealmente hasta su completitud realicen un objetivo o sea un algoritmo \cite{logica_programacion}, por ejemplo, una receta de cocina. Esta habilidad requiere el desarrollo de raciocinio lógico y estructurado, así como la capacidad de analizar la causa y efecto de cada paso del algoritmo, así como la capacidad de detectar errores y proponer mejoras.
 
 \section{Definición del problema}
 La enseñanza de programación es regularmente una dualidad con la enseñanza de un lenguaje de programación, donde se enfoca en la enseñanza de la sintaxis y en la enseñanza y práctica de hilar la lógica necesaria para crear un programa para computadoras, donde entran técnicas como [12]:
@@ -107,46 +107,37 @@ La enseñanza de programación es regularmente una dualidad con la enseñanza de
 
 La enseñanza de programación es un proceso complejo, donde el alumno tiene que acostumbrarse a razonar la forma de solucionar un problema (a base de descomposición) y aprender un lenguaje de programación con todas las idiosincrasias que este tenga, desarrollando los debidos modelos mentales sobre el funcionamiento del lenguaje y sobre la notación para resolver un problema \cite{mow-a}. La sintaxis de un lenguaje de programación puede ser complicado para un principiante, se ha encontrado que estos tienen dificultad para encontrar errores gramaticales en su código. Para esto, sería mejor dotar a alguien aprendiendo a programar con la habilidad de razonar problemas en un entorno donde no tengan que razonar mucho la sintaxis del lenguaje, y haya aspectos visuales que permitan al usuario experimentar programando y desarrollar los modelos mentales, pero reduzcan la carga cognitiva de usar una herramienta como un lenguaje de programación escrito por texto. 
 
-\section{objetivo general}
-Desarrollar un videojuego multijugador colaborativo que permita a alumnos aprender programación estructurada usando un lenguaje de programación visual. 
+\section{Objetivo general}
+Desarrollar un videojuego multijugador que permita a estudiantes reforzar sus conocimientos de programación estructurada y mejorar sus habilidades de lógica de programación. 
 
 \subsection{Objetivos específicos}
 
 \begin{enumerate}
-    \item Creación de un documento de diseño.
-    \begin{enumerate}
-        \item Diseño de puzzles en un entorno colaborativo relacionados a distintos conceptos de la programación estructurada. 
-        \item 	Crear un mundo virtual que conecte los diversos puzles para enseñar a los alumnos programación 
-    \end{enumerate}
-    \item Crear un entorno de programación por bloques para que los alumnos puedan programar soluciones de puzzles.
-    \item Desarrollar un componente de servidor para la creación de lobbies.
-    \item Desarrollar el software en Javascript para el navegador web.
+    \item Creación de un documento de diseño que defina el alcance del juego, sus componentes y subsistemas. Que permita a sus jugadores aprender programación estructurada.
+    \item Crear un juego basado en este documento de diseño.
     \item Validar resultados a través de pruebas estadísticas.
 \end{enumerate}
 
 \section{Pregunta de Investigación}
 ¿Qué ventajas existen en la enseñanza de programación mediante el videojuego propuesto?
 
-\section{justificación}
-Un videojuego colaborativo permitiría tener ventajas como el desarrollo de las habilidades cognitivas, sociales en un ambiente de colaboración permite a sus integrantes encontrar nuevas formas de atacar problemas, algunas de estas de especial importancia para la programación. 
-Adicionalmente, los videojuegos son peculiarmente efectivos para la resolución de problemas, debido a que permiten “aprender haciendo” donde el proceso de aprendizaje es una constante practica e interacción con tareas más complejas donde los jugadores encuentran reglas subyacentes que son de utilidad para resolver los problemas que nos plantee el juego \cite{monjelat-a}. Peculiarmente, este método de aprendizaje iterativo es muy cercana a la manera en la que resolvemos problemas en la vida diaria, en esta regularmente resolvemos problemas por analogía, donde recurrimos a esquemas (paquetes de información sobre las propiedades del problema como: el conocimiento antes de intentar resolver el problema, a que se quiere llegar, los posibles pasos y aquello que es permitido y las consecuencias de escoger incorrectamente) y se recupera el marco que se creó anteriormente para resolver este nuevo problema.
+\section{Justificación}
+Un videojuego colaborativo permitiría tener ventajas como el desarrollo de las habilidades cognitivas, sociales en un ambiente de colaboración que permite a sus integrantes encontrar nuevas formas de atacar problemas, algunas de estas de especial importancia para la programación. 
+Adicionalmente, los videojuegos son peculiarmente efectivos para la resolución de problemas, debido a que permiten “aprender haciendo” donde el proceso de aprendizaje es una constante práctica e interacción con tareas más complejas donde los jugadores encuentran reglas subyacentes que son de utilidad para resolver los problemas que nos plantee el juego \cite{monjelat-a}. Peculiarmente, este método de aprendizaje iterativo es muy cercana a la manera en la que resolvemos problemas en la vida diaria. Durante nuestro día a día regularmente resolvemos problemas por analogía, donde recurrimos a esquemas (paquetes de información sobre las propiedades del problema como: el conocimiento antes de intentar resolver el problema, a qué se quiere llegar, los posibles pasos y aquello que es permitido y las consecuencias de escoger incorrectamente) y se recupera el marco que se creó anteriormente para resolver este nuevo problema.
 Un videojuego para la enseñanza de programación con los puntos anteriores, puede ser una excelente herramienta para la enseñanza en salones de clase de los elementos básicos de la programación y permitir a principiantes desarrollar la habilidad de resolver problemas. Adicionalmente, un videojuego corto puede ser una excelente herramienta para una clase de Hour of Code (una propuesta para en una hora, introducir a pequeños o a grandes a la computación o a la programación).
 
 
-\subsection{Alcances y limitaciones}
-\subsubsection{Alcances}
+\section{Delimitaciones y limitaciones}
+\subsection{Delimitaciones}
 \begin{itemize}
-    \item Este videojuego se podrá jugar desde un navegador
-    \begin{itemize}
-        \item Ante ello será programado en el engine Unity3D exportando al entorno WebGL
-    \end{itemize}
-    \item El producto consta de un tiempo de juego de una hora a hora y media para ser completado por el jugador.
-    \item Los puzles están enfocados a crear o modificar código con el fin de alterar algún aspecto del nivel, ya sea enemigos, el ambiente o manejar algún NPC (personaje no jugable) para resolverlos.
+    \item Este videojuego se podrá jugar desde un navegador web, de preferencia en computadoras de escritorio o laptops. Ante ello será programado en el \textit{engine} Unity3D exportando al entorno WebGL
+    \item El producto tendrá un tiempo de juego de 20 a 30 minutos de juego.
+    \item Los puzles están enfocados a enseñar mediante educación JIT diferentes conceptos de programación procedurimental y entrenar la lógica de programación
+    \item Se uso Mirror como librería para manejar el multijugador
 \end{itemize}
-
-\subsubsection{Limitaciones}
+\subsection{Limitaciones}
 \begin{itemize}
-    \item Se tuvo un límite de tiempo de desarrollo a 4 meses para acomodar la validación y procesos adicionales. 
-    \item Se uso la librería Blocky para implementar la programación por bloques, está pendiente descubrir debilidades en sus capacidades, por lo que puede cambiar temas jugables, los tipos de puzzles o jugabilidad general según se encuentren limitaciones.
-    \item Se uso un servidor ASP.NET Core para el desarrollo del modo multijugador.
+    \item Se tuvo un límite de tiempo de desarrollo a 4 meses para acomodar la validación y
+procesos adicionales.
+
 \end{itemize}
