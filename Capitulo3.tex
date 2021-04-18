@@ -84,7 +84,7 @@ Cómo anteriormente se había tratado, el tiempo de ciclo o \textit{Lead Time} e
 
 \subsection{Análisis}
 \subsubsection{Propuestas de producto}
-Durante la definición del proyecto empezó la pandemia del COVID-19, ante la necesidad de el aislamiento mucha gente recurrió a una gran variedad de juegos para ocupar su tiempo libre, entre estos hubo algunos juegos que ocuparon la consciencia colectiva por al menos un rato, juegos como \textit{Animal Crossing}, \texit{Fall Guys} y \textit{Among Us}. En el caso de este ultimo, la mayoría del público lo descubrió en \textit{streams}, gente jugando con sus amigos transmitido en tiempo real, estos normalmente jugaban el juego mientras estaban en videollamada, en cierta forma simulando su inicio como juego con partidas en Red Local. Un juego con ventajas similares funciona tanto en un entorno en linea así como en un salón de clases y tiene utilidad como actividad integradora porque naturalmente hace que entre compañeros hablen y permite conocer a otras personas.
+Durante la definición del proyecto empezó la pandemia del COVID-19, ante la necesidad de el aislamiento mucha gente recurrió a una gran variedad de juegos para ocupar su tiempo libre, entre estos hubo algunos juegos que ocuparon la consciencia colectiva por al menos un rato, juegos como \textit{Animal Crossing}, \textit{Fall Guys} y \textit{Among Us}. En el caso de este ultimo, la mayoría del público lo descubrió en \textit{streams}, gente jugando con sus amigos transmitido en tiempo real, estos normalmente jugaban el juego mientras estaban en videollamada, en cierta forma simulando su inicio como juego con partidas en Red Local. Un juego con ventajas similares funciona tanto en un entorno en linea así como en un salón de clases y tiene utilidad como actividad integradora porque naturalmente hace que entre compañeros hablen y permite conocer a otras personas.
 En su parte, se definió de la creación del juego en el que el usuario pueda aprender programación junto con sus compañeros, de especial importancia durante el tiempo de realización de este proyecto donde estaba activa la pandemia del COVID-19 que obligo a muchos estudiantes a tener clases a distancia. Ante esto, de preferencia que el juego fuera accesible en una multitud de dispositivos, a fin de que una gran variedad de estudiantes puedan acceder con su dispositivo o un dispositivo de la institución para participar en la actividad. Con este factor se considero la necesidad de crear un juego para navegador como producto final. A base de la experiencia previa, así como sus plataformas soportadas y su facilidad para el desarrollo se decidió usar \textit{Unity} como motor gráfico.
 
 \section{Diseño}
@@ -122,7 +122,7 @@ Los puzzles del juego fueron pensados para traer analogías del mundo real para 
 Para cubrir los conceptos de programación estructurada se crearon los siguientes \textit{puzzles}:
 
 \begin{itemize}
-    \item Variables tipo enteras: Con un cuarto de boilers en un extremo de la casa para brindar agua caliente, el jugador ajusta la temperatura a la que marca el termómetro, como se puede ver en la figura figura~\ref{fig:puzzle_enteros_boiler}. El puzzle se completa si el usuario mueve el \texit{slider} a la temperatura correcta.
+    \item Variables tipo enteras: Con un cuarto de boilers en un extremo de la casa para brindar agua caliente, el jugador ajusta la temperatura a la que marca el termómetro, como se puede ver en la figura figura~\ref{fig:puzzle_enteros_boiler}. El puzzle se completa si el usuario mueve el \textit{slider} a la temperatura correcta.
     \item Secuencia: Entrena al jugador en su lógica de programación. Resolverlo requiere usar los cursores para moverse, requiere considerar el camino a tomar para llegar al otro lado. Cuenta como completado cuando el jugador se haya desplazado hasta el otro extremo de campo de juego del puzzle.
     \item Variables tipo string: El jugador teclea su nombre, al finalizar, un robot de servicio mostrara una caja de dialogo diciéndole Hola Juan, por poner un ejemplo. El motivo de esto es que normalmente las variables string contienen información a imprimir en pantalla y requieren operaciones como concatenación para tenerla en el formato adecuado.
     \item  Variables tipo booleano: Este tipo de variables son representadas como un \textit{switch} o un \textit{checkbox}. En este caso el jugador tendrá que volver a encender el generador moviendo la palanca. Un click mueve la palanca de una posición a la siguiente.
@@ -164,7 +164,22 @@ Es un sistema que funciona primordialmente en el servidor, se puede notar su fun
 Hay un tipo de jugadores especiales llamados asesinos, estos son impostores que engañan a los demás jugadores de su verdadera identidad. Estos tienen entre una de sus capacidades matar a otros jugadores. El asesinar a otros jugadores es una actividad que es controlada autoritativamente por el servidor.
 Como se nota en la figura~\ref{fig:diagrama_sec_muertes_por_impost}, el detectar jugadores ocurre en el servidor. En el cliente el jugador impostor puede matar a otros jugadores no impostores, cuando se manda la señal de matar a alguien (invocada por un botón) en el servidor se procesa si es legal, o sea si es físicamente posible su ocurrencia. Si es legal, se mandan funciones RPC al jugador recién muerto para que \textit{spawnee} un esqueleto en su lugar y para mandarlo a otro \textit{layer} que no es visible por los jugadores vivos (y mostrar en la cámara del juego la capa de fantasmas). En el caso del jugador 2, y la mayoría de los jugadores vivos, solo recibirán por parte del servidor un mensaje para \textit{spawnear} un nuevo \textit{sprite} del esqueleto.
 
-\subsection{Teletransporte}
+\subsubsection{Votación de asesinos}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/diagrama_secuencia_votos.png}
+    \caption{Diagrama de secuencia del sistema de votación}
+    \label{fig:diagrama_sec_votacion}
+\end{figure}
+La votación se puede invocar de dos formas distintas; la primer forma es cuando algún jugador (ya sea programador o asesino) reporta que encontró una tumba y la segunda es acudiendo a el botón de emergencia ubicado cerca del punto donde los jugadores inician la partida. Cuando la votación se muestra una UI que permite votar por quien es el impostor (figura~\ref{}). En esta parte, los jugadores pueden hablar para llegar a un acuerdo por quien votar, puede compartir información o pistas que encontraron durante su partida, decir que tareas tuvieron antes de la votación, etc. La votación ocurre con un tiempo limite definido, al acabarse se contabilizan los votos recibidos, en este caso pueden ocurrir tres escenarios:
+\begin{itemize}
+    \item Un jugador tiene la mayoría de los votos, se mata tal jugador
+    \item Dos o mas jugadores tienen la misma cantidad de votos, no se elimina a nadie dado que se considera un empate
+    \item La mayoría de los jugadores no votaron o decidieron no votar por nadie, abstinencia de votos, no se elimina a nadie porque no hubo un acuerdo
+\end{itemize}
+El flujo de la votación entre el cliente y el servidor se puede observar en la figura~\ref{fig:diagrama_sec_votacion}.
+
+\subsubsection{Teletransporte}
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\linewidth]{images/DiagramaSecuenciaTeletransporte.png}
@@ -173,17 +188,30 @@ Como se nota en la figura~\ref{fig:diagrama_sec_muertes_por_impost}, el detectar
 \end{figure}
 Solo disponibles para los asesinos. Es una forma de escapar de cuartos con puntos descubiertos. El sistema de teletransporte usara el sistema de interacción e incluye un estado especial donde los jugadores pueden moverse entre ventanillas conectadas. Las ventanillas agregan a el jugador que entro en ella a la lista de jugadores en modo de teletransportación, en este modo las opciones disponibles son moverse a la ventanilla \textit{target} y salir de la ventanilla actual, como se puede ver en la figura~\ref{fig:diagrama_sec_teletransporte}.
 
-\subsection{Sabotajes}
-Son tipos especiales de \textit{puzzles}. Tienen la misma complejidad que estos pero requieren 2 jugadores que los hagan al mismo tiempo para completarlos con éxito. Estos pueden ocurrir varias veces en la partida dependiendo de los "asesinos". Los asesinos pueden invocar los sabotajes después de un tiempo dado de que haya iniciado la partida, después de un tiempo de juntas y después de un tiempo de que los programadores completaron un primer sabotaje correctamente.
+\subsubsection{Sabotajes}
+Son tipos especiales de \textit{puzzles}. Tienen la misma complejidad que estos pero requieren 2 jugadores que los hagan al mismo tiempo para completarlos con éxito. Estos pueden ocurrir varias veces en la partida dependiendo de los asesinos. Estos pueden invocar los sabotajes después de un tiempo dado de que haya iniciado la partida, después de un tiempo de juntas y después de un tiempo de que los programadores completaron un primer sabotaje correctamente.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/sabotage_preguntas.png}
+    \caption{Interfaz gráfica de sabotage de telégrafo}
+    \label{fig:ui_teletransporte}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{images/diagrama_secuencia_sabotage_preguntas.png}
+    \caption{Diagrama de secuencia de sabotaje de telégrafo}
+    \label{fig:diagrama_secuencia_sabotage_pregunta}
+\end{figure}
 
 Hay tres sabotajes disponibles:
 \begin{itemize}
     \item Apagar generadores, jugadores tienen que encender un generador de respaldo
     \item Mover presión de \textit{boilers}, jugadores tienen que regular la presión. Puzzle consiste en que los jugadores tienen que ver el indicador en pantalla y mantener la presión en verde, modificando el algoritmo en pantalla de forma que mantenga la presión entre el mínimo y el máximo.
-    \item Sabotear telégrafo, requiere dos personas contesten preguntas. Al contestar un numero de dado de preguntas correctas resolverán el sabotaje.
+    \item Sabotear telégrafo, requiere dos personas contesten preguntas. Al contestar un numero de dado de preguntas correctas resolverán el sabotaje. La interfaz gráfica se puede ver en la figura~\ref{fig:ui_teletransporte}. En cuanto a funcionamiento, todo mundo tiene que contestar la pregunta actual para poder pasar a la siguiente, como se ve en la figura~\ref{fig:diagrama_secuencia_sabotage_pregunta}.
 \end{itemize}
 
-\subsection{Mapa de juego}
+\subsubsection{Mapa de juego}
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\linewidth]{images/MapaJuego.png}
@@ -245,14 +273,20 @@ En la creación del pipeline de la generación de documentación se usó el trab
 
 \section{Implementación}
 \subsection{Sprites}
-Como lo vimos anteriormente, hay dos tipos de \textit{sprites}. Aquellos que se obtuvieron de itch.io se agregaron simplemente a Unity importándolos a las carpetas del proyecto y configurado para que los interpretara como \textit{"sprites"}, estos al ser \textit{spritesheets} (y por lo tanto contener en un solo archivo un numero de \textit{sprites} individuales) se cortan en el editor de \textit{sprites} dependiendo del tamaño en el que fueron diseñados (normalmente 16x16 o 32x32 píxeles); normalmente aquí acabaría el proceso pero en algunos sprites requirieron ajustes manuales por su forma de \textit{"sprite packing"} (como se organizan los sprites entre el archivo de imagen). En el segundo tipo, fueron los creados específicamente para el juego, estos fueron diseñados en Photoshop, se uso el \textit{plugin} de PSDs para permitir importar archivos de Photoshop directamente a Unity para utilizarlos, dependiendo de la situación del \textit{sprite} en particular se dejaba en simple o en múltiples, estos últimos cortados en  16x16 para ítems grandes que usan el principio 9-slice. 
+Como lo vimos anteriormente, hay dos tipos de \textit{sprites}. Aquellos que se obtuvieron de itch.io se agregaron simplemente a Unity importándolos a las carpetas del proyecto y configurado para que los interpretara como \textit{"sprites"}, estos al ser \textit{spritesheets} (y por lo tanto contener en un solo archivo un numero de \textit{sprites} individuales) se cortan en el editor de \textit{sprites} dependiendo del tamaño en el que fueron diseñados (normalmente 16x16 o 32x32 píxeles); normalmente aquí acabaría el proceso pero en algunos sprites requirieron ajustes manuales por su forma de \textit{"sprite packing"} (como se organizan los sprites entre el archivo de imagen). En el segundo tipo, fueron los creados específicamente para el juego, estos fueron diseñados en Photoshop, se uso el \textit{plugin} de PSDs para permitir importar archivos de Photoshop directamente a Unity para utilizarlos, dependiendo de la situación del \textit{sprite} en particular se dejaba en simple o en múltiples, estos últimos cortados en  16x16 para ítem grandes que usan el principio 9-slice. 
 
-\subsection{Despliege}
-Se uso dos servicios de Amazon Web Services. 
-Para el cliente que el corre cada usuario y accede por internet usamos S3.
-Para el servidor se uso el \textit{trim} gratis de AWS EC2. Este fue configurado para correr Windows Server 2019, la configuración se llevo a cabo según \href{https://mirror-networking.gitbook.io/docs/guides/server-hosting/aws}{las guías de Mirror}.
+\subsection{Despliegue}
 
-(Meter diagramas de configuracion del servidor, etc)
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/diagrama_deployment.png}
+    \caption{Diagrama del despliegue}
+    \label{fig:diagrama_despliege}
+\end{figure}
+
+Para el despliegue se uso Amazon Web Services. El diagrama del despliegue se puede ver en la figura~\ref{fig:diagrama_despliege}, los servicios fueron hospedados en el \textit{datacenter} de Ohio en los Estados Unidos simplemente por ser la opción mas cercana.
+En el caso especifico del cliente que corre cada usuario y accede por internet usamos S3 para el \textit{host} de los archivos estáticos.
+Sin embargo, para el servidor se uso el \textit{trim} gratis de AWS EC2, que ofrece maquinas virtuales conectadas a internet. Este fue configurado para correr Windows Server 2019, la configuración se llevo a cabo según las guías de Mirror networking, disponibles en: \url{https://mirror-networking.gitbook.io/docs/guides/server-hosting/aws}.
 
 \section{Pruebas}
 Durante el desarrollo se usaron pruebas * en el producto, así como pruebas de humo para revisar que las suposiciones del funcionamiento del sistema eran correctas al finalizar la codificación de cierta funcionalidad. Estas ultimas fueron hechas de manera manual donde se prueba el producto a fin de ver si el sistema funciona.
