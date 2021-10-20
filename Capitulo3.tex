@@ -88,9 +88,9 @@ Sabotajes pueden ser detenidos solamente por junta de cuando un jugador reporta 
 \hline
 \end{longtable}
 
-La metodología de desarrollo de software usada fue Kanban. Para la organización del tablero usamos una aplicación multiplataforma llamada  \textit{Notion} (figura~\ref{fig:notion_proyecto}), de la cual se aprovechó su vista de tablero Kanban, lista de actividades y diagrama de Gantt. En los siguientes puntos a tratar se llevaron a cabo en la planeación de actividades y se describirá con más detalle la realización del proyecto. En la tabla~\ref{table:fechas_actividades}, la figuras ~\ref{fig:gantt_anteproyecto} y ~\ref{fig:gantt_proyecto} se puede ver las actividades realizadas a lo largo de la duración del proyecto. Desde las actividades del anteproyecto, pasando por la definición del producto esperado, hasta la realización del proyecto. 
+Kanban fue la metodología usada para el desarrollo del proyecto. Para la organización del tablero usamos una aplicación multiplataforma llamada  \textit{Notion} (figura~\ref{fig:notion_proyecto}), de la cual se aprovechó su vista de tablero Kanban, lista de actividades y diagrama de Gantt. En los siguientes puntos se presenta el plan de actividades llevadas a cabo (y su descripción con mayor detalle) en la realización del proyecto. En la tabla~\ref{table:fechas_actividades}, la figuras ~\ref{fig:gantt_anteproyecto} y ~\ref{fig:gantt_proyecto} se puede ver las actividades realizadas a lo largo de la duración del proyecto. Desde las actividades del anteproyecto, pasando por la definición del producto esperado, hasta la realización del proyecto. 
 
-Cómo anteriormente se había tratado, el tiempo de ciclo o \textit{Lead Time} es el tiempo de realización de la tarea, abarca desde que se empieza a trabajar hasta que se completa la tarea. Por lo general, es bueno cuando el tiempo de ciclo es corto porque significa que no hay obstáculos que el equipo de trabajo necesite sortear. De manera similar, como se nota en la figura~\ref{fig:grafica_tiempos_ciclo} y en la figura~\ref{fig:grafica_flujo_acumulado} la mayoría de las actividades fueron resueltas en corto tiempo, la única excepción fueron actividades donde surgieron problemas técnicos no esperados, los \textit{unknown unknowns}. El principal motivo de estos fue el uso de \textit{Mirror} que aumento la complejidad por la sincronización entre el cliente y la documentación de la librería es muy escasa arriba de la configuración básica, incluso considerando la de su predecesora, Unet.
+Cómo anteriormente se había tratado, el tiempo de ciclo o \textit{Lead Time} es el tiempo de realización de la tarea, abarca desde que se empieza a trabajar hasta que se completa la tarea. Por lo general, es bueno cuando el tiempo de ciclo es corto porque significa que no hay obstáculos que el equipo de trabajo tenga que resolver. De manera similar, como se nota en la figura~\ref{fig:grafica_tiempos_ciclo} y en la figura~\ref{fig:grafica_flujo_acumulado} la mayoría de las actividades fueron resueltas en corto tiempo, la única excepción fueron actividades donde surgieron problemas técnicos no esperados, los \textit{unknown unknowns}. El principal motivo de estos fue el uso de la librería \textit{Mirror} que aumento la complejidad por la sincronización entre el cliente y la documentación de la librería es muy escasa arriba de la configuración básica, incluso considerando la de su predecesora, Unet.
 
 \begin{figure}[H]
     \centering
@@ -166,7 +166,7 @@ Para cubrir los conceptos de programación estructurada se crearon los siguiente
         \caption{Puzzle de secuencia}
         \label{fig:puzzle_booleano}
     \end{figure}
-    \item Do While: Un \textit{do while} es útil cuando la tarea a realizar requiere hacer algo al menos una vez, en este caso usamos la palanca de arranque de un automóvil que puede requerir una vuelta o unas cuantas y cuando se inicia, se tiene que alejar la mano o en la vida real uno se puede lesionar por la fuerza del motor. El usuario completa el puzzle de manera que se intente arrancar el motor siempre que no haya encendido, el jugador entra el valor booleano que funcione el código de la manera correcta, la interfaz gráfica que mostrara se puede ver en la figura~\ref{fig:puzzle_do_while}.
+    \item Do While: Un \textit{do while} es útil cuando la tarea a realizar requiere hacer algo al menos una vez, en este caso usamos la palanca de arranque de un automóvil que puede requerir una vuelta o unas cuantas y cuando se inicia, se tiene que alejar la mano o en la vida real uno se puede lesionar por la fuerza del motor. El usuario completa el puzzle de manera que se intente arrancar el motor siempre que no haya encendido, el jugador selecciona el ciclo que cumpla el numero de vueltas que se pide. La interfaz gráfica que mostrara se puede ver en la figura~\ref{fig:puzzle_do_while}.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\linewidth]{images/PuzzleDoWhile.png}
@@ -247,14 +247,14 @@ Es un sistema que funciona primordialmente en el servidor, se puede notar su fun
 \end{figure}
 
 \subsubsection{Asesinatos}
-Hay un tipo de jugadores especiales llamados asesinos, estos son impostores que engañan a los demás jugadores de su verdadera identidad. Estos tienen entre una de sus capacidades matar a otros jugadores. El asesinar a otros jugadores es una actividad que solo el servidor tiene autoridad.
-Como se nota en la figura~\ref{fig:diagrama_sec_muertes_por_impost}, se detectan los jugadores en el servidor. En el cliente del jugador impostor se puede matar a otros jugadores no impostores, cuando se manda la señal de matar a alguien (invocada por un botón) se pregunta al servidor si es legal o sea si es físicamente posible su ocurrencia (cercanía, no hay \textit{cooldown}, entre otros). Si es legal (si en ese momento puede matar a otro jugador), se llama el \textit{spawn} de una tumba en el lugar del jugador muerto y para mandarlo a otro \textit{layer} que no es visible a los jugadores vivos y mostrar la capa de fantasmas en la cámara del cliente para el jugador muerto mediante una función RPC. En el caso de los demás jugadores solo recibirán por parte del servidor un mensaje para \textit{spawnear} una tumba y desaparecerá ese jugador de su juego.
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{images/diagrama_sec_matar.png}
     \caption{Diagrama de secuencia de muertes por asesinos/impostores}
     \label{fig:diagrama_sec_muertes_por_impost}
 \end{figure}
+Hay un tipo de jugadores especiales llamados asesinos, estos son impostores que engañan a los demás jugadores de su verdadera identidad. Estos tienen entre una de sus capacidades matar a otros jugadores. El asesinar a otros jugadores es una actividad que solo el servidor tiene autoridad.
+Como se nota en la figura~\ref{fig:diagrama_sec_muertes_por_impost}, se detectan los jugadores en el servidor. En el cliente del jugador impostor se puede matar a otros jugadores no impostores, cuando se manda la señal de matar a alguien (invocada por un botón) se pregunta al servidor si es legal o sea si es físicamente posible su ocurrencia (cercanía, no hay \textit{cooldown}, entre otros). Si es legal (si en ese momento puede matar a otro jugador), se llama el \textit{spawn} de una tumba en el lugar del jugador muerto y para mandarlo a otro \textit{layer} que no es visible a los jugadores vivos y mostrar la capa de fantasmas en la cámara del cliente para el jugador muerto mediante una función RPC. En el caso de los demás jugadores solo recibirán por parte del servidor un mensaje para \textit{spawnear} una tumba y desaparecerá ese jugador de su juego.
 
 \subsubsection{Votación de asesinos}
 La votación se puede invocar de dos formas distintas; la primera forma es cuando algún jugador (ya sea programador o asesino) reporta que encontró una tumba y la segunda es acudiendo a el botón de emergencia ubicado cerca del punto donde los jugadores inician la partida. Cuando la votación se muestra una UI que permite votar por quien es el impostor (figura~\ref{fig:diagrama_ui_votacion}). En esta parte, los jugadores pueden hablar (en su salón de clases, en videollamada o \textit{chat} de voz usando una aplicación externa) para llegar a un acuerdo por quién votar, puede compartir información o pistas que encontraron durante su partida, decir que tareas tuvieron antes de la votación, etc. La votación ocurre con un tiempo límite definido, al acabarse se contabilizan los votos recibidos, en este caso pueden ocurrir tres escenarios:
@@ -265,13 +265,13 @@ La votación se puede invocar de dos formas distintas; la primera forma es cuand
 \end{itemize}
 El flujo de la votación entre el cliente y el servidor se puede observar en la figura~\ref{fig:diagrama_sec_votacion}.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{images/diagrama_secuencia_votos.png}
     \caption{Diagrama de secuencia del sistema de votación}
     \label{fig:diagrama_sec_votacion}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{images/votacion.png}
     \caption{Diseño de interfaz gráfica pantalla de votación de asesinos}
@@ -279,34 +279,35 @@ El flujo de la votación entre el cliente y el servidor se puede observar en la 
 \end{figure}
 
 \subsubsection{Modo fantasma}
-
+Para balancear el hecho de que hay lugares de mapa donde los asesinos pueden quedarse atorados sin posibilidad de escapar después de acabar con otro jugador, se diseñó el modo fantasma. Al completar un \textit{puzzle} algún jugador como asesino se agrega una posibilidad de usar el modo fantasma que le permitirá volverse transparente y realizar una salida de estos cuartos.
 
 \subsubsection{Emergencias}
 Son tipos especiales de \textit{puzzles}. Tienen la misma complejidad que estos, pero requieren 2 jugadores que los hagan al mismo tiempo para completarlos con éxito. Estos pueden ocurrir varias veces en la partida dependiendo de los asesinos. Estos pueden invocar las emergencias después de un tiempo dado de que haya iniciado la partida, después de un tiempo de juntas y después de un tiempo de que los programadores completaron una primera emergencia correctamente.
 
-Hay tres emergencias disponibles:
-\begin{itemize}
-    \item Apagar generadores, jugadores tienen que encender un generador de respaldo. En esta emergencia los jugadores necesitan aumentar el valor de un \textit{slider}, haciendo que los jugadores experimenten con un uso potencial de las variables de números enteros (figura~\ref{fig:ui_sab_generador}).
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\linewidth]{images/SabotageGenerador.png}
         \caption{Interfaz gráfica de emergencia en los generadores de electricidad}
         \label{fig:ui_sab_generador}
     \end{figure}
-    \item Mover presión de \textit{boilers}, jugadores tienen que regular la presión. \textit{Puzzle} consiste en que los jugadores tienen que ver el indicador en pantalla y mantener la presión en verde, modificando el algoritmo en pantalla de forma que mantenga la presión entre el mínimo y el máximo (figura~\ref{fig:ui_sab_presion}).
-    \begin{figure}[H]
+        \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\linewidth]{images/SabotagePresion.png}
         \caption{Interfaz gráfica de emergencia en los boilers}
         \label{fig:ui_sab_presion}
     \end{figure}
-    \item Sabotear telégrafo, requiere dos personas contesten preguntas. Al contestar un numero de dado de preguntas correctas resolverán la emergencia. La interfaz gráfica se puede ver en la figura~\ref{fig:ui_teletransporte}.
-    \begin{figure}[H]
+        \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\linewidth]{images/sabotage_preguntas.png}
         \caption{Interfaz gráfica de emergencia de telégrafo}
         \label{fig:ui_teletransporte}
     \end{figure}
+
+Hay tres emergencias disponibles:
+\begin{itemize}
+    \item Apagar generadores, jugadores tienen que encender un generador de respaldo. En esta emergencia los jugadores necesitan aumentar el valor de un \textit{slider}, haciendo que los jugadores experimenten con un uso potencial de las variables de números enteros (figura~\ref{fig:ui_sab_generador}).
+    \item Mover presión de \textit{boilers}, jugadores tienen que regular la presión. \textit{Puzzle} consiste en que los jugadores tienen que ver el indicador en pantalla y mantener la presión en verde, modificando el algoritmo en pantalla de forma que mantenga la presión entre el mínimo y el máximo (figura~\ref{fig:ui_sab_presion}).
+    \item Sabotear telégrafo, requiere dos personas contesten preguntas. Al contestar un numero de dado de preguntas correctas resolverán la emergencia. La interfaz gráfica se puede ver en la figura~\ref{fig:ui_teletransporte}.
 \end{itemize}
 
 \subsubsection{Mapa de juego}
@@ -335,12 +336,12 @@ En esta etapa se realizó la programación de diversos sistemas y comportamiento
 \subsection{Creación de \textit{sprites} y \textit{assets}}
 Según detalles del documento de diseño, se crean los diversos sprites para personajes, animaciones, objetos (mesas, cajas) e interfaces gráficas. Se crearon de todo aquello que no se pudo obtener de spritesheets de uso libre o porque fueron originales para este juego (se hablará de esto más adelante). El diseño de algunos artículos originales se realizó previamente en el documento de diseño del juego. Para los \textit{sprites} se definieron algunas limitantes, como la resolución, donde cada \textit{tile}  tiene medidas de 16x16, el fondo de este es transparente. En los \textit{sprites} necesarios, estuvieron los de personajes jugables (figura~\ref{fig:sprite_johanna}. Estos se diseñaron en \textit{Photoshop}. En el caso de los jugadores miden 1x2 \textit{tiles}. Las mesas (comedor, mesa de billar) son 3x3 \textit{tiles}. 
 
-\begin{figure}[h]
+\begin{wrapfigure}{r}{0.25\textwidth}
     \centering
-    \includegraphics[width=0.2\linewidth]{images/JohannaOrdonez.png}
+    \includegraphics[width=0.25\linewidth]{images/JohannaOrdonez.png}
     \caption{Sprite de uno de los personajes jugables}
     \label{fig:sprite_johanna}
-\end{figure}
+\end{wrapfigure}
 
 Se encontraron \textit{spritesheets} que se pudieran usar con licencia en el proyecto en el sitio web \url{http://itch.io}, esto permitió reducir el trabajo de crear arte para el juego.
 Entre estos fueron:
@@ -352,14 +353,62 @@ Entre estos fueron:
 \end{itemize}
 
 \subsection{Puzzles}
-\begin{itemize}
-    \item Variables tipo enteras y variable de punto flotante: Dada la similitud entre ellos se decidió combinar en un solo componente que puede ser reutilizado para ambos. Como se vio anteriormente, este \textit{puzzle} para mostrar un uso posible de las variables de números, se copia la temperatura del termómetro. Acepta entradas de un componente \textit{Slider} o de un \textit{InputField} que de preferencia está configurado para solo números. Se verifica que el resultado sea correcto en el servidor, como se ve en la figura~\ref{fig:diagrama_sec_int_float}.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleNumbers.png}
         \caption{Diagrama de secuencia puzzle de int/float}
         \label{fig:diagrama_sec_int_float}
     \end{figure}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleString.png}
+        \caption{Diagrama de secuencia puzzle de cadenas de texto}
+        \label{fig:diagrama_sec_string}
+    \end{figure}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleSubstring.png}
+        \caption{Diagrama de secuencia puzzle de subcadena}
+        \label{fig:diagrama_sec_subcadena}
+    \end{figure}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleBool.png}
+        \caption{Diagrama de secuencia puzzle de subcadena}
+        \label{fig:diagrama_sec_booleano}
+    \end{figure}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleDoWhile.png}
+        \caption{Diagrama de secuencia puzzle do while}
+        \label{fig:diagrama_sec_do_while}
+    \end{figure}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\linewidth]{images/DiagramaSecuenciaPuzzleFor.png}
+        \caption{Diagrama de secuencia puzzle for}
+        \label{fig:diagrama_sec_for}
+    \end{figure}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleWhile.png}
+        \caption{Diagrama de secuencia puzzle while}
+        \label{fig:diagrama_sec_while}
+    \end{figure}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleIf.png}
+        \caption{Diagrama de secuencia puzzle if}
+        \label{fig:diagrama_sec_if}
+    \end{figure}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleIfElse.png}
+        \caption{Diagrama de secuencia puzzle if else}
+        \label{fig:diagrama_sec_if_else}
+    \end{figure}
+\begin{itemize}
+    \item Variables tipo enteras y variable de punto flotante: Dada la similitud entre ellos se decidió combinar en un solo componente que puede ser reutilizado para ambos. Como se vio anteriormente, este \textit{puzzle} para mostrar un uso posible de las variables de números, se copia la temperatura del termómetro. Acepta entradas de un componente \textit{Slider} o de un \textit{InputField} que de preferencia está configurado para solo números. Se verifica que el resultado sea correcto en el servidor, como se ve en la figura~\ref{fig:diagrama_sec_int_float}.
     \item Secuencia: Los puzzles de secuencia usan una tabla simulada aprovechando los componentes de \textit{layout} provistos por Unity para el sistema de UI. Se creo un \textit{prefab} para poderlo \textit{spawnear} suficientes cuadritos para el tamaño del campo de juego establecido para el \textit{puzzle}. \texttt{SequenceGrid} es la clase que controla en comportamiento del \textit{puzzle} en el cliente, esta hace las siguiente labores:
     \begin{itemize}
         \item Controles para el jugador
@@ -367,64 +416,16 @@ Entre estos fueron:
         \item Reiniciar puzzle cuando jugador se cae en un hoyo
     \end{itemize}
     \item Variables tipo string: Un puzzle sencillo para dar un primer al uso de las cadenas string para mostrar en cosas en pantalla, normalmente interpolado con otro texto. La interfaz gráfica del \textit{puzzle} llama una función con el nombre del usuario para que se marque el \textit{puzzle} como completado (figura ~\ref{fig:diagrama_sec_string}) y hacer que un robot cercano le dé la bienvenida mostrando una pequeña burbuja de texto arriba de su cabeza en el juego.
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleString.png}
-        \caption{Diagrama de secuencia puzzle de cadenas de texto}
-        \label{fig:diagrama_sec_string}
-    \end{figure}
     \item Variable tipo string - subcadenas: El \textit{puzzle} tiene diferentes subcadenas en cada partida, estos se establecen cuando inicia el servidor. Se calcula el inicio de la subcadena y su longitud. Una vez definido, se llama un \textit{hook} en los clientes para actualizar la UI para que muestren la subcadena a la que los jugadores luego intentaran recrear. Al mover los jugadores \textit{sliders} para cambiar los valores, se calcula cual sería la subcadena formada y se mantiene el estado en el cliente, aunque se manda una copia al servidor para validar que si es el resultado esperado, en el caso que lo sea, se considera el \textit{puzzle} como terminado (figura~\ref{fig:diagrama_sec_subcadena}).
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleSubstring.png}
-        \caption{Diagrama de secuencia puzzle de subcadena}
-        \label{fig:diagrama_sec_subcadena}
-    \end{figure}
     \item  Variables tipo booleano: Como solo depende de un botón para cambiar el estado, \textit{CompleteBoolPuzzle} tiene una función pública en el cliente que llama la UI cuando se enciende que llama al servidor para indicar que se completó el \textit{puzzle} (figura~\ref{fig:diagrama_sec_booleano}) y marcarlo como tal para los demás jugadores.
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleBool.png}
-        \caption{Diagrama de secuencia puzzle de subcadena}
-        \label{fig:diagrama_sec_booleano}
-    \end{figure}
-    \item Do While: El \textit{puzzle} es simple en lógica, no necesita crear valores aleatorios o seleccionar que configuración de una lista elegir. Existe un componente \texttt{InputField} para que el jugador pueda  configurar una variable booleana, el valor de este  se revisa en el servidor para asegurarse que fue completado (figura~\ref{fig:diagrama_sec_do_while}).
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleDoWhile.png}
-        \caption{Diagrama de secuencia puzzle do while}
-        \label{fig:diagrama_sec_do_while}
-    \end{figure}
-    \item Ciclo tipo for: Este \textit{puzzle} cada vez que se ejecuta requiere un numero aleatorio que define el número de iteraciones que necesita el algoritmo que completa el usuario, este valor se pasa del servidor a cada cliente al iniciar el servidor, cuando el jugador mete un valor, se verifica en el servidor de que la entrada sea el valor correcto para completarlo (figura~\ref{fig:diagrama_sec_for}).
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.4\linewidth]{images/DiagramaSecuenciaPuzzleFor.png}
-        \caption{Diagrama de secuencia puzzle for}
-        \label{fig:diagrama_sec_for}
-    \end{figure}
+    \item Do While: El \textit{puzzle} es simple en lógica, no necesita crear valores aleatorios o seleccionar que configuración de una lista elegir. Existe una lista de botones para que el jugador pueda seleccionar la respuesta correcta, el valor de la respuesta seleccionada se revisa en el servidor para asegurarse que fue completado (figura~\ref{fig:diagrama_sec_do_while}).
+    \item Ciclo tipo for: Este \textit{puzzle} cada vez que se ejecuta requiere un número aleatorio que define las iteraciones que necesita el algoritmo que completa el usuario, este valor se pasa del servidor a cada cliente al iniciar el servidor, cuando el jugador mete un valor, se verifica en el servidor de que la entrada sea el valor correcto para completarlo (figura~\ref{fig:diagrama_sec_for}).
     \item Ciclo tipo while: Su única tarea es revisar que el valor de llenado de la cubeta introducido por el usuario sea el valor correcto, que está definido en 6 (figura~\ref{fig:diagrama_sec_while}).
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleWhile.png}
-        \caption{Diagrama de secuencia puzzle while}
-        \label{fig:diagrama_sec_while}
-    \end{figure}
-    \item If: Para la creación de los botones con imágenes de las flores para la selección de la flor que hay que selecciona se creó un componente que sirva como abstracción, que se conecta con los componentes de \texttt{Button} y \texttt{Image} y ofrece propiedades para facilitar cambiar cosas del botón sin depender de los componentes usados en la implementación. 
+    \item If: Para los botones con imágenes de las flores se creó un componente que sirva como abstracción, que se conecta con los componentes de \texttt{Button} y \texttt{Image} y ofrece propiedades para facilitar cambiar cosas del botón sin depender de los componentes usados en la implementación. 
     Antes de que cualquier jugador pueda interactuar con el \textit{puzzle}, del lado del servidor se decide la flor que debe agarrar en jugador de manera aleatoria. Después de decidirse esta flor, se manda su \textit{id} codificado como una enumeración al cliente y el cliente recibe en un \textit{hook} este y actualiza la imagen del código del \textit{if} para mostrar la flor que el jugador tiene que seleccionar. 
     Una vez que el jugador interactúa con el \textit{puzzle}, se manda el clic del botón con el id a la flor que corresponden, si el usuario selecciona el correcto se cuenta como que se completó el \textit{puzzle}, y un subsistema se encarga de aumentar el contador (figura~\ref{fig:diagrama_sec_if}).
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleIf.png}
-        \caption{Diagrama de secuencia puzzle if}
-        \label{fig:diagrama_sec_if}
-    \end{figure}
     \item If/else: El \textit{puzzle if/else} necesita un valor aleatorio que se calcula cuando inicia el servidor, este valor es usado para decidir si se va a decorar un pastel o un \textit{cupcake}, como se había visto anteriormente le mostramos al jugador un pseudocódigo de la forma que debería de decorar el postre. Y el jugador tiene un \textit{sprite} del postre a decorar y selecciona con dos botones inferiores la decoración a usar. Al calcularse este valor anterior en el servidor, Mirror llama un \textit{hook} en el cliente sobre el cambio del valor de la variable, usamos este \textit{hook} para cambiar el \textit{sprite} del postre a decorar (figura~\ref{fig:diagrama_sec_if_else}).
     Para marcar el \textit{puzzle} como completado, hay unas funciones especiales que mandan la selección de decoración al servidor y si es la decoración correcta marcan el \textit{puzzle} como completado.
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleIfElse.png}
-        \caption{Diagrama de secuencia puzzle if else}
-        \label{fig:diagrama_sec_if_else}
-    \end{figure}
 \end{itemize}
 
 \subsection{Sistema de versiones}
@@ -434,7 +435,7 @@ Para la elaboración del proyecto se usó el sistema de versiones Git. El reposi
 Se usó Github Actions permite ejecutar un \textit{script} después de crear nuevos \textit{commits} a la rama \textit{Master}.
 Ejecuta las siguientes acciones cada vez que se activa el trabajo:
 \begin{itemize}
-    \item Compila ejecutables para Windows x64-86 y WebGL
+    \item Compila ejecutables para Linux x64-86 y WebGL
     \item Crea documentación de las funciones y variables del proyecto y sube usando \textit{Github Pages} la nueva versión a la página \url{http://saulnunez.com/Project-Hamilton/}
 \end{itemize}
 
@@ -447,45 +448,44 @@ En la creación del pipeline de la generación de documentación se usó el trab
 Como lo vimos anteriormente, hay dos tipos de \textit{sprites}. Aquellos que se obtuvieron de itch.io se agregaron simplemente a Unity importándolos a las carpetas del proyecto y configurado para que los interpretara como \textit{"sprites"}, estos al ser \textit{spritesheets} (y por lo tanto contener en un solo archivo un numero de \textit{sprites} individuales) se cortan en el editor de \textit{sprites} dependiendo del tamaño en el que fueron diseñados (normalmente 16x16 o 32x32 píxeles); normalmente aquí acabaría el proceso pero en algunos sprites requirieron ajustes manuales por su forma de \textit{"sprite packing"} (como se organizan los sprites entre el archivo de imagen). En el segundo tipo, fueron los creados específicamente para el juego, estos fueron diseñados en Photoshop, se usó el \textit{plugin} de PSDs para permitir importar archivos de Photoshop directamente a Unity para utilizarlos, dependiendo de la situación del \textit{sprite} en particular se dejaba en simple o en múltiples, estos últimos cortados en  16x16 para ítem grandes que usan el principio 9-slice.
 
 \subsection{Emergencias}
-Para las emergencias se decidió crear un subsistema para controlar su estado. Este controla la interfaz que tienen los impostores para encender las emergencias. Así como los \textit{timeouts} necesarios para que las emergencias tarden un tiempo determinado antes de poder ser activados cuando inicia el juego y cuando se reinicia el contador por una votación para sacar a alguien o por el \textit{cooldown} a una emergencia previa.
-Como los emergencias incluyen acciones comunes como activarlos o detenerlos, se creó una clase base que usan todos estos para incluir estos métodos (figura~\ref{fig:diagrama_clases_emergencias}).
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\linewidth]{images/DiagramaClasesEmergencias.png}
     \caption{Diagrama de clases del sistema de emergencias}
     \label{fig:diagrama_clases_emergencias}
 \end{figure}
-\begin{itemize}
-    \item Emergencia de telégrafo, la selección de pregunta y su revisión ocurren en el servidor, el cliente recibe información sobre la pregunta actual (para mostrarla en pantalla) y todo mundo(como todos los que están respondiendo el emergencia, mínimo los dos jugadores) tiene que contestar la pregunta actual para poder pasar a la siguiente, como se ve en la figura~\ref{fig:diagrama_secuencia_emergencia_pregunta}.
-        \begin{figure}[h]
+\begin{figure}[p]
             \centering
             \includegraphics[width=1\linewidth]{images/diagrama_secuencia_sabotage_preguntas.png}
             \caption{Diagrama de secuencia de emergencia de telégrafo}
             \label{fig:diagrama_secuencia_emergencia_pregunta}
         \end{figure}
-    \item Apagar generadores, la única función que realiza el cliente es mandar la nueva posición del \textit{slider} al servidor, como se puede ver en la figura~\ref{fig:diagrama_secuencia_generadores}.
-        \begin{figure}[h]
+        \begin{figure}[p]
             \centering
             \includegraphics[width=1\linewidth]{images/DiagramaSecuenciaSabotageGeneradores.png}
             \caption{Diagrama de secuencia de emergencia en los generadores}
             \label{fig:diagrama_secuencia_generadores}
         \end{figure}
+Para las emergencias se decidió crear un subsistema para controlar su estado. Este controla la interfaz que tienen los impostores para encender las emergencias. Así como los \textit{timeouts} necesarios para que las emergencias tarden un tiempo determinado antes de poder ser activados cuando inicia el juego y cuando se reinicia el contador por una votación para sacar a alguien o por el \textit{cooldown} a una emergencia previa.
+Como los emergencias incluyen acciones comunes como activarlos o detenerlos, se creó una clase base que usan todos estos para incluir estos métodos (figura~\ref{fig:diagrama_clases_emergencias}).
+\begin{itemize}
+    \item Emergencia de telégrafo, la selección de pregunta y su revisión ocurren en el servidor, el cliente recibe información sobre la pregunta actual (para mostrarla en pantalla) y todo mundo(como todos los que están respondiendo el emergencia, mínimo los dos jugadores) tiene que contestar la pregunta actual para poder pasar a la siguiente, como se ve en la figura~\ref{fig:diagrama_secuencia_emergencia_pregunta}.
+    \item Apagar generadores, la única función que realiza el cliente es mandar la nueva posición del \textit{slider} al servidor, como se puede ver en la figura~\ref{fig:diagrama_secuencia_generadores}.
     \item Ajustar presión del boiler, hay distintos medidores de los cuales elige uno para mostrar por emergencia, al definirse uno, se actualiza la UI en el cliente, cada vez que el jugador juegue con los valores del algoritmo que el usuario necesita completar para regular la presión se revisara en el cliente que son el valor ideal.
 \end{itemize}
 
 \subsection{Despliegue}
-Se crearon varias imágenes \textit{Docker} para hospedar los programas del cliente y servidor. Estos contenedores son manejados por \textit{Docker Compose} que controla su estado y crea una red local simulada entre estos. El diagrama de la conexión entre los contenedores y el mundo real se puede ver en la figura~\ref{fig:diagrama_despliege}, el \textit{stack} de red del servidor manda los paquetes de red a Docker que a la vez la delega a los contenedores.
-En el caso específico del cliente que corre cada usuario se usó Apache para el \textit{host} de los archivos estáticos.
-Para la configuración del servidor en \textit{Ubuntu} se llevó a cabo según las guías de Mirror networking, disponibles en: \url{https://mirror-networking.gitbook.io/docs/guides/server-hosting/google-cloud}, sobre un contenedor que corre Ubuntu.
-El protocolo usado para la comunicación se usó \textit{websockets}, para poder usar la misma dirección y el mismo puerto 80 que el sitio como para realizar la conexión al servidor (\url{http://pruebas.saulnunez.com} para el cliente y \url{ws://pruebas.saulnunez.com} para el servidor), se usó Apache como servidor Proxy, el cual hace redirección al servidor que contiene el sitio del cliente si el protocolo es http, pero si tiene el /texit{header} para hacer \texit{upgrade}se dirige al servidor de juego.
-Para hospedar todo se usó \textit{Ubuntu} en \textit{Google Cloud Compute Engine}, en el cual para instalar Docker que uso la guía de instalación oficial: \url{https://docs.docker.com/engine/install/ubuntu/}. Docker Compose se necesitó instalar por separado, lo que se realizó con su guía oficial de instalación, obtenida aquí: \url{https://docs.docker.com/compose/install/}.
-
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{images/diagrama_deployment.png}
     \caption{Diagrama del despliegue}
     \label{fig:diagrama_despliege}
 \end{figure}
+Se crearon varias imágenes \textit{Docker} para hospedar los programas del cliente y servidor. Estos contenedores son manejados por \textit{Docker Compose} que controla su estado y crea una red local simulada entre estos. El diagrama de la conexión entre los contenedores y el mundo real se puede ver en la figura~\ref{fig:diagrama_despliege}, el \textit{stack} de red del servidor manda los paquetes de red a Docker que a la vez la delega a los contenedores.
+En el caso específico del cliente que corre cada usuario se usó Apache para el \textit{host} de los archivos estáticos.
+Para la configuración del servidor en \textit{Ubuntu} se llevó a cabo según las guías de Mirror networking, disponibles en: \url{https://mirror-networking.gitbook.io/docs/guides/server-hosting/google-cloud}, sobre un contenedor que corre Ubuntu.
+El protocolo usado para la comunicación se usó \textit{websockets}, para poder usar la misma dirección y el mismo puerto 80 que el sitio como para realizar la conexión al servidor (\url{http://pruebas.saulnunez.com} para el cliente y \url{ws://pruebas.saulnunez.com} para el servidor), se usó Apache como servidor Proxy, el cual hace redirección al servidor que contiene el sitio del cliente si el protocolo es http, pero si tiene el /texit{header} para hacer \texit{upgrade}se dirige al servidor de juego.
+Para hospedar todo se usó \textit{Ubuntu} en \textit{Google Cloud Compute Engine}, en el cual para instalar Docker que uso la guía de instalación oficial: \url{https://docs.docker.com/engine/install/ubuntu/}. Docker Compose se necesitó instalar por separado, lo que se realizó con su guía oficial de instalación, obtenida aquí: \url{https://docs.docker.com/compose/install/}.
 
 \section{Pruebas}
 Durante el desarrollo se usaron pruebas de humo en el producto, se usó el \textit{asset} \href{https://github.com/hwaet/UnityProjectCloner}{UnityProjectCloner} para crear una copia del proyecto para poder simular en la misma computadora un cliente y lo que la librería Mirror llama un \textit{host}, un cliente con el servidor integrado, a base de esto poder probar que el código generado tenía el funcionamiento esperado y que no tuviera errores o problemas de configuración. Fueron pruebas de 5-15 minutos sobre el sistema que se estaba trabajando en ese momento.
