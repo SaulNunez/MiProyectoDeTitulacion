@@ -10,7 +10,7 @@ El videojuego tendrá una duración aproximada de 20-30 minutos.
 Para la evaluación de la eficacia del producto creado se realizó en dos etapas.
 
 \begin{itemize}
-    \item Se pidió ayuda a un docente que en el semestre agosto-diciembre de 2021 impartiera clases de Fundamentos de Programación o de Programación 1. [TBD quien] Esto con el fin de validar el contenido por su valor didáctico, que cumpla las demandas del curso y enseñe el tema de manera correcta.
+    \item Se pidió ayuda a un docente que en el semestre agosto-diciembre de 2021 impartiera clases de Fundamentos de Programación o de Programación 1. Esto con el fin de validar el contenido por su valor didáctico, que cumpla las demandas del curso y enseñe el tema de manera correcta.
     \item Una vez evaluado el contenido, se probó con uno de los grupos que imparte este docente. Primero se hizo un pequeño examen/encuesta para evaluar su conocimiento, así como obtener su expectativa del juego antes que lo probaran. Después se puso en grupos de ocho jugadores a jugar. Y una vez terminada la partida, se puso a que contestaran una segunda encuesta, a fin de evaluar su conocimiento después del juego, así como obtener retroalimentación sobre problemas de usabilidad que encontraron y si el juego se les hizo divertido.
 \end{itemize}
 
@@ -138,76 +138,29 @@ Los puzzles del juego fueron pensados para traer analogías del mundo real para 
 Para cubrir los conceptos de programación estructurada se crearon los siguientes \textit{puzzles}:
 
 \begin{itemize}
-    \item Variables numéricas tipo enteras: Con un cuarto de \textit{boilers} en un extremo de la casa para brindar agua caliente, el jugador ajusta la temperatura a la que marca el termómetro, como se puede ver en la figura figura~\ref{fig:puzzle_int}. El \textit{puzzle} se completa si el usuario mueve el \textit{slider} a la temperatura correcta. Pensado en la vida real que los microcontroladores normalmente leen los valores de sensores.
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.5\linewidth]{images/PuzzleInt.png}
-        \caption{Puzzle de variable numérica de tipo entero }
-        \label{fig:puzzle_int}
-    \end{figure}
-    \item Secuencia: Entrena al jugador en su lógica de programación al trabajar en el jugador la habilidad de resolver problemas en paso. Requiere usar las teclas de dirección para moverse, requiere considerar el camino a tomar para llegar al otro lado. Cuenta como completado cuando el jugador se haya desplazado hasta el otro extremo de campo de juego del \textit{puzzle} (figura~\ref{fig:puzzle_secuencia}). Este \textit{puzzle} está pensado en que el jugador considere los pasos necesarios para llegar a la meta, lo necesario para la creación de algoritmos.
+    \item Secuencia: Entrena al jugador en lógica de programación al trabajar en este la habilidad de resolver problemas paso a paso. En este el \textit{puzzle} jugador tiene que introducir los pasos necesarios para hacer que el robot llegue de un lado al otro (figura~\ref{fig:puzzle_secuencia}). Este \textit{puzzle} está pensado en que el jugador considere los pasos necesarios para llegar a la meta, lo necesario para la creación de algoritmos.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\linewidth]{images/PuzzleSecuencia.png}
         \caption{Puzzle de secuencia}
         \label{fig:puzzle_secuencia}
     \end{figure}
-    \item Variables tipo string: El jugador teclea su nombre, al finalizar, un robot de servicio mostrara una burbuja de dialogo dándole la bienvenida (figura~\ref{fig:puzzle_string}). La motivación de este \textit{puzzle} es que normalmente las variables \textit{string} contienen información a imprimir en pantalla y requieren operaciones como concatenación para tenerla en el formato adecuado.
-        \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.5\linewidth]{images/PuzzleString.png}
-        \caption{Puzzle de cadena de texto}
-        \label{fig:puzzle_string}
-    \end{figure}
-    \item  Variables tipo booleano: Este tipo de variables son representadas como un \textit{switch} o un \textit{checkbox}. El jugador tendrá que volver a encender el generador moviendo la palanca. Un clic mueve la palanca de una posición a la siguiente y completa el \text{puzzle}, como se ve en la figura~\ref{fig:puzzle_booleano}. Pensada en el uso de los booleanos como banderas, para indicar el estado de un objeto. 
+    \item Ciclos
+    \begin{itemize}
+        \item Opción múltiple: En este tipo de \textit{puzzle}, se pide al jugador que elija el ciclo con un numero definido de repeticiones. Dependiendo de la dificultad, puede que se combinen varios tipos de ciclos en sus opciones. 
+        \item Completar ciclo: Tiene instrucciones de cuantas repeticiones debe hacer el bucle. El jugador tiene que completar el valor de pasos, de inicio de la variable de índice y cuando termina de correrse el ciclo.
+    \end{itemize}
+    \item Condicionales: Hay varios puzzles tratando condicionales a lo largo del juego. La formula general es que tienen que seleccionar lo que hace ese pedazo especifico de código. Un ejemplo, se puede ver en la figura~\ref{fig:if_else_puzzle}. Sin embargo, como lo hace cada uno varia ligeramente.
     \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.5\linewidth]{images/SabotageGenerador.png}
-        \caption{Puzzle de secuencia}
-        \label{fig:puzzle_booleano}
-    \end{figure}
-    \item Do While: Un \textit{do while} es útil cuando la tarea a realizar requiere hacer algo al menos una vez, en este caso usamos la palanca de arranque de un automóvil que puede requerir una vuelta o unas cuantas y cuando se inicia, se tiene que alejar la mano o en la vida real uno se puede lesionar por la fuerza del motor. El usuario completa el puzzle de manera que se intente arrancar el motor siempre que no haya encendido, el jugador selecciona el ciclo que cumpla el numero de vueltas que se pide. La interfaz gráfica que mostrara se puede ver en la figura~\ref{fig:puzzle_do_while}.
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.5\linewidth]{images/PuzzleDoWhile.png}
-        \caption{Puzzle de estructura do while}
-        \label{fig:puzzle_do_while}
-    \end{figure}
-    \item Variable numérica de punto flotante: Un \textit{puzzle} más avanzado que el de variable tipo entero, como se ve en la figura~\ref{fig:puzzle_float} el jugador introduce la temperaturas, por experiencia de usuario se cambia el \textit{slider} a una caja donde el jugador tendrá que teclear el valor actual de la temperatura.
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.5\linewidth]{images/PuzzleFloat.png}
-        \caption{Puzzle de variable float}
-        \label{fig:puzzle_float}
-    \end{figure}
-    \item Ciclo tipo for:Se asemeja al ciclo de una lavadora que dura cierta duración, el jugador necesita que poner las veces que la lavadora da vuelta la ropa (figura~\ref{fig:puzzle_for}).
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.5\linewidth]{images/PuzzleFor.png}
-        \caption{Puzzle de estructura for}
-        \label{fig:puzzle_for}
-    \end{figure}
-    \item Ciclo tipo while: Una cubeta requiere cierta cantidad de agua para llenarla hasta cierto punto, o si no, se tira el agua de la cubeta (figura~\ref{fig:while_puzzle}). Este concepto permite realizar una acción monitoreando mediante una condición el nivel de la cubeta y así detenerse, algo así como el uso de la estructura \textit{while} para la lectura del contenido de un archivo por poner un ejemplo.
-        \begin{figure}[H]
-            \centering
-            \includegraphics[width=0.5\linewidth]{images/WhilePuzzle.png}
-            \caption{Puzzle de while}
-            \label{fig:while_puzzle}
-        \end{figure}
-    \item Condicional simple: Los jugadores tendrán que seleccionar la flor del tipo correcto a poner en el florero, como se nota en la figura~\ref{fig:puzzle_if}. La forma en la que los usuarios saben cuál es la solución correcta es por un pseudocódigo que incluye un único \textit{if}, los usuarios tendrán que analizarlo para saber que flor \textit{tendrán} que seleccionar.
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.5\linewidth]{images/PuzzleIf.png}
-        \caption{Puzzle de seleccionar flor, usa selección para enseñar el uso del if}
-        \label{fig:puzzle_if}
-    \end{figure}
-    \item Condicional con \textit{else}: Una versión extendida del \textit{if}. Haciendo alusión a la figura~\ref{fig:if_else_puzzle}, este consiste en decoración de repostería, en ese día se prepararon \textit{cupcakes} y pasteles,  el jugador será presentado el pseudocódigo de cual debería ser su decisión según el tipo de repostería. Las opciones serán mostradas como botones.
-        \begin{figure}[H]
-            \centering
-            \includegraphics[width=0.5\linewidth]{images/PuzzleIfElse.png}
-            \caption{Puzzle diseñado para el if/else}
-            \label{fig:if_else_puzzle}
-        \end{figure}
+                \centering
+                \includegraphics[width=0.5\linewidth]{images/PuzzleIfElse.png}
+                \caption{Puzzle diseñado para el if/else}
+                \label{fig:if_else_puzzle}
+            \end{figure}
+    \begin{itemize}
+        \item If: El jugador tiene que razonar el pseudocódigo dado y ver si la condición ambos tipos de flores son iguales ocurre. Dependiendo de eso que rama va agarrar el programa y como impacta eso a lo que realiza este.
+        \item If/else: El usuario lee un pedazo de pseudocódigo, lo analiza para ver que hace, y elige la opción que marca lo que hizo el código. El pedazo dice como se va a decorar un pastel, el usuario tiene que analizar el código y decir si se va a decorar con cerezas o con chispitas.
+    \end{itemize}
 \end{itemize}
 
 La organización de los puzzles se puede ver la figura~\ref{fig:items_on_map}. La mayoría de los puzzles están organizados dependiendo en su temática, por ejemplo: decoración de pasteles ocurre en la cocina. Sin embargo, se tomaron a la hora del diseño libertades para hacer que cuartos sean más justos, hay puzzles que su posición fue definida para crear un flujo de jugadores en ese cuarto, a forma de que haya lugares donde los asesinos pueden ir varias veces a encontrar jugadores programadores y a la vez evitar que si los agarran en estos lugares nadie se dé cuenta.
@@ -353,47 +306,29 @@ Entre estos fueron:
 \end{itemize}
 
 \subsection{Puzzles}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleNumbers.png}
-        \caption{Diagrama de secuencia puzzle de int/float}
-        \label{fig:diagrama_sec_int_float}
-    \end{figure}
-        \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleString.png}
-        \caption{Diagrama de secuencia puzzle de cadenas de texto}
-        \label{fig:diagrama_sec_string}
-    \end{figure}
-        \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleSubstring.png}
-        \caption{Diagrama de secuencia puzzle de subcadena}
-        \label{fig:diagrama_sec_subcadena}
-    \end{figure}
         \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleBool.png}
-        \caption{Diagrama de secuencia puzzle de subcadena}
+        \caption{Diagrama de secuencia puzzle de encender generador (booleanos y comando si entonces)}
         \label{fig:diagrama_sec_booleano}
     \end{figure}
         \begin{figure}[H]
         \centering
-        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleDoWhile.png}
-        \caption{Diagrama de secuencia puzzle do while}
-        \label{fig:diagrama_sec_do_while}
+        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleSecuencia.drawio.png}
+        \caption{Diagrama de secuencia del puzzle de secuencia }
+        \label{fig:diagrama_sec_sec}
     \end{figure}
         \begin{figure}[H]
         \centering
-        \includegraphics[width=0.4\linewidth]{images/DiagramaSecuenciaPuzzleFor.png}
-        \caption{Diagrama de secuencia puzzle for}
-        \label{fig:diagrama_sec_for}
+        \includegraphics[width=0.4\linewidth]{images/diagrama_sec_for_while.png}
+        \caption{Diagrama de secuencia puzzle completar ciclos}
+        \label{fig:diagrama_sec_for_while}
     \end{figure}
         \begin{figure}[H]
         \centering
-        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleWhile.png}
-        \caption{Diagrama de secuencia puzzle while}
-        \label{fig:diagrama_sec_while}
+        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleOpcionMultiple.png}
+        \caption{Diagrama de secuencia del sistema para puzzles de opción múltiple}
+        \label{fig:diagrama_sec_opmul}
     \end{figure}
         \begin{figure}[H]
         \centering
@@ -408,25 +343,14 @@ Entre estos fueron:
         \label{fig:diagrama_sec_if_else}
     \end{figure}
 \begin{itemize}
-    \item Variables tipo enteras y variable de punto flotante: Dada la similitud entre ellos se decidió combinar en un solo componente que puede ser reutilizado para ambos. Como se vio anteriormente, este \textit{puzzle} para mostrar un uso posible de las variables de números, se copia la temperatura del termómetro. Acepta entradas de un componente \textit{Slider} o de un \textit{InputField} que de preferencia está configurado para solo números. Se verifica que el resultado sea correcto en el servidor, como se ve en la figura~\ref{fig:diagrama_sec_int_float}.
-    \item Secuencia: Los puzzles de secuencia usan una tabla simulada aprovechando los componentes de \textit{layout} provistos por Unity para el sistema de UI. Se creo un \textit{prefab} para poderlo \textit{spawnear} suficientes cuadritos para el tamaño del campo de juego establecido para el \textit{puzzle}. \texttt{SequenceGrid} es la clase que controla en comportamiento del \textit{puzzle} en el cliente, esta hace las siguiente labores:
-    \begin{itemize}
-        \item Controles para el jugador
-        \item Actualizar sprites del grid cuando hay cambios de posición del jugador
-        \item Reiniciar puzzle cuando jugador se cae en un hoyo
-    \end{itemize}
-    \item Variables tipo string: Un puzzle sencillo para dar un primer al uso de las cadenas string para mostrar en cosas en pantalla, normalmente interpolado con otro texto. La interfaz gráfica del \textit{puzzle} llama una función con el nombre del usuario para que se marque el \textit{puzzle} como completado (figura ~\ref{fig:diagrama_sec_string}) y hacer que un robot cercano le dé la bienvenida mostrando una pequeña burbuja de texto arriba de su cabeza en el juego.
-    \item Variable tipo string - subcadenas: El \textit{puzzle} tiene diferentes subcadenas en cada partida, estos se establecen cuando inicia el servidor. Se calcula el inicio de la subcadena y su longitud. Una vez definido, se llama un \textit{hook} en los clientes para actualizar la UI para que muestren la subcadena a la que los jugadores luego intentaran recrear. Al mover los jugadores \textit{sliders} para cambiar los valores, se calcula cual sería la subcadena formada y se mantiene el estado en el cliente, aunque se manda una copia al servidor para validar que si es el resultado esperado, en el caso que lo sea, se considera el \textit{puzzle} como terminado (figura~\ref{fig:diagrama_sec_subcadena}).
-    \item  Variables tipo booleano: Como solo depende de un botón para cambiar el estado, \textit{CompleteBoolPuzzle} tiene una función pública en el cliente que llama la UI cuando se enciende que llama al servidor para indicar que se completó el \textit{puzzle} (figura~\ref{fig:diagrama_sec_booleano}) y marcarlo como tal para los demás jugadores.
-    \item Do While: El \textit{puzzle} es simple en lógica, no necesita crear valores aleatorios o seleccionar que configuración de una lista elegir. Existe una lista de botones para que el jugador pueda seleccionar la respuesta correcta, el valor de la respuesta seleccionada se revisa en el servidor para asegurarse que fue completado (figura~\ref{fig:diagrama_sec_do_while}).
-    \item Ciclo tipo for: Este \textit{puzzle} cada vez que se ejecuta requiere un número aleatorio que define las iteraciones que necesita el algoritmo que completa el usuario, este valor se pasa del servidor a cada cliente al iniciar el servidor, cuando el jugador mete un valor, se verifica en el servidor de que la entrada sea el valor correcto para completarlo (figura~\ref{fig:diagrama_sec_for}).
-    \item Ciclo tipo while: Su única tarea es revisar que el valor de llenado de la cubeta introducido por el usuario sea el valor correcto, que está definido en 6 (figura~\ref{fig:diagrama_sec_while}).
-    \item If: Para los botones con imágenes de las flores se creó un componente que sirva como abstracción, que se conecta con los componentes de \texttt{Button} y \texttt{Image} y ofrece propiedades para facilitar cambiar cosas del botón sin depender de los componentes usados en la implementación. 
-    Antes de que cualquier jugador pueda interactuar con el \textit{puzzle}, del lado del servidor se decide la flor que debe agarrar en jugador de manera aleatoria. Después de decidirse esta flor, se manda su \textit{id} codificado como una enumeración al cliente y el cliente recibe en un \textit{hook} este y actualiza la imagen del código del \textit{if} para mostrar la flor que el jugador tiene que seleccionar. 
-    Una vez que el jugador interactúa con el \textit{puzzle}, se manda el clic del botón con el id a la flor que corresponden, si el usuario selecciona el correcto se cuenta como que se completó el \textit{puzzle}, y un subsistema se encarga de aumentar el contador (figura~\ref{fig:diagrama_sec_if}).
-    \item If/else: El \textit{puzzle if/else} necesita un valor aleatorio que se calcula cuando inicia el servidor, este valor es usado para decidir si se va a decorar un pastel o un \textit{cupcake}, como se había visto anteriormente le mostramos al jugador un pseudocódigo de la forma que debería de decorar el postre. Y el jugador tiene un \textit{sprite} del postre a decorar y selecciona con dos botones inferiores la decoración a usar. Al calcularse este valor anterior en el servidor, Mirror llama un \textit{hook} en el cliente sobre el cambio del valor de la variable, usamos este \textit{hook} para cambiar el \textit{sprite} del postre a decorar (figura~\ref{fig:diagrama_sec_if_else}).
-    Para marcar el \textit{puzzle} como completado, hay unas funciones especiales que mandan la selección de decoración al servidor y si es la decoración correcta marcan el \textit{puzzle} como completado.
+    \item Completar ciclos: Los \textit{puzzle} de este tipo tienen varios campos a completar como se ha hablado anteriormente. Al llenar estos campos, el jugador tiene un botón de verificar, esto manda las entradas a través de la red al servidor, donde se verifica en el servidor. Ya sea respuesta correcta o falsa se comunica el resultado al cliente (figura~\ref{fig:diagrama_sec_for_while}).
+    \item Secuencia: Los puzzle de secuencia usan una tabla simulada aprovechando los componentes de \textit{layout} provistos por Unity para el sistema de UI. Se creo un \textit{prefab} para poderlo \textit{spawnear} suficientes cuadritos para el tamaño del campo de juego establecido para el \textit{puzzle}. \texttt{SequenceGrid} es la clase que controla en comportamiento del \textit{puzzle} en el cliente, esta hace la labor de actualizar \textit{sprites} del \textit{grid} cuando hay cambios de posición del jugador. Todos estos subsistemas son controlados por SequencePuzzle que se encarga de leer las instrucciones en el cliente. Al terminar de leer las instrucciones, se mandan al servidor para verificar que lleguen a la meta (y marcar el \textit{puzzle} como completado) y en el cliente hacer un \textit{replay}, es visualmente atractivo, permite al jugador ver donde se equivocó y da continuidad al jugador que completo correctamente la tarea en lugar de marcar como completado el \textit{puzzle} automáticamente.
+    \item  \textit{Puzzle} en área de generador (comando si/entonces y operadores relacionales): Este \textit{puzzle} incluye expresiones lógicas una dentro de la otra, los jugadores tendrán que analizar cómo se comporta y a base del estado actual de las variables, elegir que rama eligió el programa (el comando si/entonces) como se ve en la figura~\ref{fig:diagrama_sec_booleano}.
+    \item Elegir la opción correcta: Usado para algunos \textit{puzzles} de ciclos, hay distintos botones con opciones. El jugador da clic a la opción correcta. El juego manda el índice de la respuesta al servidor, si el índice está marcado como respuesta correcta entonces se marca como contestada correctamente (figura~\ref{fig:diagrama_sec_opmul}).
+    \item If: En este puzzle, se agarra un \textit{enum} aleatorio de los posibles tipos de flores. Este tipo de flor será seleccionada para completar un pedazo de pseudocódigo. Aparte, se selecciona otro tipo de flor, de la misma manera, esta se ajusta en cuadro de imagen. Este puzzle consiste en preguntarle al jugador que hace el seudocódigo dado el tipo de flor que pide y el tipo flor que va a procesar. La respuesta seleccionada se manda al servidor (figura~\ref{fig:diagrama_sec_if}).
+    \item If/else: El \textit{puzzle if/else} necesita un valor booleano que se calcula cuando inicia el servidor, este valor es usado para decidir si se va a decorar un pastel o un \textit{cupcake}, como se había visto anteriormente le mostramos al jugador un pseudocódigo de la forma que debería de decorar el postre. Y el jugador manda al servidor su elección usando los dos botones para seleccionar, que se revisa que sea el valor correcto en el servidor como se nota en la figura~\ref{fig:diagrama_sec_if_else}.
 \end{itemize}
+
 
 \subsection{Sistema de versiones}
 Para la elaboración del proyecto se usó el sistema de versiones Git. El repositorio es público y puede ser accedido en \url{https://github.com/SaulNunez/Project-Hamilton}.
