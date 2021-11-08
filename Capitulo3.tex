@@ -2,17 +2,12 @@
 En este capítulo se discute sobre el trabajo a realizado para la completitud del proyecto, así como la descripción y el post-mortem de las diferentes actividades realizadas durante su realización.
 
 \section{Producto propuesto}
-El producto desarrollado fue un videojuego multijugador. En este los alumnos pueden aprender conceptos básicos de los lenguajes de programación, viendo los conceptos de programación estructurada, mediante acertijos que les permitan de otra manera analizar su funcionamiento. En este juego se enfocó a la enseñanza de: variables, condicionales, ciclos y funciones, tratando temas de programación estructurada, basado en el material del curso de Fundamentos de la Programación y Programación I de la Universidad Autónoma de Ciudad Juárez, así como los libros Fundamentos de programación: Algoritmos, estructura de datos y objetos de Luis Joyanes Aguilar y Prelude to Programming: Concepts and design de Steward Venit y Elizabeth Drake. 
+El producto desarrollado fue un videojuego multijugador. En este los alumnos pueden aprender conceptos básicos de los lenguajes de programación, viendo los conceptos de programación estructurada, mediante acertijos que les permitan de otra manera analizar su funcionamiento. En este juego se enfocó a la enseñanza de: variables, condicionales, ciclos y funciones, tratando temas de programación estructurada, basado en el material del curso de Fundamentos de la Programación de la Universidad Autónoma de Ciudad Juárez, así como los libros Fundamentos de programación: Algoritmos, estructura de datos y objetos de Luis Joyanes Aguilar y Prelude to Programming: Concepts and design de Steward Venit y Elizabeth Drake. 
 Las mecánicas del juego fueron inspiradas en el videojuego \textit{Among Us}. En este juego, un grupo de máximo 10 jugadores están juntos en una partida, hay una variedad de mapas y el punto es realizar todas las actividades que tienen asignadas para ganar. Pero del grupo de jugadores, unos cuantos son asignados como impostores y su trabajo es matar a los demás jugadores. Sin embargo, los jugadores pueden reportar muertes o sonar una alarma que les permite discutir y votar por quien es impostor, si sacan a todos los impostores, ganan los \textit{crewmates}, los jugadores no impostores.
 El videojuego tendrá una duración aproximada de 20-30 minutos.
 
 \section{Forma de validación}
-Para la evaluación de la eficacia del producto creado se realizó en dos etapas.
-
-\begin{itemize}
-    \item Se pidió ayuda a un docente que en el semestre agosto-diciembre de 2021 impartiera clases de Fundamentos de Programación o de Programación 1. Esto con el fin de validar el contenido por su valor didáctico, que cumpla las demandas del curso y enseñe el tema de manera correcta.
-    \item Una vez evaluado el contenido, se probó con uno de los grupos que imparte este docente. Primero se hizo un pequeño examen/encuesta para evaluar su conocimiento, así como obtener su expectativa del juego antes que lo probaran. Después se puso en grupos de ocho jugadores a jugar. Y una vez terminada la partida, se puso a que contestaran una segunda encuesta, a fin de evaluar su conocimiento después del juego, así como obtener retroalimentación sobre problemas de usabilidad que encontraron y si el juego se les hizo divertido.
-\end{itemize}
+Para la evaluación de la eficacia del producto creado se pidió la ayuda de varios docentes que han impartido o están actualmente impartiendo clases de Fundamentos de Programación. Esto con el fin de validar el contenido por su valor didáctico, que cumpla las demandas del curso y enseñe el tema de manera correcta.
 
 \section{Metodología}
 \begin{longtable}[c]{|m{5cm}|c|c|c|}
@@ -142,7 +137,7 @@ Para cubrir los conceptos de programación estructurada se crearon los siguiente
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\linewidth]{images/PuzzleSecuencia.png}
-        \caption{Puzzle de secuencia}
+        \caption{Prototipo del puzzle de secuencias}
         \label{fig:puzzle_secuencia}
     \end{figure}
     \item Ciclos
@@ -408,8 +403,11 @@ Como los emergencias incluyen acciones comunes como activarlos o detenerlos, se 
 Se crearon varias imágenes \textit{Docker} para hospedar los programas del cliente y servidor. Estos contenedores son manejados por \textit{Docker Compose} que controla su estado y crea una red local simulada entre estos. El diagrama de la conexión entre los contenedores y el mundo real se puede ver en la figura~\ref{fig:diagrama_despliege}, el \textit{stack} de red del servidor manda los paquetes de red a Docker que a la vez la delega a los contenedores.
 En el caso específico del cliente que corre cada usuario se usó Apache para el \textit{host} de los archivos estáticos.
 Para la configuración del servidor en \textit{Ubuntu} se llevó a cabo según las guías de Mirror networking, disponibles en: \url{https://mirror-networking.gitbook.io/docs/guides/server-hosting/google-cloud}, sobre un contenedor que corre Ubuntu.
-El protocolo usado para la comunicación se usó \textit{websockets}, para poder usar la misma dirección y el mismo puerto 80 que el sitio como para realizar la conexión al servidor (\url{http://pruebas.saulnunez.com} para el cliente y \url{ws://pruebas.saulnunez.com} para el servidor), se usó Apache como servidor Proxy, el cual hace redirección al servidor que contiene el sitio del cliente si el protocolo es http, pero si tiene el /texit{header} para hacer \texit{upgrade}se dirige al servidor de juego.
-Para hospedar todo se usó \textit{Ubuntu} en \textit{Google Cloud Compute Engine}, en el cual para instalar Docker que uso la guía de instalación oficial: \url{https://docs.docker.com/engine/install/ubuntu/}. Docker Compose se necesitó instalar por separado, lo que se realizó con su guía oficial de instalación, obtenida aquí: \url{https://docs.docker.com/compose/install/}.
+
+\section{Despliegue}
+Para hospedar todo lo anteriormente detallado se usó \textit{Ubuntu} en \textit{Google Cloud Compute Engine}, en el cual para instalar Docker que uso la guía de instalación oficial: \url{https://docs.docker.com/engine/install/ubuntu/}. Docker Compose se necesitó instalar por separado, lo que se realizó con su guía oficial de instalación, obtenida aquí: \url{https://docs.docker.com/compose/install/}.
+
+Adicionalmente, se creó una pequeña guía para montarlo en otros servidores, esta esta disponible en el repositorio anteriormente detallado.
 
 \section{Pruebas}
 Durante el desarrollo se usaron pruebas de humo en el producto, se usó el \textit{asset} \href{https://github.com/hwaet/UnityProjectCloner}{UnityProjectCloner} para crear una copia del proyecto para poder simular en la misma computadora un cliente y lo que la librería Mirror llama un \textit{host}, un cliente con el servidor integrado, a base de esto poder probar que el código generado tenía el funcionamiento esperado y que no tuviera errores o problemas de configuración. Fueron pruebas de 5-15 minutos sobre el sistema que se estaba trabajando en ese momento.

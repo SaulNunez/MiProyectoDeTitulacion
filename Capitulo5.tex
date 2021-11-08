@@ -1,11 +1,44 @@
 % Inicio de Introducción
 \chapter{Conclusiones}\label{conclusiones}
-[Estos son los enunciados más importantes y más fuertes que se deben realizar acerca de los resultados y discusiones. Las conclusiones deben resumir el contenido y el propósito del proyecto. Se debe hacer énfasis en lo que queremos que se recuerde acerca del proyecto y realizar una síntesis de los resultados que se derivaron de los objetivos específicos trazados inicialmente (y que dieron respuesta a las preguntas de investigación si es que existen). No deben aparecer elementos nuevos o que no fueron discutidos, por ejemplo nuevos resultados observados en otros trabajos. Las conclusiones se refieren única y exclusivamente al proyecto desarrollado.
+ 
+ En esta sección se resume el trabajo realizado. Además, se discute los resultados respecto a los objetivos y pregunta de investigación. Adicionalmente se discute de trabajo a futuro.
  
 \section{Con respecto a las preguntas de investigación}
+
+Se encontró interés en muchos docentes de la materia de Fundamentos, respecto a las ventajas que pudiera traer un juego como este, así como de las capacidades actuales del producto. Uno de los docentes entrevistados menciono que lo usaría para su clase cuando llegue a lanzarse. 
+
+En general, todos los docentes estuvieron de acuerdo en que sería algo que llamaría la atención a sus estudiantes, entre las razones porque:
+\begin{itemize}
+    \item Los roles, el cambio constante de los roles, así como la complejidad adicional que agrega la interacción entre compañeros para ser efectivo en tu rol mantienen el juego interesante para los alumnos.
+    \item A base de su experiencia, los alumnos responden bien a cuando usan juegos o aplicaciones para el proceso de enseñanza. Juegos como \textit{Kahoot!} tuvieron muy buena acogida  en el salón de clases.
+\end{itemize}
+
 \section{Con respecto al objetivo de la investigación}
+\begin{itemize}
+    \item Se realizó un documento de diseño donde se diseñaron las mecánicas del juego, ambientación, personajes y \textit{puzzles}.
+    \item Se creó un juego a base de este documento usando Unity3D y Mirror Netorking para el multijugador; este juego está listo para albergar partidas del juego, puede ser instalado en un servidor o en una computadora en una red local. Estos ejecutables esta contenerizados y son orquestados usando Docker Compose.
+    \item Se realizaron reuniones con profesores mostrándoles el juego y tuvieron interés en el juego. Descubriendo \textit{showstoppers}, los cuales se corrigieron, de forma que el juego cumple de mejor manera los requerimientos que los docentes necesitan para usarlo en sus clases.
+\end{itemize}
+
 \section{Recomendaciones para futuras investigaciones}
-[La forma más simple de presentar las conclusiones es enumerándolas consecutivamente, pero podrías optar por recapitular brevemente el contenido del artículo, mencionando someramente su propósito, los métodos principales, los datos más sobresalientes y la contribución más importante de la investigación. La sección de conclusiones no debe repetir innecesariamente el contenido del resumen.]
+\subsection{Puzzles}
+Hubo dos sugerencias, una sobre agregar temas adicionales y otra sobre la complejidad de los ejercicios (que esta pudiera subir más). Para cubrir esta área, se pueden agregar lo siguientes al juego como trabajo futuro:
+\begin{itemize}
+    \item Crear ejercicios con los temas de arreglos y matrices.
+    
+    \item Agregar ejercicios más complejos. Los ejercicios de juego fueron diseñados para ser sencillos: de un solo tema y no muy extensos. Se puede aumentar la complejidad con la creación de ejercicios con más condicionales dobles, y agregar \texit{puzzles} con condicionales anidadas, ciclos y combinación de ciclos con condicionales. Estos ejercicios pueden ser habilitados en Configuración de partida y si están habilitados que reemplacen algunos de los ejercicios existentes de su respectivo tema. De forma que los alumnos tengan que razonar más el ejercicio. Esto a su vez mantiene el juego fresco durante más tiempo como efecto secundario. Adicionalmente, permite ajustar la dificultad al docente según el nivel de su clase.
+    
+    \item Usando la Configuración de partida, se pudiera agregar una nueva opción que solo permita \textit{puzzles} que tengan contenido de programación, dado que algunos ejercicios para las emergencias tienen preguntas de conocimiento popular.
+\end{itemize}
+
+\subsection{Pruebas Unitarias}
+Aunque existe la infraestructura en el sistema de integración continua para ejecutar pruebas unitarias al integrar nuevo código a la rama \texit{master}. Falta mucho para mejorar la cobertura del código con pruebas de este tipo. 
+
+\subsection{Comprobación con alumnos}
+Uno de los temas comunes de todas las reuniones con docentes es que un juego como ayuda pedagógica es algo que sería de interés para los alumnos. Sería interesante realizar una encuesta para obtener la opinión de los estudiantes de educación superior sobre aprender con juegos, esto permitiría evaluar la utilidad de creación de diversos proyectos de juegos para \textit{e-learning} para este segmento. 
+
+Adicionalmente seria de especial interés realizar una verificación con estudiantes. En una verificación se podría estudiar si hay un impacto positivo en el desempeño de los estudiantes con el uso del material de repaso aquí creado, encontrar detalles que impacten la usabilidad del programa y evaluar si a los alumnos se les hace divertido repasar el material con el juego. Porque, aunque es vital aprender que opinión tienen los profesores sobre el juego porque son ellos quien lo implementaran en el salón de clases, ya en el salón de clases es importante ver su impacto y la forma en la que podemos mejorar la utilidad de este primero.
+
 
 
 % Fin de Conclusiones
