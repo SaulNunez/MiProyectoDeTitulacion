@@ -351,14 +351,15 @@ Entre estos fueron:
 Para la elaboración del proyecto se usó el sistema de versiones Git. El repositorio es público y puede ser accedido en \url{https://github.com/SaulNunez/Project-Hamilton}.
 
 \subsection{Integración Continua}
-Se usó Github Actions permite ejecutar un \textit{script} después de crear nuevos \textit{commits} a la rama \textit{Master}.
-Ejecuta las siguientes acciones cada vez que se activa el trabajo:
+Se usó Github Actions permite ejecutar archivo de definición de tareas después de crear nuevos \textit{commits}.
+Este ejecuta las siguientes acciones cada vez que se activa el trabajo:
 \begin{itemize}
     \item Compila ejecutables para Linux x64-86 y WebGL
-    \item Crea documentación de las funciones y variables del proyecto y sube usando \textit{Github Pages} la nueva versión a la página \url{http://saulnunez.com/Project-Hamilton/}
+    \item Corre las pruebas unitarias del proyecto (no se desarrollo ninguna por cuestiones de tiempo, pero la tarea esta habilitada y funcionando) 
+    \item Crea documentación de las funciones y variables del proyecto y sube a \textit{Github Pages} la nueva versión, esta es accesible en la página  \url{http://saulnunez.com/Project-Hamilton/}
 \end{itemize}
 
-Para la compilación de ejecutables se usó el increíble trabajo de GameCI que tiene imágenes preconfiguradas de Unity que facilitan la creación de los \textit{pipelines} necesarios para la compilación. Se uso su tutorial disponible en \url{https://game.ci/docs/github/v1/builder} y sus ejemplos para la creación del \textit{script}.
+Para la compilación de ejecutables y el sistema pruebas se usó el increíble trabajo de GameCI que tiene imágenes preconfiguradas de Unity que facilitan la creación de los \textit{pipelines} necesarios. Se uso su tutorial disponible en \url{https://game.ci/docs/github/v1/builder} y sus ejemplos para la creación del archivo de configuración.
 
 En la creación del pipeline de la generación de documentación se usó el trabajo de Normand Erwan disponible en \url{https://github.com/NormandErwan/DocFxForUnity} que provee la configuración de DocFX para que funcione con la organización por carpetas de Unity y por la forma en la que este de manera predefinida crea clases para componentes en el \textit{namespace} \textbf{global}.
 
@@ -397,17 +398,14 @@ Como los emergencias incluyen acciones comunes como activarlos o detenerlos, se 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{images/diagrama_deployment.png}
-    \caption{Diagrama del despliegue}
+    \caption{Diagrama del despliegue, en este caso un servidor en \textit{Google Cloud Compute Engine}}
     \label{fig:diagrama_despliege}
 \end{figure}
-Se crearon varias imágenes \textit{Docker} para hospedar los programas del cliente y servidor. Estos contenedores son manejados por \textit{Docker Compose} que controla su estado y crea una red local simulada entre estos. El diagrama de la conexión entre los contenedores y el mundo real se puede ver en la figura~\ref{fig:diagrama_despliege}, el \textit{stack} de red del servidor manda los paquetes de red a Docker que a la vez la delega a los contenedores.
+Se crearon dos imágenes de \textit{Docker} para hospedar los programas del  servidor y un \textit{webserver} usando Apache para servir la página del juego para los cliente. Estos contenedores pueden ser manejados por \textit{Docker Compose} para controla su estado y crea una red local simulada entre estos, en el proyecto se creo el archivo llamado \textbf{docker-compose.yml} que orquestra estos contenedores detallados y adicionalmente un tercero que va enfrente de los anteriormente detallados para servir como \textit{forward proxy}, que distribuye los paquetes según su protocolo (\textit{HTTP} a \textit{webserver} y \textit{websockets} al servidor), este ultimo utiliza Apache. La función de este \textit{forward proxy} es poder dirigir todas las peticiones a ambos contenedores por el puerto 80, para evitar cualquier bloqueo por \textit{firewalls}. El diagrama de la conexión entre los contenedores y el mundo real se puede ver en la figura~\ref{fig:diagrama_despliege} en un ejemplo en el que esta hospedado en \textit{Google Cloud Compute Engine}, el \textit{stack} de red del servidor manda los paquetes de red a Docker que a la vez la delega a los contenedores.
 En el caso específico del cliente que corre cada usuario se usó Apache para el \textit{host} de los archivos estáticos.
-Para la configuración del servidor en \textit{Ubuntu} se llevó a cabo según las guías de Mirror networking, disponibles en: \url{https://mirror-networking.gitbook.io/docs/guides/server-hosting/google-cloud}, sobre un contenedor que corre Ubuntu.
+Para el contenedor del servidor se uso como imagen base \textit{Ubuntu}, en el que se llevó a cabo la configuración según las guía de \textit{Mirror networking} donde lo hospedan en \textit{Google Cloud}, esta disponible en: \url{https://mirror-networking.gitbook.io/docs/guides/server-hosting/google-cloud}, cabe destacar que la imagen de Ubuntu para Docker no trae los paquetes para X11, 
 
-\section{Despliegue}
-Para hospedar todo lo anteriormente detallado se usó \textit{Ubuntu} en \textit{Google Cloud Compute Engine}, en el cual para instalar Docker que uso la guía de instalación oficial: \url{https://docs.docker.com/engine/install/ubuntu/}. Docker Compose se necesitó instalar por separado, lo que se realizó con su guía oficial de instalación, obtenida aquí: \url{https://docs.docker.com/compose/install/}.
-
-Adicionalmente, se creó una pequeña guía para montarlo en otros servidores, esta esta disponible en el repositorio anteriormente detallado.
+Se creó documentación para montarlo en otros servidores, esta disponible en el archivo \textbf{README.md} en la raíz del repositorio del proyecto.
 
 \section{Pruebas}
 Durante el desarrollo se usaron pruebas de humo en el producto, se usó el \textit{asset} \href{https://github.com/hwaet/UnityProjectCloner}{UnityProjectCloner} para crear una copia del proyecto para poder simular en la misma computadora un cliente y lo que la librería Mirror llama un \textit{host}, un cliente con el servidor integrado, a base de esto poder probar que el código generado tenía el funcionamiento esperado y que no tuviera errores o problemas de configuración. Fueron pruebas de 5-15 minutos sobre el sistema que se estaba trabajando en ese momento.
@@ -416,4 +414,4 @@ Se hicieron tres \textit{soak tests} distintos. Uno se dejó durante 3 horas la 
 
 Se hicieron pruebas de funcionalidad en una ocasión, con 3 jugadores para revisar la usabilidad de la interfaz gráfica, ver la estabilidad y ver problemas en las mecánicas del juego.
 
-En el despliegue, se realizaron pruebas de integración de manera manual a fin de detectar que se conectara correctamente el cliente y el servidor. Debido a el uso de los contenedores de \textit{Docker} no se tuvo que hacer pruebas para compensar las diferencias de configuración entre el entorno de pruebas y el sistema final, dado que es exactamente el mismo. Adicionalmente se realizó una sesión donde se simulo una partida con tres jugadores para hacer pruebas del multijugador con el servidor para ver si ocurrían problemas debido a la latencia entre el cliente y el servidor debido a la distancia de la conexión con el servidor.
+Adicionalmente se realizó una sesión donde se simulo una partida con tres jugadores para hacer pruebas del multijugador con un servidor remoto para ver si ocurrían problemas debido a la latencia entre el cliente y el servidor debido a la distancia de la conexión con el servidor.
