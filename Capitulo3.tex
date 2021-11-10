@@ -1,5 +1,5 @@
 \chapter{Desarrollo del Proyecto}
-En este capítulo se discute sobre el trabajo a realizado para la completitud del proyecto, así como la descripción y el post-mortem de las diferentes actividades realizadas durante su realización.
+En este capítulo se discute sobre el trabajo a realizado para la completitud del proyecto, así como la descripción y el \textit{post-mortem} de las diferentes actividades realizadas durante su realización.
 
 \section{Producto propuesto}
 El producto desarrollado fue un videojuego multijugador. En este los alumnos pueden aprender conceptos básicos de los lenguajes de programación, viendo los conceptos de programación estructurada, mediante acertijos que les permitan de otra manera analizar su funcionamiento. En este juego se enfocó a la enseñanza de: variables, condicionales, ciclos y funciones, tratando temas de programación estructurada, basado en el material del curso de Fundamentos de la Programación de la Universidad Autónoma de Ciudad Juárez, así como los libros Fundamentos de programación: Algoritmos, estructura de datos y objetos de Luis Joyanes Aguilar y Prelude to Programming: Concepts and design de Steward Venit y Elizabeth Drake. 
@@ -30,7 +30,6 @@ Para la evaluación de la eficacia del producto creado se pidió la ayuda de var
         Jugador puede interactuar con objetos de la escena & 03/01/2021 & 03/01/2021 & 0 \\ \hline
         Jugador puede votar por un jugador como culpable & 24/01/2021 & 02/02/2021 & 9 \\ \hline
         Jugador puede agendar reuniones & 03/02/2021 & 04/02/2021 & 1 \\ \hline
-        Moverse por las alcantarillas & 04/02/2021 & 05/02/2021 & 1 \\ \hline
         Ocultar gente muerta & 05/02/2021 & 05/02/2021 & 0 \\ \hline
         Puzzle boilers -int & 08/02/2021 & 08/02/2021 & 0 \\ \hline
         Puzzle de variable-bool & 11/02/2021 & 11/02/2021 & 0 \\ \hline
@@ -43,8 +42,8 @@ Para la evaluación de la eficacia del producto creado se pidió la ayuda de var
         Jugadores asesinos pueden ejecutar sabotajes & 19/02/2021 & 23/02/2021 & 4 \\ \hline
         Puzzle de saboteo de telégrafo (cuestionario) & 19/02/2021 & 25/02/2021 & 6 \\ \hline
         Puzzle para saboteo para electricidad & 19/02/2021 & 25/02/2021 & 6 \\ \hline
-        Sabotajes pueden ser detenidos únicamente por junta por cadáver encontrado & 25/02/2021 & 04/03/2021 & 7 \\ \hline
-        Configurar protocolo websockets & 08/03/2021 & 10/05/2021 & 63 \\ \hline
+        Sabotajes pueden ser detenidos únicamente por junta por esqueleto encontrado & 25/02/2021 & 04/03/2021 & 7 \\ \hline
+        Configurar protocolo websockets para conexión cliente/servidor & 08/03/2021 & 10/05/2021 & 63 \\ \hline
         Puzzle string & 17/03/2021 & 18/03/2021 & 1 \\ \hline
         Puzzle de secuencia & 21/03/2021 & 22/03/2021 & 1 \\ \hline
         Puzzle string-substring & 23/03/2021 & 24/03/2021 & 1 \\ \hline
@@ -52,9 +51,9 @@ Para la evaluación de la eficacia del producto creado se pidió la ayuda de var
         Conectar a UI sistema de asesinos y programadores & 13/05/2021 & 15/05/2021 & 2 \\ \hline
         Hacer jugador transparentoso cuando haya muerto, y solo mostrar a otros jugadores muertos. Spawnear tumbita para los que esta vivos & 15/05/2021 & 16/05/2021 & 1 \\ \hline
         Pasar bandera si es asesino de la selección que ocurrió al estar todos listos en el lobby & 17/05/2021 & 18/05/2021 & 1 \\ \hline
-        Agregar cool downs después de votación para volver a activar las juntas de emergencia y de los asesinos poder matar a los programadores & 18/05/2021 & 21/05/2021 & 3 \\ \hline
-        Asignar nombre al jugador cuando no puso ninguno en el lobby & 25/05/2021 & 26/05/2021 & 1 \\ \hline
-        Actualizar sprite del jugador a el personaje elegido en el lobby & 27/05/2021 & 29/05/2021 & 2 \\ \hline
+        Agregar \textit{cooldowns} después de votación para volver a activar las juntas de emergencia y de los asesinos poder matar a los programadores & 18/05/2021 & 21/05/2021 & 3 \\ \hline
+        Asignar nombre al jugador cuando no puso ninguno en el \texit{lobby} & 25/05/2021 & 26/05/2021 & 1 \\ \hline
+        Actualizar \textit{sprite} del jugador a el personaje elegido en el \textit{lobby} & 27/05/2021 & 29/05/2021 & 2 \\ \hline
         Pantalla para mostrar si jugador ha ganado o perdido al final del juego & 29/05/2021 & 30/05/2021 & 1 \\ \hline
         Puzzle de saboteo para boiler & 03/06/2021 & 04/06/2021 & 1 \\ \hline
         Pantalla de elección de jugador & 13/06/2021 & 14/06/2021 & 1 \\ \hline
@@ -83,7 +82,7 @@ Para la evaluación de la eficacia del producto creado se pidió la ayuda de var
         Redacción de la introducción del documento y detalles finales & 04/11/2021 & 08/11/2021 & 4 \\ \hline
 \end{longtable}
 
-Kanban fue la metodología usada para el desarrollo del proyecto. Para la organización del tablero usamos una aplicación multiplataforma llamada  \textit{Notion} (figura~\ref{fig:notion_proyecto}), de la cual se aprovechó su vista de tablero Kanban, lista de actividades y diagrama de Gantt. En los siguientes puntos se presenta el plan de actividades llevadas a cabo (y su descripción con mayor detalle) en la realización del proyecto. En la tabla~\ref{table:fechas_actividades}, la figuras ~\ref{fig:gantt_anteproyecto} y ~\ref{fig:gantt_proyecto} se puede ver las actividades realizadas a lo largo de la duración del proyecto. Desde las actividades del anteproyecto, pasando por la definición del producto esperado, hasta la realización del proyecto. 
+Kanban fue la metodología usada para el desarrollo del proyecto. Para la organización del tablero usamos una aplicación multiplataforma llamada  \textit{Notion} (figura~\ref{fig:notion_proyecto}), de la cual se aprovechó su vista de tablero Kanban, lista de actividades y diagrama de Gantt. En los siguientes puntos se presenta el plan de actividades llevadas a cabo (y su descripción con mayor detalle) en la realización del proyecto. En la tabla~\ref{table:fechas_actividades} y la figura~\ref{fig:diagrama_gantt} se puede ver las actividades realizadas a lo largo de la duración del proyecto. Desde las actividades del anteproyecto, pasando por la definición del producto esperado, hasta la realización del proyecto. 
 
 Cómo anteriormente se había tratado, el tiempo de ciclo o \textit{Lead Time} es el tiempo de realización de la tarea, abarca desde que se empieza a trabajar hasta que se completa la tarea. Por lo general, es bueno cuando el tiempo de ciclo es corto porque significa que no hay obstáculos que el equipo de trabajo tenga que resolver. De manera similar, como se nota en la figura~\ref{fig:grafica_tiempos_ciclo} y en la figura~\ref{fig:grafica_flujo_acumulado} la mayoría de las actividades fueron resueltas en corto tiempo, la única excepción fueron actividades donde surgieron problemas técnicos no esperados, los \textit{unknown unknowns}. El principal motivo de estos fue el uso de la librería \textit{Mirror} que aumento la complejidad por la sincronización entre el cliente y la documentación de la librería es muy escasa arriba de la configuración básica, incluso considerando la de su predecesora, Unet.
 
@@ -93,19 +92,41 @@ Cómo anteriormente se había tratado, el tiempo de ciclo o \textit{Lead Time} e
     \caption{Notion con las actividades en diagrama \textit{Kanban}}
     \label{fig:notion_proyecto}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{images/DiagramaGanttAnteproyecto.PNG}
-    \caption{Diagrama de Gantt del anteproyecto}
-    \label{fig:gantt_anteproyecto}
+    \caption{Diagrama de Gantt del proyecto}
+    \label{fig:diagrama_gantt}
+    \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/ago-dec-19.png}
+        \caption{Diagrama de Gantt del anteproyecto}
+        \label{fig:gantt_anteproyecto}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/ene-mar-21.png}
+        \caption{Diagrama de Gantt de la realización del proyecto - Noviembre 2020 a Marzo 2021}
+        \label{fig:gantt_proyecto}
+    \end{subfigure}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}
+    \ContinuedFloat
     \centering
-    \includegraphics[width=0.8\linewidth]{images/MapaGanttProyecto.png}
-    \caption{Diagrama de Gantt de la realización del proyecto}
-    \label{fig:gantt_proyecto}
+    \caption{Diagrama de Gantt del proyecto}
+    \label{fig:diagrama_gantt}
+         \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/mar-sep-21.png}
+        \caption{Diagrama de Gantt de la realización del proyecto - Marzo 2021 a Septiembre 2021}
+        \label{fig:gantt_proyecto_2}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}\ContinuedFloat
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/sep-nov-21.png}
+        \caption{Diagrama de Gantt de la realización del proyecto - Septiembre 2021 a Noviembre 2021}
+        \label{fig:gantt_proyecto_3}
+     \end{subfigure}
 \end{figure}
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{images/BurndownChart.png}
