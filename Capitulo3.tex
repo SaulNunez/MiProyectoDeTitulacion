@@ -161,25 +161,68 @@ Para cubrir los conceptos de programación estructurada se crearon los siguiente
         \caption{Prototipo del puzzle de secuencias}
         \label{fig:puzzle_secuencia}
     \end{figure}
-    \item Ciclos
-    \begin{itemize}
-        \item Opción múltiple: En este tipo de \textit{puzzle}, se pide al jugador que seleccione el ciclo con un numero definido de repeticiones. Dependiendo de la dificultad, puede que se combinen varios tipos de ciclos en sus opciones. 
-        \item Completar ciclo: Tiene instrucciones de cuantas repeticiones debe hacer el bucle. El jugador tiene que completar el valor de pasos, de inicio de la variable de índice y cuando termina de correrse el ciclo.
-    \end{itemize}
-    \item Condicionales: Hay varios puzzles tratando condicionales a lo largo del juego. La formula general es que tienen que seleccionar lo que hace ese pedazo especifico de código. Un ejemplo, se puede ver en la figura~\ref{fig:if_else_puzzle}. Sin embargo, como lo hace cada uno varia ligeramente.
     \begin{figure}[H]
-                \centering
-                \includegraphics[width=0.5\linewidth]{images/PuzzleIfElse.png}
-                \caption{Puzzle diseñado para el if/else}
-                \label{fig:if_else_puzzle}
-            \end{figure}
-    \begin{itemize}
-        \item If: El jugador tiene que razonar el pseudocódigo dado y ver si la condición ambos tipos de flores son iguales ocurre. Dependiendo de eso que rama va agarrar el programa y como impacta eso a lo que realiza este.
-        \item If/else: El usuario lee un pedazo de pseudocódigo, lo analiza para ver que hace, y elige la opción que marca lo que hizo el código. El pedazo dice como se va a decorar un pastel, el usuario tiene que analizar el código y decir si se va a decorar con cerezas o con chispitas.
-    \end{itemize}
+            \centering
+            \includegraphics[width=0.5\linewidth]{images/PuzzleCiclosEleccionMultiple.png}
+            \caption{Prototipo del puzzle de opción multiple}
+            \label{fig:puzzle_opcion_multiple}
+    \end{figure}
+    \item Opción múltiple: En este tipo de \textit{puzzle}, se pide al jugador que seleccione el ciclo con un numero definido de repeticiones. Dependiendo de la dificultad, puede que se combinen varios tipos de ciclos en sus opciones. Se selecciona la opción correcta dando clic a su botón (figura~\ref{fig:puzzle_opcion_multiple}).
+    \begin{figure}[H]
+        \caption{Puzzles de completar ciclos}
+        \label{fig:puzzle_completar_ciclos}
+        \begin{subfigure}{\textwidth}
+            \centering
+            \includegraphics[width=0.5\linewidth]{images/CompletarCicloFor.png}
+            \caption{Completar ciclo Para (implementado en juego)}
+            \label{fig:puzzle_completar_ciclos_for}
+        \end{subfigure}
+        \begin{subfigure}{\textwidth}
+            \centering
+            \includegraphics[width=0.5\linewidth]{images/CompletarCicloWhile.png}
+            \caption{Completar ciclo Mientras (implementado en juego)}
+            \label{fig:puzzle_completar_ciclos_while}
+        \end{subfigure}
+    \end{figure}
+    \item Completar ciclo: Tiene instrucciones de cuantas repeticiones debe hacer el bucle. El jugador tiene que completar el valor de pasos, de inicio de la variable de índice y cuando termina de correrse el ciclo, como se ven en figura~\ref{fig:puzzle_completar_ciclos}.
+
+    \item Condicionales: Hay varios puzzles que tratan el tema de condicionales a lo largo del juego. La formula general es que los jugadores tienen que seleccionar lo que hace ese pedazo especifico de código, como se puede se puede ver en la figura~\ref{fig:puzzle_condicionales}. Sin embargo, como lo hace cada uno varia ligeramente, incluyendo temas tales como operadores relacionales (subfigura~\subref{fig:puzzle_condicionale3} y subfigura~\subref{fig:puzzle_condicionales4} de la figura anteriormente referida) u operadores lógicos(subfigura~\subref{fig:puzzle_condicionales2}). Todos estos acertijos cambian los valores de las variables o las comparaciones cada partida.
+    \begin{figure}[H]
+        \centering
+        \caption{Capturas de pantalla de los diversos ejercicios de condicionales en el juego}
+        \label{fig:puzzle_condicionales}
+        \begin{subfigure}{\textwidth}
+            \centering
+            \includegraphics[width=0.5\linewidth]{images/Puzzlecondicional1.png}
+            \caption{El jugador tiene que entender que hace el pseudocódigo}
+            \label{fig:puzzle_condicionales1}
+        \end{subfigure}
+        \begin{subfigure}{\textwidth}
+            \centering
+            \includegraphics[width=0.5\linewidth]{images/Puzzlecondicional2.png}
+            \caption{En este ejercicio se ven operadores lógicos anidados}
+            \label{fig:puzzle_condicionales2}
+        \end{subfigure}
+    \end{figure}
+        \begin{figure}[H]
+        \ContinuedFloat
+        \centering
+        \begin{subfigure}{\textwidth}
+            \centering
+            \includegraphics[width=0.5\linewidth]{images/Puzzlecondicional3.png}
+            \caption{Este \textit{puzzle} trabaja operadores relacionales}
+            \label{fig:puzzle_condicionale3}
+        \end{subfigure}
+        \begin{subfigure}{\textwidth}
+            \centering
+            \includegraphics[width=0.5\linewidth]{images/Puzzlecondicional4.png}
+            \caption{Este ejercicio ve operadores relacionales, pero comparando valores enteros}
+            \label{fig:puzzle_condicionales4}
+        \end{subfigure}
+    \end{figure}
 \end{itemize}
 
-Es importante destacar que estos son los \textit{puzzles} finales, algunos se han cortado del juego o modificado. Esto se discutirá en mas detalle en el capitulo próximo. 
+Es importante destacar que estos son los \textit{puzzles} finales, algunos se han cortado del juego o modificado. Estos cambios se discutirán en más detalle en el capitulo próximo. 
 
 La organización de los puzzles se puede ver la figura~\ref{fig:items_on_map}. La mayoría de los puzzles están organizados dependiendo en su temática, por ejemplo: decoración de pasteles ocurre en la cocina. Sin embargo, se tomaron a la hora del diseño libertades para hacer que cuartos sean más justos, hay puzzles que su posición fue definida para crear un flujo de jugadores en ese cuarto, a forma de que haya lugares donde los asesinos pueden ir varias veces a encontrar jugadores programadores y a la vez evitar que si los agarran en estos lugares nadie se dé cuenta.
 Los \textit{puzzles} se pueden descubrir por un símbolo de espada (figura~\ref{fig:puzzle_location}), los jugadores se tienen que parar cerca para interactuar con ellos, eso abre la interfaz gráfica para resolver los puzzles. Cuando estos no hayan sido resueltos tienen un icono, cuando ya fueron resueltos por un jugador este desaparece y no se puede interactuar con ellos.
