@@ -52,7 +52,7 @@ Para la evaluación de la eficacia del producto creado se pidió la ayuda de var
         Hacer jugador transparentoso cuando haya muerto, y solo mostrar a otros jugadores muertos. Spawnear tumbita para los que esta vivos & 15/05/2021 & 16/05/2021 & 1 \\ \hline
         Pasar bandera si es asesino de la selección que ocurrió al estar todos listos en el lobby & 17/05/2021 & 18/05/2021 & 1 \\ \hline
         Agregar \textit{cooldowns} después de votación para volver a activar las juntas de emergencia y de los asesinos poder matar a los programadores & 18/05/2021 & 21/05/2021 & 3 \\ \hline
-        Asignar nombre al jugador cuando no puso ninguno en el \texit{lobby} & 25/05/2021 & 26/05/2021 & 1 \\ \hline
+        Asignar nombre al jugador cuando no puso ninguno en el \textit{lobby} & 25/05/2021 & 26/05/2021 & 1 \\ \hline
         Actualizar \textit{sprite} del jugador a el personaje elegido en el \textit{lobby} & 27/05/2021 & 29/05/2021 & 2 \\ \hline
         Pantalla para mostrar si jugador ha ganado o perdido al final del juego & 29/05/2021 & 30/05/2021 & 1 \\ \hline
         Puzzle de saboteo para boiler & 03/06/2021 & 04/06/2021 & 1 \\ \hline
@@ -191,13 +191,13 @@ Para cubrir los conceptos de programación estructurada se crearon los siguiente
         \begin{subfigure}{\textwidth}
             \centering
             \includegraphics[width=0.5\linewidth]{images/CompletarCicloFor.png}
-            \caption{Completar ciclo Para (implementado en juego)}
+            \caption{Completar ciclo Para}
             \label{fig:puzzle_completar_ciclos_for}
         \end{subfigure}
         \begin{subfigure}{\textwidth}
             \centering
             \includegraphics[width=0.5\linewidth]{images/CompletarCicloWhile.png}
-            \caption{Completar ciclo Mientras (implementado en juego)}
+            \caption{Completar ciclo Mientras}
             \label{fig:puzzle_completar_ciclos_while}
         \end{subfigure}
     \end{figure}
@@ -422,7 +422,7 @@ Entre estos fueron:
     \end{figure}
 \begin{itemize}
     \item Completar ciclos: Los \textit{puzzle} de este tipo tienen varios campos a completar como se ha hablado anteriormente. Al llenar estos campos, el jugador tiene un botón de verificar, esto manda las entradas a través de la red al servidor, donde se verifica en el servidor. Ya sea respuesta correcta o falsa se comunica el resultado al cliente (figura~\ref{fig:diagrama_sec_for_while}).
-    \item Secuencia: Los puzzle de secuencia usan una tabla simulada aprovechando los componentes de \textit{layout} provistos por Unity para el sistema de UI. Se creo un \textit{prefab} para poderlo \textit{spawnear} suficientes cuadritos para el tamaño del campo de juego establecido para el \textit{puzzle}. \texttt{SequenceGrid} es la clase que controla en comportamiento del \textit{puzzle} en el cliente, esta hace la labor de actualizar \textit{sprites} del \textit{grid} cuando hay cambios de posición del jugador. Todos estos subsistemas son controlados por SequencePuzzle que se encarga de leer las instrucciones en el cliente. Al terminar de leer las instrucciones, se mandan al servidor para verificar que lleguen a la meta (y marcar el \textit{puzzle} como completado) y en el cliente hacer un \textit{replay}, es visualmente atractivo, permite al jugador ver donde se equivocó y da continuidad al jugador que completo correctamente la tarea en lugar de marcar como completado el \textit{puzzle} automáticamente.
+    \item Secuencia: Los puzzle de secuencia usan una tabla simulada aprovechando los componentes de \textit{layout} provistos por Unity para el sistema de UI. Se creo un \textit{prefab} para poderlo \textit{spawnear} suficientes cuadritos para el tamaño del campo de juego establecido para el \textit{puzzle}. \texttt{SequenceGrid} es la clase que controla en comportamiento del \textit{puzzle} en el cliente, esta hace la labor de actualizar \textit{sprites} del \textit{grid} cuando hay cambios de posición del jugador. Todos estos subsistemas son controlados por \texttt{SequencePuzzle} que se encarga de leer las instrucciones en el cliente. Al terminar de leer las instrucciones, se mandan al servidor para verificar que lleguen a la meta (y marcar el \textit{puzzle} como completado) y en el cliente hacer un \textit{replay}, es visualmente atractivo, permite al jugador ver donde se equivocó y da continuidad al jugador que completo correctamente la tarea en lugar de marcar como completado el \textit{puzzle} automáticamente. El funcionamiento de este puzzle se puede ver con más detalle en la figura~\ref{fig:diagrama_sec_sec}.
     \item  \textit{Puzzle} en área de generador (comando si/entonces y operadores relacionales): Este \textit{puzzle} incluye expresiones lógicas una dentro de la otra, los jugadores tendrán que analizar cómo se comporta y a base del estado actual de las variables, elegir que rama eligió el programa (el comando si/entonces) como se ve en la figura~\ref{fig:diagrama_sec_booleano}.
     \item Elegir la opción correcta: Usado para algunos \textit{puzzles} de ciclos, hay distintos botones con opciones. El jugador da clic a la opción correcta. El juego manda el índice de la respuesta al servidor, si el índice está marcado como respuesta correcta entonces se marca como contestada correctamente (figura~\ref{fig:diagrama_sec_opmul}).
     \item If: En este puzzle, se agarra un \textit{enum} aleatorio de los posibles tipos de flores. Este tipo de flor será seleccionada para completar un pedazo de pseudocódigo. Aparte, se selecciona otro tipo de flor, de la misma manera, esta se ajusta en cuadro de imagen. Este puzzle consiste en preguntarle al jugador que hace el seudocódigo dado el tipo de flor que pide y el tipo flor que va a procesar. La respuesta seleccionada se manda al servidor (figura~\ref{fig:diagrama_sec_if}).
