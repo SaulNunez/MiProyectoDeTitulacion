@@ -484,7 +484,7 @@ Profesor Investigador \\
   
   \begin{singlespace}
 	  {Ccp:}\par
-	  Coordinador del Programa de Sistemas Computacionales\par
+	  Mtro. Absalón Uruchurtu Moreno\par
 	  {\@author}\par
 	  Archivo\vfill
   \end{singlespace}
