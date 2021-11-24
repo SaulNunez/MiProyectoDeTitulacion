@@ -91,8 +91,8 @@ PRIMM es un método de enseñanza de programación que incorpora discusión e in
     \item Crear. Los estudiantes crean nuevos programas que usan las mismas estructuras pero resuelven problemas distintos.
 \end{enumerate}
 
-\subsection{Game-based learning y educación colaborativa}
-Game-based learning es “en formación en la cual los contenidos teóricos son presentados por medio de un videojuego” \cite{gamelearn2014a} y contienen elementos como \cite{gamelearn2017a}:
+\subsection{\textit{Game-based learning} y educación colaborativa}
+\textit{Game-based learning} es “en formación en la cual los contenidos teóricos son presentados por medio de un videojuego” \cite{gamelearn2014a} y contienen elementos como \cite{gamelearn2017a}:
 \begin{itemize}
     \item Historia para darle inmersión a los jugadores
     \item Gamificación, como \textit{rankings} o un sistema de puntos
@@ -113,47 +113,47 @@ Se ha encontrado que los videojuegos colaborativos agregan ventajas como el trab
 la comunicación y la colaboración \cite{romano-a}.
 
 \subsection{Kanban}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.5\textwidth]{flujo_acumulativo.png}
-        \caption{Diagrama de flujo acumulativo.}
-    \label{fig:flujo_acumulativo}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics{distribucion_tiempos_ciclos}
-    \caption{Gráfica de distribución de tiempos de ciclo.}
-    \label{fig:distribucion_tiempos_ciclos}
-\end{figure}
-
 Kanban es una metodología ágil para el desarrollo de software con un énfasis 
 en la entrega continúa teniendo en cuenta la capacidad del equipo \cite{romano-a}. 
 Las métricas de Kanban son las siguientes \cite{najera2018a}:
 
 \begin{itemize}
     \item \textbf{Diagrama de flujo acumulativo:} Provee información relacionada con la capacidad del equipo. Está basado en tiempo y muestra cómo se mueven las tarjetas de izquierda a derecha en el tablero. Como se puede ver en la figura~\ref{fig:flujo_acumulativo} la altura de las bandas muestra el número de tarjetas en esa etapa durante cierta unidad de tiempo.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{flujo_acumulativo.png}
+            \caption{Diagrama de flujo acumulativo.}
+        \label{fig:flujo_acumulativo}
+    \end{figure}
     \item \textbf{Gráfica de distribución de tiempos de ciclo:} Como se puede ver en la figura~\ref{fig:distribucion_tiempos_ciclos} es útil para ver la frecuencia con la que las tarjetas son completadas a lo largo del tiempo.
+    \begin{figure}[H]
+        \centering
+        \includegraphics{distribucion_tiempos_ciclos}
+        \caption{Gráfica de distribución de tiempos de ciclo.}
+        \label{fig:distribucion_tiempos_ciclos}
+    \end{figure}
 \end{itemize}
 
 \section{Marco tecnológico}
 Para el desarrollo de este proyecto es necesario tener herramientas para las partidas con otros usuarios, así como manera de usar librerías probadas y comúnmente usadas.
 
 \subsection{Unity3D}
-\begin{figure}[h!]
+Es un motor que permite diseñar videojuegos. Permite usar C\# para programar el juego, compilando, usando Mono\cite{unity2019}. Es un motor muy capaz que permite desarrollar videojuegos 2D y 3D, con una variedad de herramientas para facilitar el desarrollo (figura~\ref{fig:unity_screenshot}).
+
+\begin{figure}[H]
     \centering
     \includegraphics{unity}
-        \caption{Algunas capacidades de Unity para el desarrollo de videojuegos: animaciones, máquina de estados y para videojuegos 2D, un editor de sprites.}
+        \caption{Algunas capacidades de Unity para el desarrollo de videojuegos: animaciones, máquina de estados y un editor de sprites.}
         \label{fig:unity_screenshot}
 \end{figure}
-Es un motor que permite diseñar videojuegos. Permite usar C\# para programar el juego, compilando, usando Mono\cite{unity2019}. Es un motor muy capaz que permite desarrollar videojuegos 2D y 3D, con una variedad de herramientas para facilitar el desarrollo (figura~\ref{fig:unity_screenshot}).
+
 Unity puede crear el juego para varios entornos, como consolas de videojuegos como la Nintento Switch, el Xbox One, PS4, Windows, MacOS, Linux, Android, iOS, o la web mediante WebGL [24].
 
 \subsection{\textit{Mirror}}
 \textit{Mirror} es una librería para crear juegos multijugador de \textit{Unity}. Es una continuación a \textit{Unet} de \textit{Unity Technologies}. Permite desarrollar el cliente y el servidor en un único proyecto.
 
 \subsection{Git}
-Git es el sistema de control de versiones más popular del mundo, fue creado en 2005 por Linus Torvalds [27]. Es un ejemplo de un DVCS, un sistema distribuido de control de versiones. A diferencia de sistemas donde en un solo lugar esta todo el historial de versiones como CVS o Subversion. En Git todas las copias funcionales de código son un repositorio que contiene todo el historial de versiones.
-En comparación con otros sistemas, Git está diseñado para que la creación de ramas y \textit{tags} sean operaciones baratas, por lo tanto, rápidas.
+Git es el sistema de control de versiones más popular del mundo, fue creado en 2005 por Linus Torvalds [27]. Es un ejemplo de un \textit{DVCS}, un sistema distribuido de control de versiones. A diferencia de sistemas donde en un solo lugar esta todo el historial de versiones como \textit{CVS} o \textit{Subversion}. En \textit{Git} todas las copias funcionales de código son un repositorio que contiene todo el historial de versiones.
+En comparación con otros sistemas, Git está diseñado para que la creación de \textit{ramas} y \textit{tags} sean operaciones baratas, por lo tanto, rápidas.
 
 Github es un servicio de hospedaje de repositorios Git \cite{finley2012a}. Se uso como repositorio remoto para sincronizar cambios, además de aprovechar sus funciones para crear \textit{pipelines} para \textit{Continous Integration} permitiendo probar que el juego se pueda compilar y que ningún sistema este "roto".

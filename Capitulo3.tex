@@ -2,12 +2,12 @@
 En este capítulo se discute sobre el trabajo a realizado para la completitud del proyecto, así como la descripción y el \textit{post-mortem} de las diferentes actividades realizadas durante su realización.
 
 \section{Producto propuesto}
-El producto desarrollado fue un videojuego multijugador. En éste los alumnos pueden aprender conceptos básicos de los lenguajes de programación, viendo los conceptos de programación estructurada, mediante acertijos que les permitan de otra manera analizar su funcionamiento. En este juego se enfocó a la enseñanza de: variables, condicionales, ciclos y funciones, tratando temas de programación estructurada, basado en el material del curso de Fundamentos de la Programación de la Universidad Autónoma de Ciudad Juárez, así como los libros Fundamentos de programación: Algoritmos, estructura de datos y objetos de Luis Joyanes Aguilar y Prelude to Programming: Concepts and design de Steward Venit y Elizabeth Drake. 
-Las mecánicas del juego fueron inspiradas en el videojuego \textit{Among Us}. En este juego, un grupo de máximo 10 jugadores están juntos en una partida, hay una variedad de mapas y el punto es realizar todas las actividades que tienen asignadas para ganar. Pero del grupo de jugadores, unos cuantos son asignados como impostores y su trabajo es matar a los demás jugadores. Sin embargo, los jugadores pueden reportar muertes o sonar una alarma que les permite discutir y votar por quien es impostor, si sacan a todos los impostores, ganan los \textit{crewmates}, los jugadores no impostores.
+El producto desarrollado fue un videojuego multijugador. En éste los alumnos pueden aprender conceptos básicos de los lenguajes de programación, viendo los conceptos de programación estructurada, mediante acertijos que les permitan de otra manera analizar su funcionamiento. En este juego se enfocó a la enseñanza de: variables, condicionales, ciclos y funciones, tratando temas de programación estructurada, basado en el material del curso de Fundamentos de la Programación de la Universidad Autónoma de Ciudad Juárez, así como los libros \textit{Fundamentos de programación: Algoritmos, estructura de datos y objetos} de Luis Joyanes Aguilar \cite{luisjoyanesaguilar_2020_fundamentos} y \textit{Prelude to Programming: Concepts and design} de Steward Venit y Elizabeth Drake \cite{venit_2015_prelude}. 
+Las mecánicas del juego fueron inspiradas en el videojuego \textit{Among Us}. En este juego, un grupo de máximo 10 jugadores están juntos en una partida, hay una variedad de mapas y el punto es realizar todas las actividades que tienen asignadas para ganar. Pero del grupo de jugadores, unos cuantos son asignados como impostores y su trabajo es matar a los demás jugadores. Sin embargo, los jugadores pueden reportar muertes o sonar una alarma que les permite discutir y votar por quien es impostor, si sacan a todos los impostores, ganan los \textit{crewmates}, los jugadores no \textit{impostores}.
 El videojuego tendrá una duración aproximada de 20-30 minutos.
 
 \section{Forma de validación}
-Para la evaluación de la eficacia del producto creado se pidió la ayuda de varios docentes que han impartido o están actualmente impartiendo clases de Fundamentos de Programación. Esto con el fin de validar el contenido por su valor didáctico, que cumpla las demandas del curso y enseñe el tema de manera correcta.
+Para la evaluación de la eficacia del producto creado se pidió la ayuda de varios docentes que han impartido o están actualmente impartiendo clases de Fundamentos de Programación. Ésto con el fin de validar el contenido por su valor didáctico, que cumpla las demandas del curso y enseñe el tema de manera correcta. Para esta validación se hicieron reuniones con los distintos docentes, al final se les realizó una pequeña encuesta, se puede ver con más detalle ésta en la figura~\ref{fig:survey} del anexo. 
 
 \section{Metodología}
 
@@ -17,7 +17,7 @@ Para la evaluación de la eficacia del producto creado se pidió la ayuda de var
 % \setlength{\tabcolsep}{2pt}
 \renewcommand{\arraystretch}{0.75}
  
-        Tarea & Fecha Inicio & Fecha Fin & Duración \\ \hline
+        Tareas & Fecha Inicio & Fecha Fin & Duración \\ \hline
         Investigación de antecedentes & 12/08/2019 & 09/09/2019 & 28 \\ 
         Establecimiento de objetivos del proyecto & 09/09/2019 & 20/09/2019 & 11 \\ 
         Desarrollo del marco referencial & 16/09/2019 & 20/09/2019 & 4 \\ 
@@ -87,20 +87,17 @@ Para la evaluación de la eficacia del producto creado se pidió la ayuda de var
         Redacción de la introducción del documento y detalles finales & 04/11/2021 & 08/11/2021 & 4 \\  
 \end{longtable}
 
-\textit{Kanban} fue la metodología usada para el desarrollo del proyecto. Para la organización del tablero usamos una aplicación multiplataforma llamada  \textit{Notion} (figura~\ref{fig:notion_proyecto}), de la cual se aprovechó su vista de tablero \textit{Kanban}, lista de actividades y diagrama de Gantt. En los siguientes puntos se presenta el plan de actividades llevadas a cabo (y su descripción con mayor detalle) en la realización del proyecto. En la tabla~\ref{table:fechas_actividades} y la figura~\ref{fig:diagrama_gantt} se puede ver las actividades realizadas a lo largo de la duración del proyecto. Desde las actividades del anteproyecto, pasando por la definición del producto esperado, hasta la realización del proyecto. 
+\textit{Kanban} fue la metodología usada para el desarrollo del proyecto. Para la organización del tablero usamos una aplicación multiplataforma llamada  \textit{Notion} (figura~\ref{fig:notion_proyecto}), de la cual se aprovechó su vista de tablero \textit{Kanban}, lista de actividades y diagrama de Gantt. En los siguientes puntos se presenta el plan de actividades llevadas a cabo (y su descripción con mayor detalle) en la realización del proyecto. En la tabla~\ref{table:fechas_actividades} y en la figura~\ref{fig:diagrama_gantt} se puede ver las actividades realizadas a lo largo de la duración del proyecto, desde las actividades del anteproyecto, pasando por la definición del producto esperado, hasta la realización del proyecto. 
 
-Cómo anteriormente se había tratado, el tiempo de ciclo o \textit{Lead Time} es el tiempo de realización de la tarea, abarca desde que se empieza a trabajar hasta que se completa la tarea. Por lo general, es bueno cuando el tiempo de ciclo es corto porque significa que no hay obstáculos que el equipo de trabajo tenga que resolver. De manera similar, como se nota en la figura~\ref{fig:grafica_tiempos_ciclo} y en la figura~\ref{fig:grafica_flujo_acumulado} la mayoría de las actividades fueron resueltas en corto tiempo, la única excepción fueron actividades donde surgieron problemas técnicos no esperados, los \textit{unknown unknowns}. El principal motivo de estos fue el uso de la librería \textit{Mirror} que aumento la complejidad por la sincronización entre el cliente y la documentación de la librería es muy escasa arriba de la configuración básica, incluso considerando la de su predecesora, Unet.
-
-\begin{figure}[H]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=0.8\linewidth]{images/notion.png}
     \caption{Notion con las actividades en diagrama \textit{Kanban}.}
     \label{fig:notion_proyecto}
 \end{figure}
-\begin{figure}
+
+\begin{figure}[H]
     \centering
-    \caption{Diagrama de Gantt del proyecto.}
-    \label{fig:diagrama_gantt}
     \begin{subfigure}{\textwidth}
         \centering
         \includegraphics[width=0.8\linewidth]{images/ago-dec-19.png}
@@ -114,30 +111,27 @@ Cómo anteriormente se había tratado, el tiempo de ciclo o \textit{Lead Time} e
         \label{fig:gantt_proyecto}
     \end{subfigure}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
     \ContinuedFloat
     \centering
-    \caption{Diagrama de Gantt del proyecto.}
-    \label{fig:diagrama_gantt}
-         \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\textwidth}
         \centering
         \includegraphics[width=0.8\linewidth]{images/mar-sep-21.png}
         \caption{Diagrama de Gantt de la realización del proyecto - Marzo 2021 a Septiembre 2021.}
         \label{fig:gantt_proyecto_2}
     \end{subfigure}
-    \begin{subfigure}{\textwidth}\ContinuedFloat
+    \begin{subfigure}{\textwidth}
         \centering
         \includegraphics[width=0.8\linewidth]{images/sep-nov-21.png}
         \caption{Diagrama de Gantt de la realización del proyecto - Septiembre 2021 a Noviembre 2021.}
         \label{fig:gantt_proyecto_3}
-     \end{subfigure}
+    \end{subfigure}
+    \caption{Diagrama de Gantt del proyecto.}
+    \label{fig:diagrama_gantt}
 \end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{images/BurndownChart.png}
-    \caption{Gráfica de flujo acumulado del proyecto.}
-    \label{fig:grafica_flujo_acumulado}
-\end{figure}
+
+Cómo anteriormente se había tratado, el tiempo de ciclo o \textit{Lead Time} es el tiempo de realización de la tarea, abarca desde que se empieza a trabajar hasta que se completa la tarea. Por lo general, es bueno cuando el tiempo de ciclo es corto porque significa que no hay obstáculos que el equipo de trabajo tenga que resolver. De manera similar, como se nota en la figura~\ref{fig:grafica_tiempos_ciclo} y en la figura~\ref{fig:grafica_flujo_acumulado} la mayoría de las actividades fueron resueltas en corto tiempo, la única excepción fueron actividades donde surgieron problemas técnicos no esperados, los \textit{unknown unknowns}. El principal motivo de éstos en el proyecto fue el uso de la librería \textit{Mirror} que aumento la complejidad por la sincronización entre el cliente y la documentación de la librería es muy escasa aparte de la configuración básica, incluso considerando la de su predecesora, \textit{Unet}.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{images/TareasEnTrabajo.png}
@@ -145,9 +139,17 @@ Cómo anteriormente se había tratado, el tiempo de ciclo o \textit{Lead Time} e
     \label{fig:grafica_tiempos_ciclo}
 \end{figure}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/BurndownChart.png}
+    \caption{Gráfica de flujo acumulado del proyecto.}
+    \label{fig:grafica_flujo_acumulado}
+\end{figure}
+
 \subsection{Análisis}
 \subsubsection{Propuestas de producto}
 Durante la definición del proyecto empezó la pandemia del SARS-COV2 que genera el padecimiento COVID-19. Ante la necesidad del aislamiento mucha gente recurrió a una gran variedad de juegos para ocupar su tiempo libre, entre estos hubo algunos juegos que ocuparon la consciencia colectiva por al menos un rato, juegos como \textit{Animal Crossing}, \textit{Fall Guys} y \textit{Among Us}. Muchos de estos juegos la gente los descubrió en \textit{streams}(transmitido en tiempo real) de gente jugando con sus amigos, estos normalmente jugaban el juego mientras estaban en videollamada. Un juego con ventajas similares que funcione tanto en un entorno en línea, así como en un salón de clases, tiene la utilidad como actividad integradora porque naturalmente hace que entre compañeros hablen y permite conocer a otras personas.
+
 En su parte, se enfocó a que la creación del juego el usuario pueda aprender programación junto con sus compañeros incluso cuando estos no comparten un mismo espacio físico, dado que, durante la definición de éste, muchos estudiantes tuvieron la necesidad de tomar clases a distancia. Ante esto, la preferencia que el juego fuera accesible en una multitud de dispositivos, a fin de que una gran variedad de estudiantes pueda acceder con su dispositivo o un dispositivo de la institución para participar en la actividad. Con este factor se consideró la necesidad de crear un juego para navegador como producto final. A base de la experiencia previa, así como sus plataformas soportadas y su facilidad para el desarrollo se decidió usar \textit{Unity} como \textit{game engine}.
 
 \section{Diseño}
@@ -160,39 +162,38 @@ Para cubrir los conceptos de programación estructurada se crearon los siguiente
 
 \begin{itemize}
     \item Secuencia: Entrena al jugador en lógica de programación al trabajar en éste la habilidad de resolver problemas paso a paso. En este \textit{puzzle} el jugador tiene que crear el algoritmo con los pasos necesarios para hacer que el robot llegue al otro lado (figura~\ref{fig:puzzle_secuencia}).
-    \begin{figure}[H]
+        \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\linewidth]{images/PuzzleSecuencia.png}
         \caption{Captura de pantalla de uno de los \textit{puzzle} de secuencia.}
         \label{fig:puzzle_secuencia}
     \end{figure}
+    \item Opción múltiple: En este tipo de \textit{puzzle}, se pide al jugador que seleccione el ciclo con un numero definido de repeticiones. Dependiendo de la dificultad, puede que se combinen varios tipos de ciclos en sus opciones. Se selecciona la opción correcta dando clic a su botón (figura~\ref{fig:puzzle_opcion_multiple}).
     \begin{figure}[H]
             \centering
         \begin{subfigure}{0.4\textwidth}
             \centering
             \includegraphics[width=\textwidth]{images/OpcionMultiple1.png}
             \caption{Jugador tiene que llenar la cubeta hasta el nivel pedido.}
-            \label{fig:puzzle_completar_ciclos_for}
+            \label{fig:puzzle_opmul_ciclos_for}
         \end{subfigure}
         \begin{subfigure}{0.4\textwidth}
             \centering
             \includegraphics[width=\textwidth]{images/OpcionMultiple2.png}
             \caption{En este \textit{puzzle} se tiene que seleccionar el ciclo que escriba en pantalla del 1 al 10.}
-            \label{fig:puzzle_completar_ciclos_while}
+            \label{fig:puzzle_opmul_ciclos_while}
         \end{subfigure}
         \begin{subfigure}{0.4\textwidth}
             \centering
             \includegraphics[width=\textwidth]{images/OpcionMultiple3.png}
             \caption{Jugador tiene que dar vuelta a una palanca para encender un motor.}
-            \label{fig:puzzle_completar_ciclos_while}
+            \label{fig:puzzle_opmul_ciclos_while_2}
         \end{subfigure}
         \caption{Capturas de pantalla de \textit{puzzle} de opción múltiple.}
         \label{fig:puzzle_opcion_multiple}
     \end{figure}
-    \item Opción múltiple: En este tipo de \textit{puzzle}, se pide al jugador que seleccione el ciclo con un numero definido de repeticiones. Dependiendo de la dificultad, puede que se combinen varios tipos de ciclos en sus opciones. Se selecciona la opción correcta dando clic a su botón (figura~\ref{fig:puzzle_opcion_multiple}).
+    \item Completar ciclo: Tiene instrucciones de cuantas repeticiones debe hacer el bucle. El jugador tiene que llenar el valor inicial de la variable de índice, cuando termina de correrse el ciclo y en el ejercicio del ciclo Para, los pasos a hacer, como se ven en figura~\ref{fig:puzzle_completar_ciclos}.
     \begin{figure}[H]
-        \caption{\textit{Puzzles} de completar ciclos.}
-        \label{fig:puzzle_completar_ciclos}
         \begin{subfigure}{\textwidth}
             \centering
             \includegraphics[width=0.5\linewidth]{images/CompletarCicloFor.png}
@@ -205,14 +206,12 @@ Para cubrir los conceptos de programación estructurada se crearon los siguiente
             \caption{Completar ciclo Mientras.}
             \label{fig:puzzle_completar_ciclos_while}
         \end{subfigure}
+        \caption{\textit{Puzzles} de completar ciclos.}
+        \label{fig:puzzle_completar_ciclos}
     \end{figure}
-    \item Completar ciclo: Tiene instrucciones de cuantas repeticiones debe hacer el bucle. El jugador tiene que llenar el valor inicial de la variable de índice, cuando termina de correrse el ciclo y en el ejercicio del ciclo Para, los pasos a hacer, como se ven en figura~\ref{fig:puzzle_completar_ciclos}.
-
-    \item Condicionales: Hay varios ejercicios que tratan el tema de condicionales a lo largo del juego. Los jugadores seleccionan la opción que describe lo que hace ese pseudocódigo, como se puede se puede ver en la figura~\ref{fig:puzzle_condicionales}. Sin embargo, como lo hace cada uno varia ligeramente, algunos incluyendo temas tales como operadores relacionales (subfigura~\subref{fig:puzzle_condicionale3} y subfigura~\subref{fig:puzzle_condicionales4} de la figura antes referida) u operadores lógicos(subfigura~\subref{fig:puzzle_condicionales2}). Todos estos acertijos cambian los valores de las variables o las comparaciones cada partida.
+    \item Condicionales: Hay varios ejercicios que tratan el tema de condicionales a lo largo del juego. Los jugadores seleccionan la opción que describe lo que hace ese pseudocódigo, como se puede se puede ver en la figura~\ref{fig:puzzle_condicionales}. Sin embargo, cómo lo hace cada uno varia ligeramente, algunos incluyendo temas tales como operadores relacionales (subfigura~\ref{fig:puzzle_condicionale3} y subfigura~\ref{fig:puzzle_condicionales4}) u operadores lógicos(subfigura~\ref{fig:puzzle_condicionales2}). Todos estos acertijos cambian los valores de las variables o las comparaciones cada partida.
     \begin{figure}[H]
         \centering
-        \caption{Capturas de pantalla de los diversos ejercicios de condicionales en el juego.}
-        \label{fig:puzzle_condicionales}
         \begin{subfigure}{\textwidth}
             \centering
             \includegraphics[width=0.5\linewidth]{images/Puzzlecondicional1.png}
@@ -241,10 +240,19 @@ Para cubrir los conceptos de programación estructurada se crearon los siguiente
             \caption{Este ejercicio ve operadores relacionales, pero comparando valores enteros.}
             \label{fig:puzzle_condicionales4}
         \end{subfigure}
+        \caption{Capturas de pantalla de los diversos ejercicios de condicionales en el juego.}
+        \label{fig:puzzle_condicionales}
     \end{figure}
 \end{itemize}
 
 Es importante destacar que estos son los \textit{puzzles} finales, algunos se han cortado del juego o modificado, según retroalimentación y cambios al documento de diseño. Estos cambios se discutirán en más detalle en el capitulo próximo. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/MapaJuegoConItems.png}
+    \caption{Disposición de \textit{puzzles} en el juego.}
+    \label{fig:items_on_map}
+\end{figure}
 
 La organización de los \textit{puzzles} se puede ver la figura~\ref{fig:items_on_map}. La mayoría de los acertijos están organizados dependiendo en su temática, por ejemplo: decoración de pasteles ocurre en la cocina. Sin embargo, se tomaron a la hora del diseño libertades para hacer que cuartos sean más justos, hay \textit{puzzles} que su posición fue definida para crear un flujo de jugadores en ese cuarto, a forma de que haya lugares donde los asesinos pueden ir varias veces a encontrar jugadores programadores y a la vez evitar que si los agarran en estos lugares nadie se dé cuenta.
 \begin{wrapfigure}{l}{0.25\textwidth}
@@ -255,12 +263,9 @@ La organización de los \textit{puzzles} se puede ver la figura~\ref{fig:items_o
 \end{wrapfigure}
 Los \textit{puzzles} se pueden descubrir por un símbolo de espada (figura~\ref{fig:puzzle_location}), los jugadores se tienen que parar cerca para interactuar con ellos, eso abre la interfaz gráfica para resolver los \textit{puzzles}. Cuando estos no hayan sido resueltos tienen un icono, cuando ya fueron resueltos por un jugador éste desaparece y no se puede interactuar con ellos.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\linewidth]{images/MapaJuegoConItems.png}
-    \caption{Disposición de \textit{puzzles} en el juego.}
-    \label{fig:items_on_map}
-\end{figure}
+Se decidió utilizar la librería \textit{Mirror} para desarrollar el sistema de multijugador. Esto es esencial, porque sus abstracciones para el manejo de las comunicaciones cliente-servidor mediante \textit{Remote Call Procedure} dictaron algunas decisiones de arquitectura.
+
+Éste fue diseñado con un servidor autoritativo. Las acciones del jugador van al servidor para ser verificadas. Una excepción es el sistema de movimiento de los jugadores, como trataremos a continuación. Como se puede ver en la figura~\ref{fig:diagrama_sec_movimiento}, en este caso cada "propietario" de su personaje tiene capacidad total de moverlo a donde quiera, en teoría. En práctica, el cliente controla la posición a base de la entrada del jugador y usando sincronización de posición y velocidad de \textit{Mirror} tenemos un pseudo sistema de predicción de su siguiente movimiento para conexiones lentas. 
 
 \begin{figure}[H]
     \centering
@@ -269,13 +274,11 @@ Los \textit{puzzles} se pueden descubrir por un símbolo de espada (figura~\ref{
     \label{fig:diagrama_sec_movimiento}
 \end{figure}
 
-Se decidió utilizar la librería \textit{Mirror} para desarrollar el sistema de multijugador. Esto es esencial, porque sus abstracciones para el manejo de las comunicaciones cliente-servidor mediante \textit{Remote Call Procedure} dictaron algunas decisiones de arquitectura.
-
-Éste fue diseñado con un servidor autoritativo. Las acciones del jugador van al servidor para ser verificadas. Una excepción es el sistema de movimiento de los jugadores, como trataremos a continuación. Como se puede ver en la figura~\ref{fig:diagrama_sec_movimiento}, en este caso cada "propietario" de su personaje tiene capacidad total de moverlo a donde quiera, en teoría. En práctica, el cliente controla la posición a base de la entrada del jugador y usando sincronización de posición y velocidad de \textit{Mirror} tenemos un pseudo sistema de predicción de su siguiente movimiento para conexiones lentas. 
-
 \subsubsection{Sistema de detección de muertes}
+
 Es un sistema que funciona primordialmente en el servidor, se puede notar su funcionamiento en la figura~\ref{fig:diagrama_sec_detect_muertes}. En todo momento, cada \textit{game loop} corre una rutina que realiza \textit{raytracing} al área circundante al jugador con un radio definido previamente en el \textit{lobby} del juego. Al haber un cambio se mandará una llamada a un procedimiento en el cliente que actualizará la interfaz gráfica para mostrar un botón de reportar muertos. Una vez al ser reportado, se realizará una segunda revisión de que sea una operación legal y se pide a todos los clientes mostrar una UI para realizar la votación sobre el personaje de juego.
-\begin{figure}[h!]
+
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{images/diagrama_deteccion_muerte.png}
     \caption{Diagrama de secuencia de la detección de muertes.}
@@ -283,22 +286,34 @@ Es un sistema que funciona primordialmente en el servidor, se puede notar su fun
 \end{figure}
 
 \subsubsection{Asesinatos}
+Hay un tipo de jugadores especiales llamados \textit{asesinos}, estos son \textit{impostores} que engañan a los demás jugadores de su verdadera identidad. Estos tienen entre una de sus capacidades matar a otros jugadores. El asesinar a otros jugadores es una actividad que solo el servidor tiene autoridad.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{images/diagrama_sec_matar.png}
     \caption{Diagrama de secuencia de muertes por asesinos/impostores.}
     \label{fig:diagrama_sec_muertes_por_impost}
 \end{figure}
-Hay un tipo de jugadores especiales llamados asesinos, estos son impostores que engañan a los demás jugadores de su verdadera identidad. Estos tienen entre una de sus capacidades matar a otros jugadores. El asesinar a otros jugadores es una actividad que solo el servidor tiene autoridad.
-Como se nota en la figura~\ref{fig:diagrama_sec_muertes_por_impost}, se detectan los jugadores en el servidor. En el cliente del jugador impostor se puede matar a otros jugadores no impostores, cuando se manda la señal de matar a alguien (invocada por un botón) se pregunta al servidor si es legal o sea si es físicamente posible su ocurrencia (cercanía, no hay \textit{cooldown}, entre otros). Si es legal (si en ese momento puede matar a otro jugador), se llama el \textit{spawn} de una tumba en el lugar del jugador muerto y para mandarlo a otro \textit{layer} que no es visible a los jugadores vivos y mostrar la capa de fantasmas en la cámara del cliente para el jugador muerto mediante una función RPC. En el caso de los demás jugadores solo recibirán por parte del servidor un mensaje para \textit{spawnear} una tumba y desaparecerá ese jugador de su juego.
+
+Como se nota en la figura~\ref{fig:diagrama_sec_muertes_por_impost}, se detectan los jugadores en el servidor. En el cliente del jugador \textit{impostor} se puede matar a otros jugadores \textit{no impostores}, cuando se manda la señal de matar a alguien (invocada por un botón) se pregunta al servidor si es legal o sea si es físicamente posible su ocurrencia (cercanía, no hay \textit{cooldown}, entre otros). Si es legal (si en ese momento puede matar a otro jugador), se llama el \textit{spawn} de una tumba en el lugar del jugador muerto y para mandarlo a otro \textit{layer} que no es visible a los jugadores vivos y mostrar la capa de fantasmas en la cámara del cliente para el jugador muerto mediante una función RPC. En el caso de los demás jugadores solo recibirán por parte del servidor un mensaje para \textit{spawnear} una tumba y desaparecerá ese jugador de su juego.
 
 \subsubsection{Votación de asesinos}
-La votación se puede invocar de dos formas distintas; la primera forma es cuando algún jugador (ya sea programador o asesino) reporta que encontró una tumba y la segunda es acudiendo al botón de emergencia ubicado cerca del punto donde los jugadores inician la partida. Cuando la votación ocurre, se muestra una interfaz gráfica que permite votar por quien es el impostor (figura~\ref{fig:diagrama_ui_votacion}). En esta parte, los jugadores pueden hablar (en su salón de clases, en videollamada o \textit{chat} de voz usando una aplicación externa) para llegar a un acuerdo por quién votar, puede compartir información o pistas que encontraron durante su partida, decir que tareas tuvieron antes de la votación, etc. La votación ocurre con un tiempo límite definido, al acabarse se contabilizan los votos recibidos, en este caso pueden ocurrir tres escenarios:
+La votación se puede invocar de dos formas distintas; la primera forma es cuando algún jugador (ya sea programador o asesino) reporta que encontró una tumba y la segunda es acudiendo al botón de emergencia ubicado cerca del punto donde los jugadores inician la partida. Cuando la votación ocurre, se muestra una interfaz gráfica que permite votar por quien es el impostor (figura~\ref{fig:diagrama_ui_votacion}). En esta parte, los jugadores pueden hablar (en su salón de clases, en videollamada o \textit{chat} de voz usando una aplicación externa) para llegar a un acuerdo por quién votar, puede compartir información o pistas que encontraron durante su partida, decir que tareas tuvieron antes de la votación, etc. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/votacion.png}
+    \caption{Diseño de interfaz gráfica pantalla de votación de asesinos.}
+    \label{fig:diagrama_ui_votacion}
+\end{figure}
+
+La votación ocurre con un tiempo límite definido, al acabarse se contabilizan los votos recibidos, en este caso pueden ocurrir tres escenarios:
 \begin{itemize}
     \item Un jugador tiene la mayoría de los votos, se mata tal jugador.
     \item Dos o más jugadores tienen la misma cantidad de votos, no se elimina a nadie dado que se considera un empate.
     \item La mayoría de los jugadores no votaron o decidieron no votar por nadie, abstinencia de votos, no se elimina a nadie porque no hubo un acuerdo.
 \end{itemize}
+
 El flujo de la votación entre el cliente y el servidor se puede observar en la figura~\ref{fig:diagrama_sec_votacion}.
 
 \begin{figure}[H]
@@ -307,70 +322,63 @@ El flujo de la votación entre el cliente y el servidor se puede observar en la 
     \caption{Diagrama de secuencia del sistema de votación.}
     \label{fig:diagrama_sec_votacion}
 \end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\linewidth]{images/votacion.png}
-    \caption{Diseño de interfaz gráfica pantalla de votación de asesinos.}
-    \label{fig:diagrama_ui_votacion}
-\end{figure}
 
 \subsubsection{Modo fantasma}
-Para balancear el hecho de que hay lugares de mapa donde los asesinos pueden quedarse atorados sin posibilidad de escapar después de acabar con otro jugador, se diseñó el modo fantasma. Al completar un \textit{puzzle} algún jugador como asesino se agrega una posibilidad de usar el modo fantasma que le permitirá volverse transparente y realizar una salida de estos cuartos.
+Para balancear el hecho de que hay lugares de mapa donde los asesinos pueden quedarse atorados sin posibilidad de escapar después de acabar con otro jugador, se diseñó el \textit{modo fantasma}. Al completar un \textit{puzzle} algún jugador como \textit{asesino} se agrega una posibilidad de usar el \textit{modo fantasma} que le permitirá volverse transparente y realizar una salida de estos cuartos.
 
 \subsubsection{Emergencias}
-Son tipos especiales de \textit{puzzles}. Tienen la misma complejidad que estos, pero requieren 2 jugadores que los hagan al mismo tiempo para completarlos con éxito. Estos pueden ocurrir varias veces en la partida dependiendo de los asesinos. Estos pueden invocar las emergencias después de un tiempo dado de que haya iniciado la partida, después de un tiempo de juntas y después de un tiempo de que los programadores completaron una primera emergencia correctamente.
+Son tipos especiales de \textit{puzzles}. Tienen la misma complejidad que estos, pero requieren 2 jugadores que los hagan al mismo tiempo para completarlos con éxito. Estos pueden ocurrir varias veces en la partida dependiendo de los \textit{asesinos}. Estos pueden invocar las \textit{emergencias} después de un tiempo dado de que haya iniciado la partida, después de un tiempo de \textit{juntas} y después de un tiempo de que los \textit{programadores} completaron una primera \textit{emergencia} correctamente.
 
-    \begin{figure}[H]
+Hay tres emergencias disponibles:
+\begin{itemize}
+    \item Apagar generadores, jugadores tienen que encender un generador de respaldo. En esta emergencia los jugadores necesitan aumentar el valor de un \textit{slider}, haciendo que los jugadores experimenten con un uso potencial de las variables de números enteros (figura~\ref{fig:ui_sab_generador}).
+        \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\linewidth]{images/SabotageGenerador.png}
         \caption{Interfaz gráfica de emergencia en los generadores de electricidad.}
         \label{fig:ui_sab_generador}
     \end{figure}
-        \begin{figure}[H]
+    \item Mover presión de \textit{boilers}, jugadores tienen que regular la presión. \textit{Puzzle} consiste en que los jugadores tienen que ver el indicador en pantalla y mantener la presión en verde, modificando el algoritmo en pantalla de forma que mantenga la presión entre el mínimo y el máximo (figura~\ref{fig:ui_sab_presion}).
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\linewidth]{images/SabotagePresion.png}
         \caption{Interfaz gráfica de emergencia en los \textit{boilers}.}
         \label{fig:ui_sab_presion}
     \end{figure}
-        \begin{figure}[H]
+    \item \textit{Sabotear telégrafo}, requiere dos personas contesten preguntas. Al contestar un numero de dado de preguntas correctas resolverán la emergencia. La interfaz gráfica se puede ver en la figura~\ref{fig:ui_teletransporte}.
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\linewidth]{images/sabotage_preguntas.png}
         \caption{Interfaz gráfica de emergencia de telégrafo.}
         \label{fig:ui_teletransporte}
     \end{figure}
-
-Hay tres emergencias disponibles:
-\begin{itemize}
-    \item Apagar generadores, jugadores tienen que encender un generador de respaldo. En esta emergencia los jugadores necesitan aumentar el valor de un \textit{slider}, haciendo que los jugadores experimenten con un uso potencial de las variables de números enteros (figura~\ref{fig:ui_sab_generador}).
-    \item Mover presión de \textit{boilers}, jugadores tienen que regular la presión. \textit{Puzzle} consiste en que los jugadores tienen que ver el indicador en pantalla y mantener la presión en verde, modificando el algoritmo en pantalla de forma que mantenga la presión entre el mínimo y el máximo (figura~\ref{fig:ui_sab_presion}).
-    \item \textit{Sabotear telégrafo}, requiere dos personas contesten preguntas. Al contestar un numero de dado de preguntas correctas resolverán la emergencia. La interfaz gráfica se puede ver en la figura~\ref{fig:ui_teletransporte}.
 \end{itemize}
 
 \subsubsection{Mapa de juego}
-\begin{figure}[h]
+El juego se lleva a cabo en una mansión. El mapa consiste en un solo piso. Algunas de las características que se consideró que tuviera el mapa fueron:
+\begin{itemize}
+    \item Interconectado para permitir a los \textit{programadores} moverse a completar sus actividades, de preferencia más de una salida entre cuartos. 
+    \item Hay algunos cuartos que rompen con la primera regla para los programadores, tienen una sola salida y es muy fácil de que un asesino agarre a un programador haciendo una tarea y fácilmente lo pueda matar, dado que hay poco flujo de tránsito, la tumba puede quedar no detectada por un largo tiempo. La forma de balancear ésto es agregando varias tareas en este cuarto de forma que otros jugadores tengan la necesidad de entrar. Algunos jugadores más experimentados dada la reputación de esos cuartos podrán entrar a revisar si no hay ninguna tumba de alguno de sus compañeros programadores.
+    \item Áreas grandes principales donde los jugadores circulan a las diferentes salas del juego, normalmente son zonas que un asesino consideraría muy alto riesgo para matar a un programador. Estas son la entrada a la mansión, un patio, el zaguán de atrás de la casa y un patio que conecta los \textit{boilers} con un corral.
+\end{itemize}
+
+El diseño del mapa se puede ver en la figura~\ref{fig:mapa_juego}.
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{images/MapaJuego.png}
     \caption{Organización del mapa del juego.}
     \label{fig:mapa_juego}
 \end{figure}
-El juego se lleva a cabo en una mansión. El mapa consiste en un solo piso. Algunas de las características que se consideró que tuviera el mapa fueron:
-\begin{itemize}
-    \item Interconectado para permitir a los programadores moverse a completar sus actividades, de preferencia más de una salida entre cuartos. 
-    \item Hay algunos cuartos que rompen con la primera regla para los programadores, tienen una sola salida y es muy fácil de que un asesino agarre a un programador haciendo una tarea y fácilmente lo pueda matar. Dado que hay poco flujo de tránsito, la tumba puede quedar no detectada por un largo tiempo. La forma de balancear esto es agregando varias tareas en este cuarto de forma que otros jugadores tengan la necesidad de entrar. Algunos jugadores más experimentados dada la reputación de esos cuartos podrán entrar a revisar si no hay ninguna tumba de alguno de sus compañeros programadores.
-    \item Áreas grandes principales donde los jugadores circulan a las diferentes salas del juego, normalmente son zonas que un asesino consideraría muy alto riesgo para matar a un programador. Estas son la entrada a la mansión, un patio, el zaguán de atrás de la casa y un patio que conecta los \textit{boilers} con un corral.
-\end{itemize}
-
-El diseño del mapa se puede ver en la figura~\ref{fig:mapa_juego}.
 
 \section{Desarrollo}
-Usando las libertades dadas por la librería \textit{Mirror}, se usó el mismo proyecto de Unity para el desarrollo del cliente y el servidor, usando el lenguaje de programación C\#. El servidor se encarga de hospedar las partidas y los clientes que dependen del servidor para manejar el estado. En el fondo la librería se encarga de sincronizar estado además de realizar llamadas y ejecutar funciones RPC a petición del servidor.
+Usando las libertades dadas por la librería \textit{Mirror}, se usó el mismo proyecto de \textit{Unity} para el desarrollo del cliente y el servidor, usando el lenguaje de programación C\#. El servidor se encarga de hospedar las partidas y los clientes que dependen del servidor para manejar el estado. En el fondo la librería se encarga de sincronizar estado además de realizar llamadas y ejecutar funciones \textit{RPC} a petición del servidor.
 
-El juego se diseñó con un servidor autoritativo, algunos sistemas hacen cálculos en el servidor o las decisiones son rectificadas en éste. En sí, el estado del juego será computado mayormente en el servidor, donde el cliente solo estará como un cliente ligero. La comunicación entre estos dos se realizara con el protocolo usando \textit{Websockets} para la transferencia de información, una limitación dada por el soporte de protocolos de comunicación del navegador web.
+El juego se diseñó con un servidor autoritativo, algunos sistemas hacen cálculos en el servidor o las decisiones son rectificadas en éste. El estado del juego será computado mayormente en el servidor, donde el cliente solo estará como un cliente ligero. La comunicación entre estos dos se realizara con el protocolo usando \textit{Websockets} para la transferencia de información, una limitación dada por el soporte de protocolos de comunicación del navegador web.
 
 En esta etapa se realizó la programación de diversos sistemas y comportamientos de distintos elementos del juego.
 
 \subsection{Creación de \textit{sprites} y \textit{assets}}
-Según detalles del documento de diseño, se crean los diversos sprites para personajes, animaciones, objetos (mesas, cajas) e interfaces gráficas. Se crearon de todo aquello que no se pudo obtener de spritesheets de uso libre o porque fueron originales para este juego (se hablará de esto más adelante). El diseño de algunos artículos originales se realizó previamente en el documento de diseño del juego. Para los \textit{sprites} se definieron algunas limitantes, como la resolución, donde cada \textit{tile}  tiene medidas de 16x16 píxeles, el fondo de éste es transparente. En los \textit{sprites} necesarios, estuvieron los de personajes jugables (figura~\ref{fig:sprite_johanna}. Estos se diseñaron en \textit{Photoshop}. En el caso de los jugadores miden 1x2 \textit{tiles}. Las mesas (comedor, mesa de billar) son 3x3 \textit{tiles}. 
+Según detalles del documento de diseño, se crean los diversos \textit{sprites} para personajes, animaciones, objetos (mesas, cajas) e interfaces gráficas. Se crearon de todo aquello que no se pudo obtener de \textit{spritesheets} de uso libre o porque fueron originales para este juego (se hablará de esto más adelante). El diseño de algunos artículos originales se realizó previamente en el documento de diseño del juego. Para los \textit{sprites} se definieron algunas limitantes, como la resolución, donde cada \textit{tile}  tiene medidas de 16x16 píxeles, el fondo de éste es transparente. En los \textit{sprites} necesarios, estuvieron los de personajes jugables (figura~\ref{fig:sprite_johanna}. Estos se diseñaron en \textit{Photoshop}. En el caso de los jugadores miden 1x2 \textit{tiles}. Las mesas (comedor, mesa de billar) son 3x3 \textit{tiles}.
 
 \begin{wrapfigure}{l}{0.25\textwidth}
     \centering
@@ -389,57 +397,57 @@ Entre estos fueron:
 \end{itemize}
 
 \subsection{Puzzles}
+\begin{itemize}
+    \item Completar ciclos: Los \textit{puzzle} de este tipo tienen varios campos a completar como se ha hablado anteriormente. Al llenar estos campos, el jugador tiene un botón de verificar, esto manda las entradas a través de la red al servidor, donde se verifica en el servidor. Ya sea respuesta correcta o falsa se comunica el resultado al cliente (figura~\ref{fig:diagrama_sec_for_while}).
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\linewidth]{images/diagrama_sec_for_while.png}
+        \caption{Diagrama de secuencia \textit{puzzle} completar ciclos.}
+        \label{fig:diagrama_sec_for_while}
+    \end{figure}
+    \item Secuencia: Los \textit{puzzle} de secuencia usan una tabla simulada aprovechando los componentes de \textit{layout} provistos por \text{Unity} para el \textit{sistema de UI}. Se creo un \textit{prefab} para poder crear en tiempo de juego suficientes cuadritos para llenar el tamaño del campo de juego establecido para el \textit{puzzle}. \texttt{SequenceGrid} es la clase que controla en comportamiento del \textit{puzzle} en el cliente, esta hace la labor de actualizar \textit{sprites} del \textit{grid} cuando hay cambios de posición del jugador. Todos estos subsistemas son controlados por \texttt{SequencePuzzle} que se encarga de leer las instrucciones en el cliente. Al terminar de leer las instrucciones, se mandan al servidor para verificar que lleguen a la meta (y marcar el \textit{puzzle} como completado) y en el cliente hacer un \textit{replay}, es visualmente atractivo, permite al jugador ver donde se equivocó y da continuidad al jugador que completo correctamente la tarea en lugar de marcar como completado el \textit{puzzle} automáticamente. El funcionamiento de este \textit{puzzle} se puede ver con más detalle en la figura~\ref{fig:diagrama_sec_sec}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleSecuencia.drawio.png}
+        \caption{Diagrama de secuencia del \textit{puzzle} de secuencia.}
+        \label{fig:diagrama_sec_sec}
+    \end{figure}
+    \item  \textit{Puzzle} en área de generador (comando si/entonces y operadores relacionales): Este \textit{puzzle} incluye expresiones lógicas una dentro de la otra, los jugadores tendrán que analizar cómo se comporta y a base del estado actual de las variables, elegir que rama eligió el programa (el comando si/entonces) como se ve en la figura~\ref{fig:diagrama_sec_booleano}.
         \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleBool.png}
         \caption{Diagrama de secuencia \textit{puzzle} de encender generador (booleanos y comando si entonces).}
         \label{fig:diagrama_sec_booleano}
     \end{figure}
-        \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleSecuencia.drawio.png}
-        \caption{Diagrama de secuencia del \textit{puzzle} de secuencia.}
-        \label{fig:diagrama_sec_sec}
-    \end{figure}
-        \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.4\linewidth]{images/diagrama_sec_for_while.png}
-        \caption{Diagrama de secuencia \textit{puzzle} completar ciclos.}
-        \label{fig:diagrama_sec_for_while}
-    \end{figure}
-        \begin{figure}[H]
+    \item Elegir la opción correcta: Usado para algunos \textit{puzzles} de ciclos, hay distintos botones con opciones y el jugador da clic a la opción correcta. El juego manda el índice de la respuesta al servidor, si el índice está marcado como respuesta correcta entonces se marca como contestada correctamente (figura~\ref{fig:diagrama_sec_opmul}).
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleOpcionMultiple.png}
         \caption{Diagrama de secuencia del sistema para \textit{puzzles} de opción múltiple.}
         \label{fig:diagrama_sec_opmul}
     \end{figure}
-        \begin{figure}[H]
+    \item If: En este \textit{puzzle}, se agarra un \textit{enum} aleatorio de los posibles tipos de flores. Este tipo de flor será seleccionada para completar un pedazo de pseudocódigo. Aparte, se selecciona otro tipo de flor, de la misma manera, esta se ajusta en cuadro de imagen. Este \textit{puzzle} consiste en preguntarle al jugador que hace el seudocódigo dado el tipo de flor que pide y el tipo flor que va a procesar. La respuesta seleccionada se manda al servidor (figura~\ref{fig:diagrama_sec_if}).
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleIf.png}
         \caption{Diagrama de secuencia \textit{puzzle} del tema de condicionales Si Entonces.}
         \label{fig:diagrama_sec_if}
     \end{figure}
-        \begin{figure}[H]
+    \item If/else: El \textit{puzzle if/else} necesita un valor booleano que se calcula cuando inicia el servidor, este valor es usado para decidir si se va a decorar un pastel o un \textit{cupcake}, como se había visto anteriormente le mostramos al jugador un pseudocódigo de la forma que debería de decorar el postre y el jugador manda al servidor su elección usando los dos botones para seleccionar, que se revisa que sea el valor correcto en el servidor como se nota en la figura~\ref{fig:diagrama_sec_if_else}.
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\linewidth]{images/DiagramaSecuenciaPuzzleIfElse.png}
         \caption{Diagrama de secuencia \textit{puzzle} del tema de condicionales complejas.}
         \label{fig:diagrama_sec_if_else}
     \end{figure}
-\begin{itemize}
-    \item Completar ciclos: Los \textit{puzzle} de este tipo tienen varios campos a completar como se ha hablado anteriormente. Al llenar estos campos, el jugador tiene un botón de verificar, esto manda las entradas a través de la red al servidor, donde se verifica en el servidor. Ya sea respuesta correcta o falsa se comunica el resultado al cliente (figura~\ref{fig:diagrama_sec_for_while}).
-    \item Secuencia: Los \textit{puzzle} de secuencia usan una tabla simulada aprovechando los componentes de \textit{layout} provistos por Unity para el sistema de UI. Se creo un \textit{prefab} para poder crear en tiempo de juego suficientes cuadritos para llenar el tamaño del campo de juego establecido para el \textit{puzzle}. \texttt{SequenceGrid} es la clase que controla en comportamiento del \textit{puzzle} en el cliente, esta hace la labor de actualizar \textit{sprites} del \textit{grid} cuando hay cambios de posición del jugador. Todos estos subsistemas son controlados por \texttt{SequencePuzzle} que se encarga de leer las instrucciones en el cliente. Al terminar de leer las instrucciones, se mandan al servidor para verificar que lleguen a la meta (y marcar el \textit{puzzle} como completado) y en el cliente hacer un \textit{replay}, es visualmente atractivo, permite al jugador ver donde se equivocó y da continuidad al jugador que completo correctamente la tarea en lugar de marcar como completado el \textit{puzzle} automáticamente. El funcionamiento de este \textit{puzzle} se puede ver con más detalle en la figura~\ref{fig:diagrama_sec_sec}.
-    \item  \textit{Puzzle} en área de generador (comando si/entonces y operadores relacionales): Este \textit{puzzle} incluye expresiones lógicas una dentro de la otra, los jugadores tendrán que analizar cómo se comporta y a base del estado actual de las variables, elegir que rama eligió el programa (el comando si/entonces) como se ve en la figura~\ref{fig:diagrama_sec_booleano}.
-    \item Elegir la opción correcta: Usado para algunos \textit{puzzles} de ciclos, hay distintos botones con opciones. El jugador da clic a la opción correcta. El juego manda el índice de la respuesta al servidor, si el índice está marcado como respuesta correcta entonces se marca como contestada correctamente (figura~\ref{fig:diagrama_sec_opmul}).
-    \item If: En este \textit{puzzle}, se agarra un \textit{enum} aleatorio de los posibles tipos de flores. Este tipo de flor será seleccionada para completar un pedazo de pseudocódigo. Aparte, se selecciona otro tipo de flor, de la misma manera, esta se ajusta en cuadro de imagen. Este \textit{puzzle} consiste en preguntarle al jugador que hace el seudocódigo dado el tipo de flor que pide y el tipo flor que va a procesar. La respuesta seleccionada se manda al servidor (figura~\ref{fig:diagrama_sec_if}).
-    \item If/else: El \textit{puzzle if/else} necesita un valor booleano que se calcula cuando inicia el servidor, este valor es usado para decidir si se va a decorar un pastel o un \textit{cupcake}, como se había visto anteriormente le mostramos al jugador un pseudocódigo de la forma que debería de decorar el postre. Y el jugador manda al servidor su elección usando los dos botones para seleccionar, que se revisa que sea el valor correcto en el servidor como se nota en la figura~\ref{fig:diagrama_sec_if_else}.
 \end{itemize}
 
 
 \subsection{Sistema de versiones}
-Para la elaboración del proyecto se usó el sistema de versiones Git. El repositorio es público y puede ser accedido en \url{https://github.com/SaulNunez/Project-Hamilton}.
+Para la elaboración del proyecto se usó el sistema de versiones \textit{Git}. El repositorio es público y puede ser accedido en \url{https://github.com/SaulNunez/Project-Hamilton}.
 
 \subsection{Integración Continua}
-Se usó Github Actions que permite ejecutar archivo de definición de tareas después de subir nuevos cambios.
+Se usó \textit{Github Actions} que permite ejecutar archivo de definición de tareas después de subir nuevos cambios.
 Éste ejecuta las siguientes acciones cada vez que se activa el trabajo:
 \begin{itemize}
     \item Compila ejecutables para Linux x64-86 y WebGL
@@ -447,49 +455,56 @@ Se usó Github Actions que permite ejecutar archivo de definición de tareas des
     \item Crea documentación de las funciones y variables del proyecto y sube a \textit{Github Pages} la nueva versión, esta es accesible en la página  \url{http://saulnunez.com/Project-Hamilton/}
 \end{itemize}
 
-Para la compilación de ejecutables y el sistema pruebas se usó el increíble trabajo de GameCI que tiene imágenes preconfiguradas de Unity que facilitan la creación de los \textit{pipelines} necesarios. Se uso su tutorial disponible en \url{https://game.ci/docs/github/v1/builder} y sus ejemplos para la creación del archivo de configuración.
+Para la compilación de ejecutables y el sistema pruebas se usó el increíble trabajo de GameCI que tiene imágenes preconfiguradas de \textit{Unity} que facilitan la creación de los \textit{pipelines} necesarios. Se uso su tutorial disponible en \url{https://game.ci/docs/github/v1/builder} y sus ejemplos para la creación del archivo de configuración.
 
-En la creación del pipeline de la generación de documentación se usó el trabajo de Normand Erwan disponible en \url{https://github.com/NormandErwan/DocFxForUnity} que provee la configuración de DocFX para que funcione con la organización por carpetas de Unity y por la forma en la que éste de manera predefinida crea clases para componentes en el \textit{namespace} \textbf{global}.
+En la creación del pipeline de la generación de documentación se usó el trabajo de Normand Erwan disponible en \url{https://github.com/NormandErwan/DocFxForUnity} que provee la configuración de DocFX para que funcione con la organización por carpetas de \textit{Unity} y por la forma en la que éste de manera predefinida crea clases para componentes en el \textit{namespace} \textbf{global}.
 
 \section{Implementación}
 \subsection{Sprites}
-Como lo vimos anteriormente, hay dos tipos de \textit{sprites}. Aquellos que se obtuvieron de itch.io se agregaron simplemente a Unity importándolos a las carpetas del proyecto y configurado para que los interpretara como \textit{"sprites"}, estos al ser \textit{spritesheets} (y por lo tanto contener en un solo archivo un numero de \textit{sprites} individuales) se cortan en el editor de \textit{sprites} dependiendo del tamaño en el que fueron diseñados (normalmente 16x16 o 32x32 píxeles); normalmente aquí acabaría el proceso pero en algunos sprites requirieron ajustes manuales por su forma de \textit{"sprite packing"} (como se organizan los sprites entre el archivo de imagen). En el segundo tipo, fueron los creados específicamente para el juego, estos fueron diseñados en Photoshop, se usó el \textit{plugin} de PSDs para permitir importar archivos de Photoshop directamente a Unity para utilizarlos, dependiendo de la situación del \textit{sprite} en particular se dejaba en simple o en múltiples, estos últimos cortados en  16x16 para ítem grandes que usan el principio 9-slice.
+Como lo vimos anteriormente, hay dos tipos de \textit{sprites}. Aquellos que se obtuvieron de itch.io se agregaron simplemente a \textit{Unity} importándolos a las carpetas del proyecto y configurado para que los interpretara como \textit{"sprites"}, estos al ser \textit{spritesheets} (y por lo tanto contener en un solo archivo un numero de \textit{sprites} individuales) se cortan en el editor de \textit{sprites} dependiendo del tamaño en el que fueron diseñados (normalmente 16x16 o 32x32 píxeles); normalmente aquí acabaría el proceso pero en algunos sprites requirieron ajustes manuales por su forma de \textit{"sprite packing"} (como se organizan los sprites entre el archivo de imagen). En el segundo tipo, fueron los creados específicamente para el juego, estos fueron diseñados en Photoshop, se usó el \textit{plugin} de PSDs para permitir importar archivos de Photoshop directamente a Unity para utilizarlos, dependiendo de la situación del \textit{sprite} en particular se dejaba en simple o en múltiples, estos últimos cortados en  16x16 para ítem grandes que usan el principio 9-slice.
 
 \subsection{Emergencias}
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\linewidth]{images/DiagramaClasesEmergencias.png}
-    \caption{Diagrama de clases del sistema de emergencias.}
-    \label{fig:diagrama_clases_emergencias}
-\end{figure}
-\begin{figure}[p]
+Para las emergencias se decidió crear un subsistema para controlar su estado. Éste controla la interfaz que tienen los impostores para encender las emergencias, así como los \textit{timeouts} necesarios para que las emergencias tarden un tiempo determinado antes de poder ser activados cuando inicia el juego y cuando se reinicia el contador por una votación para sacar a alguien o por el \textit{cooldown} a una emergencia previa.
+Como los emergencias incluyen acciones comunes como activarlos o detenerlos, se creó una clase base que usan todos estos para incluir estos métodos (figura~\ref{fig:diagrama_clases_emergencias}).
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{images/DiagramaClasesEmergencias.png}
+        \caption{Diagrama de clases del sistema de emergencias.}
+        \label{fig:diagrama_clases_emergencias}
+    \end{figure}
+
+\begin{itemize}
+    \item Emergencia de telégrafo, la selección de pregunta y su revisión ocurren en el servidor, el cliente recibe información sobre la pregunta actual (para mostrarla en pantalla) y todo mundo(como todos los que están respondiendo el emergencia, mínimo los dos jugadores) tiene que contestar la pregunta actual para poder pasar a la siguiente, como se ve en la figura~\ref{fig:diagrama_secuencia_emergencia_pregunta}.
+    \begin{figure}[H]
             \centering
             \includegraphics[width=1\linewidth]{images/diagrama_secuencia_sabotage_preguntas.png}
             \caption{Diagrama de secuencia de emergencia de telégrafo.}
             \label{fig:diagrama_secuencia_emergencia_pregunta}
-        \end{figure}
-        \begin{figure}[p]
+    \end{figure}
+    \item Apagar generadores, la única función que realiza el cliente es mandar la nueva posición del \textit{slider} al servidor, como se puede ver en la figura~\ref{fig:diagrama_secuencia_generadores}.
+        \begin{figure}[H]
             \centering
             \includegraphics[width=1\linewidth]{images/DiagramaSecuenciaSabotageGeneradores.png}
             \caption{Diagrama de secuencia de emergencia en los generadores.}
             \label{fig:diagrama_secuencia_generadores}
         \end{figure}
-Para las emergencias se decidió crear un subsistema para controlar su estado. Éste controla la interfaz que tienen los impostores para encender las emergencias. Así como los \textit{timeouts} necesarios para que las emergencias tarden un tiempo determinado antes de poder ser activados cuando inicia el juego y cuando se reinicia el contador por una votación para sacar a alguien o por el \textit{cooldown} a una emergencia previa.
-Como los emergencias incluyen acciones comunes como activarlos o detenerlos, se creó una clase base que usan todos estos para incluir estos métodos (figura~\ref{fig:diagrama_clases_emergencias}).
-\begin{itemize}
-    \item Emergencia de telégrafo, la selección de pregunta y su revisión ocurren en el servidor, el cliente recibe información sobre la pregunta actual (para mostrarla en pantalla) y todo mundo(como todos los que están respondiendo el emergencia, mínimo los dos jugadores) tiene que contestar la pregunta actual para poder pasar a la siguiente, como se ve en la figura~\ref{fig:diagrama_secuencia_emergencia_pregunta}.
-    \item Apagar generadores, la única función que realiza el cliente es mandar la nueva posición del \textit{slider} al servidor, como se puede ver en la figura~\ref{fig:diagrama_secuencia_generadores}.
     \item Ajustar presión del boiler, hay distintos medidores de los cuales elige uno para mostrar por emergencia, al definirse uno, se actualiza la UI en el cliente, cada vez que el jugador juegue con los valores del algoritmo que el usuario necesita completar para regular la presión se revisara en el cliente que son el valor ideal.
 \end{itemize}
 
 \subsection{Despliegue}
+
+Se crearon dos imágenes de \textit{Docker} para hospedar el servidor y un \textit{webserver} usando Apache para servir la página del juego para los cliente. Estos contenedores son manejados por \textit{Docker Compose} para controla su estado y crea una red local simulada entre estos, en el proyecto se creo el archivo llamado \textbf{docker-compose.yml} que orquesta estos contenedores detallados y adicionalmente un tercero que va enfrente de los anteriormente detallados para servir como \textit{forward proxy}, que distribuye los paquetes según su protocolo (\textit{HTTP} a \textit{webserver} y \textit{websockets} al servidor), este último utiliza Apache. La función de este \textit{forward proxy} es poder dirigir todas las peticiones a ambos contenedores por el puerto 80, para evitar cualquier bloqueo por \textit{firewalls}. 
+
+El diagrama de la conexión entre los contenedores y el mundo real se puede ver en la figura~\ref{fig:diagrama_despliege} en un ejemplo en el que esta hospedado en \textit{Google Cloud Compute Engine}, el \textit{stack} de red del servidor manda los paquetes de red a \textit{Docker} que a la vez la delega a los contenedores.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{images/diagrama_deployment.png}
     \caption{Diagrama del despliegue, en este caso un servidor en \textit{Google Cloud Compute Engine}.}
     \label{fig:diagrama_despliege}
 \end{figure}
-Se crearon dos imágenes de \textit{Docker} para hospedar el servidor y un \textit{webserver} usando Apache para servir la página del juego para los cliente. Estos contenedores son manejados por \textit{Docker Compose} para controla su estado y crea una red local simulada entre estos, en el proyecto se creo el archivo llamado \textbf{docker-compose.yml} que orquesta estos contenedores detallados y adicionalmente un tercero que va enfrente de los anteriormente detallados para servir como \textit{forward proxy}, que distribuye los paquetes según su protocolo (\textit{HTTP} a \textit{webserver} y \textit{websockets} al servidor), este último utiliza Apache. La función de este \textit{forward proxy} es poder dirigir todas las peticiones a ambos contenedores por el puerto 80, para evitar cualquier bloqueo por \textit{firewalls}. El diagrama de la conexión entre los contenedores y el mundo real se puede ver en la figura~\ref{fig:diagrama_despliege} en un ejemplo en el que esta hospedado en \textit{Google Cloud Compute Engine}, el \textit{stack} de red del servidor manda los paquetes de red a \textit{Docker} que a la vez la delega a los contenedores.
+
 En el caso específico del cliente que corre cada usuario se usó Apache para el \textit{host} de los archivos estáticos.
 Para el contenedor del servidor se uso como imagen base \textit{Ubuntu}, en el que se llevó a cabo la configuración según las guía de \textit{Mirror networking} donde lo hospedan en \textit{Google Cloud}, el motivo de usar esta guía es por su uso de \textit{Debian}, \textit{distro} de la cual nació \textit{Ubuntu}, por lo que es similar su configuración, mientras que la de \textit{AWS} se usó \textit{Windows Server}. Esta guía esta disponible en: \url{https://mirror-networking.gitbook.io/docs/guides/server-hosting/google-cloud}.
 

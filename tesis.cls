@@ -222,8 +222,10 @@
 
 \newcommand{\thisterm}{\termname\ de \the\year}
 \newcommand{\thismonth}{\monthname\ de \the\year}
-\newcommand{\longdate}{\@arabic\day\ de \monthname\ de \the\year}
-\newcommand{\shortdate}{\@arabic\day/\@arabic\month/\@arabic\year}
+% \newcommand{\longdate}{\@arabic\day\ de \monthname\ de \the\year}
+\newcommand{\longdate}{20 de \monthname\ de \the\year}
+% \newcommand{\shortdate}{\@arabic\day/\@arabic\month/\@arabic\year}
+\newcommand{\shortdate}{20/\@arabic\month/\@arabic\year}
 \newcommand{\shorttime}{\number\hours:\ifnum\minutes<10 0\fi\number\minutes}
 
 \newcommand{\draftmodeleyend}{(TESIS COMPILADA EN MODO DRAFT)}
@@ -353,7 +355,7 @@
         {\@directorbtitle\ \@directorb}\par
   \end{center}
     \vspace{1\@line}\textrm{\@address}%\par
-    \textrm{\hfill\@termyear}
+    \textrm{\hfill\longdate}
     %\textrm{\hspace{24pt}\@termyear}
   \end{titlepage}%
 %  \begin{titlepage}%

@@ -5,28 +5,34 @@
  
 \section{Con respecto a las preguntas de investigación}
 
-Se encontró interés en muchos docentes de la materia de Fundamentos, respecto a las ventajas que pudiera traer un juego como el desarrollado, así como de las capacidades actuales del producto. Uno de los docentes entrevistados menciono que lo usaría para su clase cuando llegue a lanzarse. 
+Se encontró interés en muchos docentes de la materia de Fundamentos, respecto a las capacidades actuales del producto y en general las ventajas que pudiera traer un juego para repasar temas en el salón de clases. Uno de los docentes entrevistados mencionó que lo usaría para su clase cuando llegue a lanzarse. 
 
-En general, todos los docentes estuvieron de acuerdo en que sería algo que llamaría la atención a sus estudiantes, entre las razones porque:
+En general, los docentes estuvieron de acuerdo en que sería algo que llamaría la atención a sus estudiantes, entre las diferentes razones porque:
 \begin{itemize}
     \item Los roles. El cambio constante de los roles, así como la complejidad adicional que agrega la interacción entre compañeros para ser efectivo en tu rol mantienen el juego interesante para los alumnos.
+    \item Los jugadores están aprendiendo junto con sus compañeros.
     \item A base de su experiencia, los alumnos responden bien a cuando usan juegos o aplicaciones para el proceso de enseñanza. Juegos como \textit{Kahoot!} tuvieron muy buena acogida  en el salón de clases.
 \end{itemize}
+
+La mayoría de los docentes estuvieron satisfechos con los temas tratados en los puzzles y en su complejidad. Además, varios docentes comentaron que es probable que usen el juego una vez lanzado.
 
 \section{Con respecto al objetivo de la investigación}
 \begin{itemize}
     \item Se realizó un documento de diseño donde se detallaron las mecánicas del juego, ambientación, personajes y \textit{puzzles}.
-    \item Se creó un juego a base de este documento usando \textit{Unity3D} y \textit{Mirror Networking} para el multijugador; este juego está listo para albergar partidas del juego, puede ser instalado en un servidor o en una computadora en una red local. Estos ejecutables fueron agregados a contenedores y son orquestados con Docker Compose. Todo el trabajo realizado puede ser accedido públicamente desde el repositorio  \url{https://github.com/SaulNunez/Project-Hamilton}.
+    \item Se creó un juego a base de este documento usando \textit{Unity3D} y \textit{Mirror Networking} para el multijugador; este juego está listo para albergar partidas del juego, puede ser instalado en un servidor o en una computadora en una red local. Estos ejecutables fueron agregados a contenedores y son orquestados con \textit{Docker Compose}. Todo el trabajo realizado puede ser accedido públicamente desde el repositorio  \url{https://github.com/SaulNunez/Project-Hamilton}.
     \item Se realizaron reuniones con profesores mostrándoles el juego y tuvieron interés en el juego. Descubriendo \textit{showstoppers}, los cuales se corrigieron, de forma que el juego cumple de mejor manera los requerimientos que los docentes necesitan para usarlo en sus clases.
 \end{itemize}
 
 \section{Recomendaciones para futuras investigaciones}
-\subsection{Puzzles}
+\subsection{Videojuego}
+Respecto al juego, salieron algunas sugerencias, entre estas, permitir más jugadores. Actualmente el juego puede un máximo de 25 jugadores. Sin embargo, algunos docentes nos comentaron la necesidad de aumentar el numero de jugadores aceptados a un máximo de 30, incluso hasta 40. Esto ultimo dado que las clases virtuales aumentaron el numero de estudiantes en cada clase, para que todos los jugadores puedan estar en una misma partida.
+
+\subsubsection{Puzzles}
 Hubieron dos sugerencias, una sobre agregar temas adicionales y otra sobre la complejidad de los ejercicios (que esta pudiera subir más). Para cubrir esta área, se pueden agregar lo siguientes al juego como trabajo futuro:
 \begin{itemize}
     \item Crear ejercicios con los temas de arreglos y matrices.
-    \item Agregar ejercicios más complejos. Los ejercicios de juego fueron diseñados para ser sencillos: de un solo tema y no muy extensos. Se puede a futuro aumentar la complejidad con la creación de ejercicios con más condicionales dobles, y agregar \textit{puzzles} con condicionales anidadas, ciclos y combinación de ciclos con condicionales. Estos ejercicios pudieran ser habilitados o deshabilitados en Configuración de partida y si están habilitados que reemplacen algunos de los ejercicios existentes de su respectivo tema. De forma que los alumnos tengan que razonar más el ejercicio. Y como efecto secundario, esto a su vez mantiene el juego fresco durante más tiempo. En general esto permite al docente ajustar la dificultad según el nivel de su clase.
-    \item Usando la Configuración de partida, se pudiera agregar una nueva opción que solo permita \textit{puzzles} que tengan contenido de programación, dado que algunos ejercicios para las emergencias tienen preguntas de conocimiento popular.
+    \item Agregar ejercicios más complejos. Los ejercicios de juego fueron diseñados para ser sencillos: de un solo tema y no muy extensos. Se puede a futuro aumentar la complejidad con la creación de ejercicios con más condicionales dobles, y agregar \textit{puzzles} con condicionales anidadas, ciclos, combinación de ciclos con condicionales y código en C. Estos ejercicios pudieran ser habilitados o deshabilitados en \textit{Configuración de partida} y si están habilitados que reemplacen algunos de los ejercicios existentes de su respectivo tema. De forma que los alumnos tengan que razonar más el ejercicio. Y como efecto secundario, esto a su vez mantiene el juego fresco durante más tiempo. En general esto permite al docente ajustar la dificultad según el nivel de su clase.
+    \item Usando la \textit{Configuración de partida}, se pudiera agregar una nueva opción que solo permita \textit{puzzles} que tengan contenido de programación, dado que algunos ejercicios para las emergencias tienen preguntas de conocimiento popular.
 \end{itemize}
 
 \subsection{Pruebas Unitarias}
